@@ -1,0 +1,35 @@
+.btn,
+.btn:link,
+.btn:active,
+.btn:visited,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	position: relative;
+	display: inline-block;
+	width: auto;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	padding: 11px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color:$color__button-text;
+	background: $color__button-bg;
+	border: 1px solid $color__button-border;
+	font-weight: $font__weight-semi-bold;
+	@include font-size(1.7);
+	@include fade;
+	@include backface-visibility(hidden);
+	&:focus,
+	&:hover {
+		color: $color__button-text-hover;
+		background-color: $color__button-bg-hover;
+		border-color: $color__button-border-hover;
+	}
+	&.btn-small {
+		@include font-size(1.3);
+		padding: 7px 14px;
+	}
+}

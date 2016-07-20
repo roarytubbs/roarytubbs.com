@@ -1,0 +1,9 @@
+a {
+	text-decoration: underline;
+	@include fade;
+	@include on-event {
+		outline: 0;
+		text-decoration: none;
+		@include fade;
+	}
+}

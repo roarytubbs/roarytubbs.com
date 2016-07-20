@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.page-header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	@include transition(all 0.2s);
+	.page-container {
+		@include flexbox;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.social-nav {
+	@include flexbox;
+	@include flex-order(3);
+	@include clear-list-style;
+	align-items: center;
+	line-height: 0;
+	height: inherit;
+	li {
+		display: inline-block;
+		margin-left: 25px;
+	}
+	@include links {
+		@include opacity(1.0);
+		@include fade;
+		color: $color__white;
+	}
+	@include links-hover {
+		@include opacity(1.0);
+		@include fade;
+	}
+	span {
+		display: none;
+	}
+	.fa {
+		@include font-size(1.5);
+	}
+	.fa-dribbble:hover,
+	.fa-dribbble:focus {
+		@include fade;
+		color: rgba($color__brand-dribbble, 1);
+	}
+	.fa-github:hover,
+	.fa-github:focus {
+		@include fade;
+		color: rgba($color__brand-github, 1);
+	}
+	.fa-linkedin:hover,
+	.fa-linkedin:focus {
+		@include fade;
+		color: rgba($color__brand-linkedin, 1);
+	}
+	.fa-twitter:hover,
+	.fa-twitter:focus {
+		@include fade;
+		color: rgba($color__brand-twitter, 1);
+	}
+	.fa-codepen:hover,
+	.fa-codepen:focus {
+		@include fade;
+		color: rgba($color__brand-codepen, 1);
+	}
+}

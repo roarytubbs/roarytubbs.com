@@ -1,0 +1,91 @@
+/*!
+Theme Name: roarytubbs
+Theme URI: http://underscores.me/
+Author: Roary Tubbs
+Author URI: https://profiles.wordpress.org/roary86/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rt
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+roarytubbs is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+// Configuration & Helpers
+@import
+'abstracts/variables-structure',
+'abstracts/variables-typography',
+'abstracts/variables-colors',
+'abstracts/functions',
+'abstracts/mixins';
+
+// Vendors
+@import
+'vendors/normalize',
+'vendors/jquery.bxslider.scss',
+'vendors/particle.scss',
+'vendors/animate/animate.scss',
+'vendors/swiper.scss',
+'vendors/ninja-form';
+
+// Typography
+@import
+"typography/typography",
+"typography/headings",
+"typography/copy",
+"typography/richtext";
+
+// Navigation
+@import
+"navigation/menus";
+
+// Modules
+@import
+"modules/accessibility",
+"modules/alignments",
+"modules/clearings",
+"modules/infinite-scroll";
+
+// Widgets
+@import "site/secondary/widgets";
+
+// Content
+@import "site/site";
+
+// Media
+@import
+"media/media",
+"media/captions",
+"media/galleries";
+
+// Components
+@import
+"components/elements",
+"components/lists",
+"components/tables",
+"components/buttons",
+"components/fields",
+"components/links";
+
+// Layout
+@import
+"layout/base",
+"layout/flex-grid",
+"layout/header",
+"layout/footer",
+"layout/hero";
+
+// Page Specific
+@import
+"pages/works",
+"pages/experience",
+"pages/home";

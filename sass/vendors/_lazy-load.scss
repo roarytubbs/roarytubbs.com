@@ -1,0 +1,6 @@
+.lazy img {
+	@include opacity(0);
+}
+.lazy img[data-original] {
+	@include opacity(1);
+}

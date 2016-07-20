@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+::-moz-selection {
+	background: $color__accent;
+	color:#fff;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background: $color__accent;
+	color:#fff;
+	text-shadow:none;
+}
+::selection{
+	background: $color__accent;
+	color:#fff;
+	text-shadow:none;
+}
+
+
+body {
+	background: $color__background-body;
+}
+blockquote, q {
+	quotes: "" "";
+
+	&:before, &:after {
+		content: "";
+	}
+}
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+img::selection {
+	background: transparent;
+}
+img::-moz-selection{background:transparent}

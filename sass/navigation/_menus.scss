@@ -1,0 +1,134 @@
+.navigation {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $color__background-header;
+	height: 70px;
+	padding: 0 5%;
+}
+.logo {
+	display: inline-flex;
+	align-items: center;
+	@include flex-order(1);
+	width: 64%;
+	height: inherit;
+	text-decoration: none;
+	color: $color__white;
+	@include transition(all 0.2s);
+	@include fade;
+	&:hover,
+	&:focus {
+		color: $color__white;
+		@include opacity(0.8);
+		@include fade;
+	}
+	img {
+		width: 6%;
+
+	}
+	span {
+		@include font-size(1.6);
+		font-weight: $font__weight-bold;
+		margin-left: 7px;
+		vertical-align: middle;
+	}
+}
+.main-nav {
+	height: inherit;
+	@include flex-order(2);
+	@include flexbox;
+	ul {
+		@include clear-list-style;
+		height: inherit;
+		display: inline-flex;
+		text-transform: uppercase;
+		font-weight: $font__weight-regular;
+		li {
+			margin-left: 25px;
+			padding-top: 25px;
+			height: 100%;
+			position: relative;
+		}
+		li:first-child {
+			margin-left: 0;
+		}
+		a:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 0px;
+			width: 100%;
+			@include fade;
+			background-color: $color__accent;
+		}
+		a:hover:before,
+		a:focus:before {
+			height: 4px;
+			@include fade;
+		}
+		@include links {
+			display: block;
+			padding: 0 10px;
+			text-decoration: none;
+			color: $color__white;
+			font-weight: $font__weight-semi-bold;
+			@include font-size(1.3);
+			@include transition(all 0.2s);
+		}
+		@include links-hover {
+			color: $color__accent;
+		}
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current-page-ancestor > a,
+		.current-menu-ancestor > a {
+			color: $color__accent;
+			&:before {
+				border-top: 4px solid $color__accent;
+			}
+		}
+	}
+	.btn {
+		margin-left: 25px;
+	}
+}
+
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

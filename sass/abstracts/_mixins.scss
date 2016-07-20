@@ -1,0 +1,201 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+    } @else {
+      &:hover,
+      &:active,
+      &:focus {
+        @content;
+      }
+    }
+  }
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+// Clear unordered list styles
+@mixin clear-list-style() {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+// Center block
+@mixin center-block {
+	display: block;
+	text-align:center;
+	margin:0 auto;
+}
+// Clearfix
+@mixin clearfix() {
+	clear:both;
+	zoom:1;
+}
+@mixin clearfix-before() {
+	content:"";
+	display:table;
+}
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	content:"";
+	display:table;
+	clear:both;
+}
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+// Cross browser opacity This mixin ensures cross browser opacity all the way down to Internet Explorer 5.
+@mixin opacity($opacity) {
+  filter: alpha(opacity=#{$opacity * 100});
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+}
+// Transition
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+// Transform
+@mixin transform($transform...) {
+  -webkit-transform:($transform);
+  -moz-transform:($transform);
+  -o-transform:($transform);
+  transform:($transform);
+}
+// Animation
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+// Border radius shorthand
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+// Fade an element useful on hover action
+@mixin fade() {
+  @include transition (all 0.2s ease);
+}
+// Fade an element useful on hover action
+@mixin filter($filter) {
+  filter: $filter;
+  -webkit-filter: $filter;
+  -moz-filter: $filter;
+  -ms-filter: $filter;
+  -o-filter: $filter;
+}
+// Anchor link colors
+@mixin links {
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    @content;
+  }
+}
+@mixin links-hover {
+  a:hover,
+  a:focus {
+    @content;
+  }
+}
+// Box shadow
+@mixin box-shadow($horizontal-length, $vertical-length, $blur, $spread, $shadow, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $horizontal-length $vertical-length $blur $spread $shadow;
+    -moz-box-shadow:inset $horizontal-length $vertical-length $blur $spread $shadow;
+    box-shadow:inset $horizontal-length $vertical-length $blur $spread $shadow;
+    } @else {
+      -webkit-box-shadow: $horizontal-length $vertical-length $blur $spread $shadow;
+      -moz-box-shadow: $horizontal-length $vertical-length $blur $spread $shadow;
+      box-shadow: $horizontal-length $vertical-length $blur $spread $shadow;
+    }
+  }
+// Backface Visibility
+@mixin backface-visibility ($backface) {
+  -webkit-backface-visibility: $backface;
+  -moz-backface-visibility: $backface;
+  -ms-backface-visibility: $backface;
+  -o-backface-visibility: $backface;
+  backface-visibility: $backface;
+}
+/* short hand appearance */
+@mixin appearance ($appearance) {
+  -webkit-appearance: $appearance;
+  -moz-appearance: $appearance;
+  -ms-appearance: $appearance;
+  -o-appearance: $appearance;
+  appearance: $appearance;
+}
+/* flexbox */
+@mixin flexbox {
+ display:-webkit-box; // old
+ display:-moz-box; // old
+ display:-ms-flexbox; // ie
+ display:-webkit-flex; // new
+ display:flex; // new
+}
+@mixin flex($values) {
+ -webkit-box-flex: $values;
+ -moz-box-flex:  $values;
+ -ms-flex:  $values;
+ -webkit-flex:  $values;
+ flex:  $values;
+}
+@mixin flex-order($order) {
+ -webkit-box-ordinal-group: $order; // old
+ -moz-box-ordinal-group: $order; // old
+ -ms-flex-order: $order; // ie
+ -webkit-order: $order; // new
+ order: $order; // new
+}
+@mixin flex-direction($direction) {
+ @if $direction == column
+ {
+   -webkit-flex-direction:vertical;
+   -moz-flex-direction:vertical;
+   -ms-flex-direction:column;
+   -webkit-flex-direction:column;
+   flex-direction:column;
+ }
+ @else
+ {
+   -webkit-flex-direction:horizontal;
+   -moz-flex-direction:horizontal;
+   -ms-flex-direction:row;
+   -webkit-flex-direction:row;
+   flex-direction:row;
+ }
+}

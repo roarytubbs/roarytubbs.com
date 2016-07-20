@@ -1,0 +1,57 @@
+// Colors
+$color__brand: #5d8ddf;
+$color__accent: #f24c4e;
+$color__text-screen: #21759b;
+$color__link: $color__brand;
+$color__link-visited: rgba($color__link, .2);
+$color__link-hover: rgba($color__link, 1);
+$color__text-main: #666666;
+$color__white: #fff;
+$color__black: #111;
+$color__off-white: #F2F2F2;
+$color__light-gray: #cacaca;
+$color__med-gray: #828282	;
+$color__dark-gray: #262626;
+$color__border: #ccc;
+// Backgrounds
+$color__background-body: $color__off-white;
+$color__background-screen: #f1f1f1;
+$color__background-hr: rgba(0,0,0,0.1);
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__background-header: $color__dark-gray;
+$color__background-utility: $color__off-white;
+// Forms
+$color__input-text: $color__text-main;
+$color__input-text-focus: $color__black;;
+$color__input-border: $color__border;
+$color__input-border-focus: $color__brand;
+$color__input-bg: $color__white;
+$color__input-bg-focus: $color__white;;
+
+$color__button-text: $color__off-white;
+$color__button-text-hover: $color__off-white;
+$color__button-border: rgba($color__accent, .8);
+$color__button-border-hover: $color__accent;
+$color__button-bg: rgba($color__accent, .7);
+$color__button-bg-hover: rgba($color__accent, .9);
+
+
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+// Brands
+$color__brand-instagram: #405de6;
+$color__brand-twitter: #55acee;
+$color__brand-linkedin: #0077b5;
+$color__brand-dribbble: #ea4c89;
+$color__brand-github: #ff9933;
+$color__brand-behance: #1769ff;
+$color__brand-pinterest: #bd081c;
+$color__brand-spotify: #2ebd59;
+$color__brand-codepen: #ccc;

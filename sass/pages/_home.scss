@@ -1,0 +1,17 @@
+.home .hero {
+	height: 450px;
+	h1.entry-title {
+		@include font-size(4.0);
+		line-height: 50px;
+		font-weight: $font__weight-regular;
+		letter-spacing: -0.05em;
+	}
+	h2.subtitle {
+		@include font-size(1.6);
+		line-height: 20px;
+		font-weight: $font__weight-regular;
+		letter-spacing: -0.02em;
+		color: $color__accent;
+		margin-top: 20px;
+	}
+}

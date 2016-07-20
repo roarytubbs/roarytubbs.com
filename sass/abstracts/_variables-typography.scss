@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800);
+
+$font__main: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font__code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+
+/// font weight
+$font__weight-light: 300;
+$font__weight-regular: 400;
+$font__weight-semi-bold: 600;
+$font__weight-bold: 700;
+$font__weight-extra-bold: 800;

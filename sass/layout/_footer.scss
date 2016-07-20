@@ -1,0 +1,84 @@
+	// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.page-footer {
+	position: relative;
+}
+.footer-nav {
+	background: #262626;
+	padding: 20px 0;
+	text-align: center;
+	ul{
+		@include clear-list-style;
+	}
+	li {
+		display: inline-block;
+	}
+	@include links {
+		color: $color__light-gray;
+		padding: 0 15%;
+		text-decoration: none;
+		@include font-size(1.4);
+		display: inline-block;
+		height: 40px;
+		line-height: 40px;
+		margin: 0 10px;
+		position: relative;
+		letter-spacing: 0em;
+		@include fade;
+	}
+	@include links-hover {
+		@include fade;
+		color: $color__off-white;
+	}
+	li.instagram {
+		@include links-hover {
+			background-color: $color__brand-instagram;
+		}
+	}
+	li.twitter {
+		@include links-hover {
+			background-color: $color__brand-twitter;
+		}
+	}
+	li.spotify {
+		@include links-hover {
+			background-color: $color__brand-spotify;
+		}
+	}
+	li.pinterest {
+		@include links-hover {
+			background-color: $color__brand-pinterest;
+		}
+	}
+	li.linkedin{
+		@include links-hover {
+			background-color: $color__brand-linkedin;
+		}
+	}
+	li.dribbble{
+		@include links-hover {
+			background-color: $color__brand-dribbble;
+		}
+	}
+	li.github{
+		@include links-hover {
+			background-color: $color__brand-github;
+		}
+	}
+	li.behance{
+		@include links-hover {
+			background-color: $color__brand-behance;
+		}
+	}
+	li.accent{
+		@include links-hover {
+			background-color: $color__accent;
+		}
+	}
+	li.codepen{
+		@include links-hover {
+			background-color: $color__brand-codepen;
+		}
+	}
+}

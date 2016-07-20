@@ -1,0 +1,104 @@
+.richtext p,
+.richtext ul,
+.richtext ol,
+.richtext blockquote {
+  @include font-size(1.8);
+  line-height: 34px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 0 40px 0;
+  letter-spacing: -0.02em;
+}
+.richtext a {
+  position: relative;
+  color: $color__link;
+  text-decoration: none;
+  font-weight: $font__weight-semi-bold;
+  display: inline;
+  padding-bottom: 3px;
+  @include fade;
+  @include on-event {
+    outline: 0;
+    color: $color__link-hover;
+    @include fade;
+  }
+}
+.richtext a:after {
+  content: "";
+  position: absolute;
+  bottom: -.25em;
+  left: 0;
+  width: 100%;
+  border-bottom: solid 2px $color__link-hover;
+  @include opacity(0);
+  @include transform(translateY(-0.25em));
+  @include transition(transform .3s ease, opacity .3s ease);
+}
+.richtext a:hover:after{
+  @include opacity(1);
+  @include transform(translateY(0));
+}
+.richtext h1,
+.richtext h2,
+.richtext h3,
+.richtext h4,
+.richtext h5,
+.richtext h6 {
+  margin-bottom: 20px;
+  letter-spacing: -0.04em;
+  @include font-size(3.0);
+  line-height: 42px;
+  margin-bottom: 20px;
+}
+.richtext h3 {
+  font-weight: $font__weight-semi-bold;
+  @include font-size(2.6);
+}
+.richtext h4 {
+  text-align: center;
+  margin-bottom: 60px;
+  @include font-size(2.4);
+  font-weight: $font__weight-semi-bold;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  &:before {
+    content: ' ';
+    display: block;
+    margin: 0 auto 5px auto;
+    width: 40px;
+    height: 2px;
+    background-color: rgba($color__light-gray, .5);
+  }
+}
+.richtext h5 {
+  color: $color__accent;
+  font-weight: $font__weight-semi-bold;
+  margin: 30px 0 5px;
+  @include font-size(2.0);
+}
+.richtext h6 {
+  font-weight: $font__weight-bold;
+  margin: 0;
+  @include font-size(1.4);
+}
+.richtext h1:first-child,
+.richtext h2:first-child,
+.richtext h3:first-child,
+.richtext h4:first-child,
+.richtext h5:first-child,
+.richtext h6:first-child {
+  margin-top: 0;
+}
+.richtext ul {
+  list-style: disc;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+.richtext ul li,
+.richtext ol li {
+  margin-bottom: 5px;
+}
+.richtext li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}

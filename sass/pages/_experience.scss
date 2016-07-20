@@ -1,0 +1,189 @@
+/* SKILLSET */
+#skillset-container {
+	ul {
+		margin: 0;
+		list-style: none;
+		@include font-size(1.6);
+	}
+	li {
+		margin-bottom: 10px;
+		&:before {
+			text-align: center;
+			vertical-align: middle;
+			font-family: 'FontAwesome';
+			content: '\f00c';
+			margin-right: 10px;
+			@include font-size(1.4);
+			color: rgba($color__accent, .4);
+		}
+	}
+}
+/* PARTNERSHIP */
+#partnerships-container {
+	ul {
+		margin: 0;
+		list-style: none;
+		@include font-size(1.6);
+	}
+	li {
+		margin-bottom: 20px;
+	}
+	h3 {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+}
+/* TOOLSET */
+#toolset-container {
+	background-color: $color__white;
+	ul {
+		@include clear-list-style;
+	}
+	img {
+		width: 60%;
+		margin: 0 auto;
+		display: inherit;
+	}
+}
+/* EMPLOYMENT */
+#employment-container {
+	background-color: $color__white;
+}
+.tabs {
+	position: relative;
+	&:after {
+		display: none;
+		content: "";
+		display: table;
+		clear: both;
+	}
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 60px;
+		width: 50px;
+		z-index: 1;
+		pointer-events: none;
+		background: -webkit-linear-gradient( right , #f8f7ee, rgba(248, 247, 238, 0));
+		background: linear-gradient(to left, #f8f7ee, rgba(248, 247, 238, 0));
+		visibility: visible;
+		opacity: 1;
+		-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+		-moz-transition: opacity .3s 0s, visibility 0s 0s;
+		transition: opacity .3s 0s, visibility 0s 0s;
+	}
+	&.is-ended:after {
+		visibility: hidden;
+		opacity: 0;
+		-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+		-moz-transition: opacity .3s 0s, visibility 0s .3s;
+		transition: opacity .3s 0s, visibility 0s .3s;
+	}
+}
+.tabs-content {
+	text-align: center;
+	overflow: hidden;
+	min-height: 0;
+	margin-bottom: 5em;
+	h5 {
+		margin: 0 0 10px;
+		line-height: 1;
+		padding: 0;
+	}
+	strong {
+		display: block;
+		@include font-size(1.6);
+		color: $color__brand;
+	}
+	span {
+
+	}
+	li {
+		display: none;
+		margin: 0;
+		&.selected {
+			display: block;
+			@include fadeInUp;
+		}
+	}
+}
+.tabs nav {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	z-index: 1;
+	position: relative;
+	margin: 0 auto;
+	width: 90%;
+}
+.tabs-navigation {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	&:before {
+		top: 50%;
+		margin-top: -10px;
+		margin-left: 0;
+		left: 38px;
+	}
+	li {
+		float: left;
+		position: relative;
+		display: block;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		width: auto;
+		padding: 2%;
+		h5 {
+			color: $color__black;
+			margin: 0;
+			@include font-size(1.6);
+		}
+		span {
+			@include font-size(1.4);
+			color: $color__black;
+		}
+	}
+	li.selected {
+		box-shadow: inset 0 -5px 0 #f05451;
+		h5 {
+			color: $color__accent;
+		}
+		span {
+			color: $color__white;
+		}
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
