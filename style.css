@@ -2369,6 +2369,17 @@ a {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
+.main-content {
+  padding: 8% 0; }
+  .main-content.white-bg {
+    background-color: #fff; }
+  .main-content .content-sep {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.page-content {
+  width: 100%;
+  margin: 0; }
+
 .page-container {
   max-width: 1170px;
   margin-left: auto;
@@ -2376,17 +2387,6 @@ a {
   width: 90.5%;
   position: relative;
   box-sizing: border-box; }
-
-.main-content.white-bg {
-  background-color: #fff; }
-.main-content .page-container {
-  padding: 8% 0; }
-.main-content .content-sep {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-
-.page-content {
-  width: 100%;
-  margin: 0; }
 
 .small-width {
   max-width: 570px;
@@ -3129,43 +3129,45 @@ a {
     top: 0;
     left: 0; }
   .hero .hero-content {
+    z-index: 99;
     text-align: center;
-    width: 100%;
-    -webkit-animation-name: zoomIn;
-    -moz-animation-name: zoomIn;
-    -ms-animation-name: zoomIn;
-    -o-animation-name: zoomIn;
-    animation-name: zoomIn;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -ms-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-duration: 0.7s;
-    -moz-animation-duration: 0.7s;
-    -ms-animation-duration: 0.7s;
-    -o-animation-duration: 0.7s;
-    animation-duration: 0.7s;
-    -webkit-animation-delay: 0s;
-    -moz-animation-delay: 0s;
-    -ms-animation-delay: 0s;
-    -o-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    width: 100%; }
+    .hero .hero-content.zoom {
+      -webkit-animation-name: zoomIn;
+      -moz-animation-name: zoomIn;
+      -ms-animation-name: zoomIn;
+      -o-animation-name: zoomIn;
+      animation-name: zoomIn;
+      -webkit-animation-iteration-count: 1;
+      -moz-animation-iteration-count: 1;
+      -ms-animation-iteration-count: 1;
+      -o-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-duration: 0.7s;
+      -moz-animation-duration: 0.7s;
+      -ms-animation-duration: 0.7s;
+      -o-animation-duration: 0.7s;
+      animation-duration: 0.7s;
+      -webkit-animation-delay: 0s;
+      -moz-animation-delay: 0s;
+      -ms-animation-delay: 0s;
+      -o-animation-delay: 0s;
+      animation-delay: 0s;
+      -webkit-animation-timing-function: ease;
+      -moz-animation-timing-function: ease;
+      -ms-animation-timing-function: ease;
+      -o-animation-timing-function: ease;
+      animation-timing-function: ease;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+      -o-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden; }
   .hero h1.entry-title {
     font-size: 48px;
     font-size: 4.8rem;
@@ -3186,11 +3188,11 @@ a {
     color: #cacaca;
     font-weight: 400; }
 
-.page-template-work .hero {
+.single-works .hero {
   height: 520px;
   align-items: flex-end;
   z-index: 1; }
-  .page-template-work .hero img {
+  .single-works .hero img {
     position: relative;
     z-index: 999;
     display: block;
@@ -3230,7 +3232,7 @@ a {
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden; }
-  .page-template-work .hero .overlay {
+  .single-works .hero .overlay {
     filter: alpha(opacity=70);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     -moz-opacity: 0.7;

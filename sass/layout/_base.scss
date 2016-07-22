@@ -2,20 +2,10 @@
 	position: relative;
 	@include transition (all 0.3s);
 }
-.page-container {
-	max-width: $size__max-width;
-	margin-left: auto;
-	margin-right: auto;
-	width: 90.5%;
-	position: relative;
-	box-sizing: border-box;
-}
 .main-content {
+	padding: 8% 0;
 	&.white-bg {
 		background-color: $color__white;
-	}
-	.page-container {
-		padding: 8% 0;
 	}
 	.content-sep {
 		border-bottom: 1px solid $color__background-hr;
@@ -24,6 +14,14 @@
 .page-content {
 	width: 100%;
 	margin: 0;
+}
+.page-container {
+	max-width: $size__max-width;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90.5%;
+	position: relative;
+	box-sizing: border-box;
 }
 .small-width {
 	max-width: $size__small-width;

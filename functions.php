@@ -129,16 +129,12 @@ add_action( 'wp_enqueue_scripts', 'rt_scripts' );
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
+
 require get_template_directory() . '/inc/social-nav.php';
 /**
  * Implement the Custom Fields.
  */
 require get_template_directory() . '/inc/custom-fields.php';
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

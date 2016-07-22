@@ -12,38 +12,36 @@ function cmb2_custom_metaboxes() {
     /**
      * Initiate the metabox
      */
-/*
-    Custom Header
-*/
+    /*
+        Custom Header
+    */
+
     $cmb = new_cmb2_box( array(
         'id'            => 'cf_custom_header',
         'title'         => __( 'Custom Header', 'cmb2' ),
-        'object_types'  => array( 'page', ),
+        'object_types'  => array( 'page', 'works', ),
         'priority'      => 'high',
         'closed'     => true,
         ) );
-
     $cmb->add_field( array(
         'name'       => __( 'Title', 'cmb2' ),
         'id'         => $prefix . 'title',
         'type'       => 'text',
         ) );
-
     $cmb->add_field( array(
         'name' => __( 'Subtitle', 'cmb2' ),
         'id'   => $prefix . 'subtitle',
         'type' => 'text',
         ) );
-
     $cmb->add_field( array(
         'name' => __( 'Background Position', 'cmb2' ),
         'id'   => $prefix . 'bg_position',
         'type' => 'text',
         'description' => 'Enter in CSS positioning (ex 50% 50%)',
         ) );
-/*
-    Skillset
-*/
+    /*
+        Skillset
+    */
     $cmb = new_cmb2_box( array(
         'id'          => 'cf_skillset',
         'title'         => __( 'Skillset', 'cmb2' ),
@@ -71,9 +69,9 @@ function cmb2_custom_metaboxes() {
         'id'   => $prefix . 'skillset_list_four',
         'type' => 'textarea_small'
         ) );
-/*
-    Partnerships
-*/
+    /*
+        Partnerships
+    */
     $cmb = new_cmb2_box( array(
         'id'          => 'cf_partnerships',
         'title'         => __( 'Partnerships', 'cmb2' ),
@@ -106,15 +104,17 @@ function cmb2_custom_metaboxes() {
         'id'   => $prefix . 'partnership_list_four',
         'type' => 'textarea_small'
         ) );
-
-/*
-    Toolset
-*/
+    /*
+        Toolset
+    */
     $cmb = new_cmb2_box( array(
         'id'          => 'cf_toolset',
         'title'         => __( 'Toolset ', 'cmb2' ),
-        'object_types'  => array( 'page', ),
-        'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/experience.php', 'value' => 'templates/work.php' ),
+        'object_types'  => array( 'page', 'works'),
+        'show_on'      => array(
+                'key' => 'page-template', 'value' => 'templates/experience.php',
+                'key' => 'post-type', 'value' => 'works'
+                ),
         'priority' => 'high',
         ) );
     $cmb->add_field( array(
@@ -122,9 +122,28 @@ function cmb2_custom_metaboxes() {
         'desc' => '',
         'id'   => $prefix . 'toolset_logos',
         'type' => 'file_list',
-    // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
-    // Optional, override default text strings
         ) );
+    /*
+        Thumbnail
+    */
+    $cmb = new_cmb2_box( array(
+        'id'          => 'cf_thumbnail',
+        'title'         => __( 'Thumbnail ', 'cmb2' ),
+        'object_types'  => array( 'works', ),
+        'context'      => 'side', //  'normal', 'advanced', or 'side'
+        'show_on'      => array( 'key' => 'post-type', 'value' => 'works' ),
+        'priority' => 'low',
+        ) );
+    $cmb->add_field( array(
+        'name'    => 'Select Thumbnail',
+        'desc'    => '',
+        'id'      => $prefix . 'thumbnail_img',
+        'type'    => 'file',
+        'options' => array(
+            'url' => false, // Hide the text input for the url
+        ),
+        ) );
+
 }
 /**
  * Sample template tag function for outputting a cmb2 file_list
@@ -146,4 +165,16 @@ function cmb2_output_file_list( $file_list_meta_key, $img_size = 'medium', $col_
     }
     echo '</ul>';
 }
+
+/**
+ * Wrapper function around cmb2_get_option
+ * @since  0.1.0
+ * @param  string  $post_type Post type name
+ * @param  string  $key Options array key
+ * @return mixed        Option value
+ */
+function custom_theme_cpt_get_option( $post_type, $key ) {
+    return cmb2_get_option( $post_type . '_options' , $key );
+}
+
 ?>

@@ -14,10 +14,6 @@ $partnership_3 = get_post_meta( get_the_ID(), '_cf_partnership_list_three', true
 $partnership_4 = get_post_meta( get_the_ID(), '_cf_partnership_list_four', true );
 $partnership_5 = get_post_meta( get_the_ID(), '_cf_partnership_list_five', true );
 $partnership_6 = get_post_meta( get_the_ID(), '_cf_partnership_list_size', true );
-$toolset_logos = get_post_meta( get_the_ID(), '_cf_toolset_logos', true);
-
-$upload_dir = wp_upload_dir();
-
 
 get_header(); ?>
 <?php get_template_part('template-parts/internal-hero'); ?>
@@ -146,7 +142,7 @@ get_header(); ?>
 	</section><!-- experience-container -->
 	<section id="toolset-container" class="main-content">
 		<div class="page-container">
-			<?php cmb2_output_file_list( '_cf_toolset_logos', 'small', 'col-sm-1' ); ?>
+			<?php get_template_part('template-parts/toolset'); ?>
 		</div><!-- page-conteiner -->
 	</section><!-- toolset-container -->
 </main><!-- main-content -->

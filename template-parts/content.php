@@ -24,7 +24,5 @@
 			) );
 			?>
 	</div><!-- .entry-content -->
-	<footer class="entry-footer">
-		<?php rt_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php rt_entry_footer(); ?>
 </article><!-- #post-## -->
