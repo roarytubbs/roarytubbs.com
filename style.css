@@ -3340,7 +3340,7 @@ a {
 
 .work-subtitle {
   text-transform: capitalize;
-  margin: 0;
+  margin: 0 0 10px 0;
   color: #cacaca;
   font-weight: 400;
   font-size: 18px;
@@ -3436,20 +3436,30 @@ a {
     max-height: 400px;
     overflow: hidden;
     margin: 0; }
-  .grid-view .grid-view-item.work-item img {
-    border-bottom: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    display: block;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s; }
+    .grid-view .grid-view-item.work-item .work-img-wrap img {
+      border-bottom: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      display: block;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .grid-view .grid-view-item.work-item .work-img-wrap:hover img {
+      transform: scale(1.1);
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -ms-filter: blur(2px);
+      -o-filter: blur(2px); }
   .grid-view .grid-view-item.work-item .overlay {
-    position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -3471,7 +3481,7 @@ a {
     transition: all 0.3s ease-in-out; }
   .grid-view .grid-view-item.work-item .btn {
     text-align: center;
-    width: 50%;
+    min-width: 50%;
     margin: 0 auto;
     font-size: 14px;
     font-size: 1.4rem;
@@ -3485,11 +3495,6 @@ a {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    filter: alpha(opacity=0);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    opacity: 0;
     background-color: #f24c4e; }
     .grid-view .grid-view-item.work-item .btn:hover {
       background-color: rgba(242, 76, 78, 0.8); }
@@ -3519,31 +3524,6 @@ a {
     font-size: 1.4rem;
     color: #828282;
     line-height: 1; }
-  .grid-view .grid-view-item.work-item:hover .overlay {
-    filter: alpha(opacity=100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1; }
-  .grid-view .grid-view-item.work-item:hover .btn {
-    transform: scale(1);
-    filter: alpha(opacity=100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1; }
-  .grid-view .grid-view-item.work-item:hover img {
-    transform: scale(1.1);
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -ms-filter: blur(2px);
-    -o-filter: blur(2px); }
 
 /* SKILLSET */
 #skillset-container ul {
@@ -3749,5 +3729,58 @@ a {
     letter-spacing: -0.02em;
     color: #f24c4e;
     margin-top: 20px; }
+  .home .hero .overlay {
+    filter: alpha(opacity=70);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7; }
+
+.dribbble-shots {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .dribbble-shots .shot {
+    width: 20%;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -ms-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-duration: 0.9s;
+    -moz-animation-duration: 0.9s;
+    -ms-animation-duration: 0.9s;
+    -o-animation-duration: 0.9s;
+    animation-duration: 0.9s;
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
 
 /*# sourceMappingURL=style.css.map */
