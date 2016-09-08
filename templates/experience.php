@@ -14,10 +14,6 @@ $partnership_3 = get_post_meta( get_the_ID(), '_cf_partnership_list_three', true
 $partnership_4 = get_post_meta( get_the_ID(), '_cf_partnership_list_four', true );
 $partnership_5 = get_post_meta( get_the_ID(), '_cf_partnership_list_five', true );
 $partnership_6 = get_post_meta( get_the_ID(), '_cf_partnership_list_size', true );
-$toolset_logos = get_post_meta( get_the_ID(), '_cf_toolset_logos', true);
-
-$upload_dir = wp_upload_dir();
-
 
 get_header(); ?>
 <?php get_template_part('template-parts/internal-hero'); ?>
@@ -31,24 +27,24 @@ get_header(); ?>
 	endwhile;
 	endif;
 	?>
-	<section id="skillset-container" class="main-content">
-		<div class="page-container">
-			<div class="row">
-				<ul class="col-md-3">
-					<?php echo wpautop( $skillset_1 ); ?>
-				</ul>
-				<ul class="col-md-3">
-					<?php echo wpautop( $skillset_2 ); ?>
-				</ul>
-				<ul class="col-md-3">
-					<?php echo wpautop( $skillset_3 ); ?>
-				</ul>
-				<ul class="col-md-3">
-					<?php echo wpautop( $skillset_4 ); ?>
-				</ul>
-			</div><!-- row -->
-		</div><!-- page-container -->
-	</section><!-- skillset-container -->
+		<section id="skillset-container" class="main-content">
+			<div class="page-container">
+				<div class="row">
+					<ul class="col-md-3">
+						<?php echo wpautop( $skillset_1 ); ?>
+					</ul>
+					<ul class="col-md-3">
+						<?php echo wpautop( $skillset_2 ); ?>
+					</ul>
+					<ul class="col-md-3">
+						<?php echo wpautop( $skillset_3 ); ?>
+					</ul>
+					<ul class="col-md-3">
+						<?php echo wpautop( $skillset_4 ); ?>
+					</ul>
+				</div><!-- row -->
+			</div><!-- page-container -->
+		</section><!-- skillset-container -->
 	<!-- <section id="employment-container" class="main-content">
 		<div class="tabs">
 			<ul class="tabs-content small-width richtext">
@@ -122,32 +118,32 @@ get_header(); ?>
 			</nav>
 		</div> 
 	</section> 
-	-->
-	<section id="partnerships-container" class="main-content white-bg">
-		<div class="page-container content-sep">
-			<header class="richtext">
-				<h3><?php echo esc_html( $partnerships_title ); ?></h3>
-			</header>
-			<div class="row">
-				<ul class="col-md-3">
-					<?php echo wpautop( $partnership_1 ); ?>
-				</ul>
-				<ul class="col-md-3">
-					<?php echo wpautop( $partnership_2 ); ?>
-				</ul>
-				<ul class="col-md-3">
-					<?php echo wpautop( $partnership_3 ); ?>
-				</ul>
-				<ul class="col-md-3">
-					<?php echo wpautop( $partnership_4 ); ?>
-				</ul>
-			</div><!-- row -->
-		</div><!-- page-container -->
-	</section><!-- experience-container -->
-	<section id="toolset-container" class="main-content">
-		<div class="page-container">
-			<?php cmb2_output_file_list( '_cf_toolset_logos', 'small', 'col-sm-1' ); ?>
-		</div><!-- page-conteiner -->
-	</section><!-- toolset-container -->
+-->
+<section id="partnerships-container" class="main-content white-bg content-sep">
+	<div class="page-container">
+		<header class="richtext">
+			<h3><?php echo esc_html( $partnerships_title ); ?></h3>
+		</header>
+		<div class="row">
+			<ul class="col-md-3">
+				<?php echo wpautop( $partnership_1 ); ?>
+			</ul>
+			<ul class="col-md-3">
+				<?php echo wpautop( $partnership_2 ); ?>
+			</ul>
+			<ul class="col-md-3">
+				<?php echo wpautop( $partnership_3 ); ?>
+			</ul>
+			<ul class="col-md-3">
+				<?php echo wpautop( $partnership_4 ); ?>
+			</ul>
+		</div><!-- row -->
+	</div><!-- page-container -->
+</section><!-- experience-container -->
+<section id="toolset-container" class="main-content white-bg">
+	<div class="page-container">
+		<?php get_template_part('template-parts/toolset'); ?>
+	</div><!-- page-conteiner -->
+</section><!-- toolset-container -->
 </main><!-- main-content -->
 <?php get_footer(); ?>

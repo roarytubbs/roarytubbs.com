@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 	<section class="page-wrapper">
 		<header class="page-header">
-			<div class="navigation">
+			<div class="navigation-wrap">
 				<a class="logo" href="<?php echo esc_url( home_url() ); ?>">
 					<img src="<?php echo get_template_directory_uri (); ?>/img/logo@2x.png">
 					<span><?php echo get_bloginfo('name'); ?></span>

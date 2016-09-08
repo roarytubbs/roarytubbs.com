@@ -20,16 +20,18 @@
 		left: 0;
 	}
 	.hero-content {
+		z-index: 99;
 		text-align: center;
 		width: 100%;
-		@include zoomIn(
-			$duration: .7s,
-			$count: 1,
-			$delay: 0s,
-			$function: ease,
-			$fill: both
-			);
-
+		&.zoom {
+			@include zoomIn(
+				$duration: .7s,
+				$count: 1,
+				$delay: 0s,
+				$function: ease,
+				$fill: both
+				);
+		}
 	}
 	h1.entry-title {
 		@include font-size(4.8);

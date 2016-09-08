@@ -26,7 +26,7 @@
 .richtext a:after {
   content: "";
   position: absolute;
-  bottom: -.25em;
+  bottom: -.2em;
   left: 0;
   width: 100%;
   border-bottom: solid 2px $color__link-hover;
@@ -53,22 +53,16 @@
 .richtext h3 {
   font-weight: $font__weight-semi-bold;
   @include font-size(2.6);
+  text-align: center;
+  margin-bottom: 60px;
 }
 .richtext h4 {
   text-align: center;
-  margin-bottom: 60px;
-  @include font-size(2.4);
-  font-weight: $font__weight-semi-bold;
-  letter-spacing: -0.05em;
+  margin-bottom: 40px;
+  @include font-size(1.8);
+  font-weight: $font__weight-bold;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  &:before {
-    content: ' ';
-    display: block;
-    margin: 0 auto 5px auto;
-    width: 40px;
-    height: 2px;
-    background-color: rgba($color__light-gray, .5);
-  }
 }
 .richtext h5 {
   color: $color__accent;
@@ -101,4 +95,32 @@
 .richtext li {
   counter-increment: item;
   margin-bottom: 5px;
+}
+.richtext blockquote {
+  padding-left: 40px;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 40px;
+  margin-left: -40px;
+  &:before {
+    content: "";
+    height: 100%;
+    width: 6px;
+    background: $color__accent;
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+  p {
+    color: #262626;
+    font-weight: $font__weight-bold;
+    line-height: 30px;
+  }
+
+}
+.richtext blockquote ~ .author em {
+    display: block;
+    @include font-size(1.4);
+    line-height: 1.5;
 }
