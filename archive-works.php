@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php echo apply_filters( 'the_content', $maybe_cpt_content ); ?>
       			</section>
 		    	<?php
-	    	}  
+	    	}
 	  ?>
 		<?php
 		if ( have_posts() ) {
