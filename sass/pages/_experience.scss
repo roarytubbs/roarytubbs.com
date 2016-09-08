@@ -28,14 +28,9 @@
 	li {
 		margin-bottom: 20px;
 	}
-	h3 {
-		text-align: center;
-		margin-bottom: 60px;
-	}
 }
 /* TOOLSET */
 #toolset-container {
-	background-color: $color__white;
 	ul {
 		@include clear-list-style;
 	}

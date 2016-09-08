@@ -119,8 +119,8 @@ get_header(); ?>
 		</div> 
 	</section> 
 -->
-<section id="partnerships-container" class="main-content white-bg">
-	<div class="page-container content-sep">
+<section id="partnerships-container" class="main-content white-bg content-sep">
+	<div class="page-container">
 		<header class="richtext">
 			<h3><?php echo esc_html( $partnerships_title ); ?></h3>
 		</header>
@@ -140,7 +140,7 @@ get_header(); ?>
 		</div><!-- row -->
 	</div><!-- page-container -->
 </section><!-- experience-container -->
-<section id="toolset-container" class="main-content">
+<section id="toolset-container" class="main-content white-bg">
 	<div class="page-container">
 		<?php get_template_part('template-parts/toolset'); ?>
 	</div><!-- page-conteiner -->

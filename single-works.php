@@ -14,7 +14,7 @@ get_header(); ?>
 	if ( have_posts() ) :
 		/* Start the Loop */
 	while ( have_posts() ) : the_post();
-	the_content( sprintf());
+			get_template_part( 'template-parts/content', get_post_format() );
 	endwhile;
 	endif;
 	?>

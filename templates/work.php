@@ -8,8 +8,14 @@ get_header(); ?>
 	<div class="page-container">
 		<div class="grid-view">
 			<?php
-		//Define your custom post type name in the arguments
-			$args = array('post_type' => 'works');
+			//Define your custom post type name in the arguments
+			$args = array(
+				'post_type'			=> 'works',
+				'posts_per_page'	=> 10,
+				'meta_key'			=> '_cf_post_date',
+				'orderby'			=> '_cf_post_date',
+				'order'				=> 'DESC'
+				);
 		//Define the loop based on arguments
 			$loop = new WP_Query( $args );
 		//Display the contents

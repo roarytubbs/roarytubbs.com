@@ -7,9 +7,6 @@
 	&.white-bg {
 		background-color: $color__white;
 	}
-	.content-sep {
-		border-bottom: 1px solid $color__background-hr;
-	}
 }
 .page-content {
 	width: 100%;
@@ -118,7 +115,9 @@
 		@include fade;
 	}
 }
-
+.content-sep {
+	border-bottom: 1px solid $color__background-hr;
+}
 
 // .module.gallery {
 // 	max-width: 860px;

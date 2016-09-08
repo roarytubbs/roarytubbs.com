@@ -53,22 +53,16 @@
 .richtext h3 {
   font-weight: $font__weight-semi-bold;
   @include font-size(2.6);
+  text-align: center;
+  margin-bottom: 60px;
 }
 .richtext h4 {
   text-align: center;
-  margin-bottom: 60px;
-  @include font-size(2.4);
-  font-weight: $font__weight-semi-bold;
-  letter-spacing: -0.05em;
+  margin-bottom: 40px;
+  @include font-size(1.8);
+  font-weight: $font__weight-bold;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  &:before {
-    content: ' ';
-    display: block;
-    margin: 0 auto 5px auto;
-    width: 40px;
-    height: 2px;
-    background-color: rgba($color__light-gray, .5);
-  }
 }
 .richtext h5 {
   color: $color__accent;
