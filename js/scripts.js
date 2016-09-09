@@ -1,6 +1,5 @@
 jQuery ( document ).ready( function( $ ) {
 
-
   $(function runParticle() {
     particlesJS("particles-js", {
       "particles": {
@@ -173,4 +172,16 @@ jQuery ( document ).ready( function( $ ) {
       tabs.parent('.tabs').removeClass('is-ended');
     }
   }
+
+  // jribbble
+  $.jribbble.setToken('0b4980a630216df0469d8ae93c45e745586e0558a8d35f9c327b054550f280e3');
+
+  $.jribbble.users('roary_tubbs').shots({per_page: 12}).then(function(shots) {
+    var html = [];
+    shots.forEach(function(shot) {
+      html.push('<img class="shot" src="' + shot.images.normal + '">');
+    });
+    $('.dribbble-shots').html(html.join(''));
+  });
+
 } ); //end

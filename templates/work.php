@@ -29,20 +29,19 @@ get_header(); ?>
 			<article class="grid-view-item work-item">
 				<a href="<?php echo the_permalink(); ?>">
 					<span class="overlay">
-						<span class="btn">View <?php the_title(); ?></span>
 					</span>
 					<figure class="work-img-wrap">
 						<img src="<?php echo esc_html( $cf_thumbnail ); ?>">
 					</figure><!-- work-img-wrap -->
 					<figcaption class="metadata">
 						<h2 class="work-title"><?php the_title(); ?></h2>
-						<h3 class="work-subtitle"><?php echo esc_html( $cf_subtitle ); ?></h3>
+						<h3 class="work-subtitle"><?php echo esc_html( $cf_subtitle ); ?></h3>				<span class="btn">View <?php the_title(); ?></span>
 					</figcaption>
 				</a>
-			</article>
+			</article><!-- work-item -->
 		<?php endwhile; wp_reset_postdata(); ?>
 		<article class="grid-view-item blank"></article>
-	</div>
-</div>
+		</div><!-- grid-view -->
+	</div><!--page-container -->
 </main><!-- main-content -->
 <?php get_footer(); ?>

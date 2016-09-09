@@ -71,7 +71,7 @@
 }
 .work-subtitle {
 	text-transform: capitalize;
-	margin: 0;
+	margin: 0 0 10px 0;
 	color: $color__light-gray;
 	font-weight: $font__weight-regular;
 	@include font-size(1.8);
@@ -159,18 +159,23 @@
 		max-height: 400px;
 		overflow: hidden;
 		margin: 0;
-	}
-	img {
-		border-bottom: 0;
-		box-sizing: border-box;
-		width: 100%;
-		height: auto;
-		display: block;
-		@include transition(all 0.4s);
+		img {
+			border-bottom: 0;
+			box-sizing: border-box;
+			width: 100%;
+			height: auto;
+			display: block;
+			@include transition(all 0.4s);
+		}
+		&:hover img{
+			transform: scale(1.1);
+			@include transition(all 0.4s);
+			@include filter(blur(2px));
+		}
 	}
 	.overlay {
-		position: absolute;
-		z-index: 1;
+		// position: absolute;
+		// z-index: 1;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -185,12 +190,11 @@
 	}
 	.btn {
 		text-align: center;
-		width: 50%;
+		min-width: 50%;
 		margin: 0 auto;
 		@include font-size(1.4);
 		@include transform(scale(0.8));
 		@include transition(all 0.3s ease-in-out);
-		@include opacity(0);
 		background-color: $color__accent;
 		&:hover {
 			background-color: rgba($color__accent, .8);
@@ -218,18 +222,6 @@
 		@include font-size(1.4);
 		color: $color__med-gray;
 		line-height: 1;
-	}
-	&:hover .overlay {
-		@include opacity(1);
-	}
-	&:hover .btn {
-		transform: scale(1);
-		@include opacity(1);
-	}
-	&:hover img{
-		transform: scale(1.1);
-		@include transition(all 0.4s);
-		@include filter(blur(2px));
 	}
 }
 

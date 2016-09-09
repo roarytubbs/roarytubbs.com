@@ -14,4 +14,25 @@
 		color: $color__accent;
 		margin-top: 20px;
 	}
+	.overlay {
+		@include opacity(.7);
+	}
+}
+.dribbble-shots {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	.shot {
+		width: 20%;
+		@include fadeIn(
+			$duration: .9s,
+			$delay: .4s
+			);
+
+	}
 }
