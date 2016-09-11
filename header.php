@@ -24,10 +24,12 @@
 	<section class="page-wrapper">
 		<header class="page-header">
 			<div class="navigation-wrap">
-				<a class="logo" href="<?php echo esc_url( home_url() ); ?>">
-					<img src="<?php echo get_template_directory_uri (); ?>/img/logo@2x.png">
-					<span><?php echo get_bloginfo('name'); ?></span>
-				</a><!-- logo -->
+				<div class="logo">
+					<a href="<?php echo esc_url( home_url() ); ?>">
+						<img src="<?php echo get_template_directory_uri (); ?>/img/logo@2x.png">
+						<span><?php echo get_bloginfo('name'); ?></span>
+					</a>
+				</div><!-- logo -->
 				<nav class="main-nav">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'main-nav',

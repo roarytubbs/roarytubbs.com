@@ -14,7 +14,6 @@
 	width: 64%;
 	height: inherit;
 	text-decoration: none;
-	color: $color__white;
 	@include transition(all 0.2s);
 	@include fade;
 	&:hover,
@@ -23,12 +22,17 @@
 		@include opacity(0.8);
 		@include fade;
 	}
+	a {
+		text-decoration: none;
+	}
 	img {
-		width: 6%;
-
+		width: 100%;
+		max-width: 50px;
+		vertical-align: middle;
 	}
 	span {
 		@include font-size(1.6);
+		color: $color__white;
 		font-weight: $font__weight-bold;
 		margin-left: 7px;
 		vertical-align: middle;
@@ -95,8 +99,6 @@
 		margin-left: 25px;
 	}
 }
-
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
