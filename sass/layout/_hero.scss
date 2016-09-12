@@ -26,19 +26,23 @@
 	}
 	.page-container.zoom {
 		@include zoomIn(
-			$duration: .5s,
+			$duration: 1s,
 			$count: 1,
-			$delay: 0s,
+			$delay: .25s,
 			$function: ease,
 			$fill: both
 			);
 	}
-	.btn.fadeIn {
-		@include fadeInUp(
-			$duration: .9s,
-			$delay: .5s
-			);
+	.btn {
+		margin-top: 50px;
+		&.fadeIn {
+			@include fadeInUp(
+				$duration: .9s,
+				$delay: .5s
+				);
+		}
 	}
+
 	h1.entry-title {
 		@include font-size(4.8);
 		line-height: 54px;
@@ -57,8 +61,5 @@
 		max-width: $size__medium-width;
 		color: $color__light-gray;
 		font-weight: $font__weight-regular;
-	}
-	.btn {
-		margin-top: 50px;
 	}
 }
