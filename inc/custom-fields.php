@@ -15,7 +15,6 @@ function cmb2_custom_metaboxes() {
     /*
         Custom Header
     */
-
         $cmb = new_cmb2_box( array(
             'id'            => 'cf_custom_header',
             'title'         => __( 'Custom Header', 'cmb2' ),
@@ -38,6 +37,16 @@ function cmb2_custom_metaboxes() {
             'id'   => $prefix . 'bg_position',
             'type' => 'text',
             'description' => 'Enter in CSS positioning (ex 50% 50%)',
+            ) );
+        $cmb->add_field( array(
+            'name' => __( 'CTA Text', 'cmb2' ),
+            'id'   => $prefix . 'cta_text',
+            'type' => 'text',
+            ) );
+        $cmb->add_field( array(
+            'name' => __( 'CTA Link', 'cmb2' ),
+            'id'   => $prefix . 'cta_link',
+            'type' => 'text',
             ) );
     /*
         Skillset
