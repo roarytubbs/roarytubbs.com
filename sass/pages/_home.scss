@@ -45,7 +45,7 @@
 		}
 		&.fadeIn {
 			@include fadeInUp(
-				$delay: 1.2s
+				$delay: .8s
 				);
 		}
 	}
