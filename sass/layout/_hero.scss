@@ -23,15 +23,21 @@
 		z-index: 99;
 		text-align: center;
 		width: 100%;
-		&.zoom {
-			@include zoomIn(
-				$duration: .7s,
-				$count: 1,
-				$delay: 0s,
-				$function: ease,
-				$fill: both
-				);
-		}
+	}
+	.page-container.zoom {
+		@include zoomIn(
+			$duration: .5s,
+			$count: 1,
+			$delay: 0s,
+			$function: ease,
+			$fill: both
+			);
+	}
+	.btn.fadeIn {
+		@include fadeInUp(
+			$duration: .9s,
+			$delay: .5s
+			);
 	}
 	h1.entry-title {
 		@include font-size(4.8);
@@ -51,5 +57,8 @@
 		max-width: $size__medium-width;
 		color: $color__light-gray;
 		font-weight: $font__weight-regular;
+	}
+	.btn {
+		margin-top: 50px;
 	}
 }

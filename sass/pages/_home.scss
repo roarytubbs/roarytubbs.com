@@ -15,6 +15,12 @@
 	max-height: 100%;
 	height: 100%;
 	position: absolute;
+	.page-container.zoom {
+		@include zoomIn(
+			$delay: .5s,
+			$duration: .9s
+			);
+	}
 	h1.entry-title {
 		@include font-size(4.0);
 		line-height: 50px;
@@ -24,10 +30,24 @@
 	h2.subtitle {
 		@include font-size(1.6);
 		line-height: 20px;
-		font-weight: $font__weight-regular;
+		font-weight: $font__weight-semi-bold;
 		letter-spacing: -0.02em;
-		color: $color__accent;
 		margin-top: 20px;
+		color: $color__brand;
+	}
+	.btn {
+		background: none;
+		&:hover,
+		&:focus {
+			color: $color__button-text-hover;
+			background-color: $color__button-bg-hover;
+			border-color: $color__button-border-hover;
+		}
+		&.fadeIn {
+			@include fadeInUp(
+				$delay: 1.2s
+				);
+		}
 	}
 	.overlay {
 		@include opacity(.9);
@@ -45,8 +65,8 @@
 	.shot {
 		width: 20%;
 		@include fadeIn(
-			$duration: .9s,
-			$delay: .4s
+			$duration: 1.25s,
+			$delay: 0s
 			);
 	}
 }
