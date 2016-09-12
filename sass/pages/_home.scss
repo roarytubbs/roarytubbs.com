@@ -18,7 +18,6 @@
 	.page-container.zoom {
 		@include zoomIn(
 			$delay: .5s,
-			$duration: .9s
 			);
 	}
 	h1.entry-title {
@@ -65,12 +64,11 @@
 	.shot {
 		width: 20%;
 		@include fadeIn(
-			$duration: 1.25s,
+			$duration: 1s,
 			$delay: 0s
 			);
 	}
 }
-
 .home .page-footer {
 	display: none;
 }
