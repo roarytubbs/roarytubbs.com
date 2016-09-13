@@ -15,7 +15,7 @@ get_header(); ?>
 		</div><!-- page-container -->
 		<?php if ( !empty( $cta_text ) ) {
 			$cta_link  = get_post_meta( get_the_ID(), '_cf_cta_link', true );
-			printf( '<a href="' . $cta_link . '" class="btn fadeIn">' . $cta_text . '</a>');
+			printf( '<a href="' . $cta_link . '" class="btn fadeInUp">' . $cta_text . '</a>');
 		}?>
 	</div><!-- hero-content -->
 	<div class="dribbble-shots"></div>

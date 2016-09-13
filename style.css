@@ -3834,7 +3834,7 @@ a {
       color: #F2F2F2;
       background-color: rgba(242, 76, 78, 0.9);
       border-color: #f24c4e; }
-    .home .hero .btn.fadeIn {
+    .home .hero .btn.fadeInUp {
       -webkit-animation-name: fadeInUp;
       -moz-animation-name: fadeInUp;
       -ms-animation-name: fadeInUp;
@@ -3850,11 +3850,11 @@ a {
       -ms-animation-duration: 1s;
       -o-animation-duration: 1s;
       animation-duration: 1s;
-      -webkit-animation-delay: 0.8s;
-      -moz-animation-delay: 0.8s;
-      -ms-animation-delay: 0.8s;
-      -o-animation-delay: 0.8s;
-      animation-delay: 0.8s;
+      -webkit-animation-delay: 0.6s;
+      -moz-animation-delay: 0.6s;
+      -ms-animation-delay: 0.6s;
+      -o-animation-delay: 0.6s;
+      animation-delay: 0.6s;
       -webkit-animation-timing-function: ease;
       -moz-animation-timing-function: ease;
       -ms-animation-timing-function: ease;
