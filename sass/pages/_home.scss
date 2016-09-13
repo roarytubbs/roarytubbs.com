@@ -17,7 +17,7 @@
 	position: absolute;
 	.page-container.zoom {
 		@include zoomIn(
-			$delay: .5s,
+			$delay: .5s
 			);
 	}
 	h1.entry-title {
@@ -42,9 +42,9 @@
 			background-color: $color__button-bg-hover;
 			border-color: $color__button-border-hover;
 		}
-		&.fadeIn {
+		&.fadeInUp {
 			@include fadeInUp(
-				$delay: .8s
+				$delay: .6s
 				);
 		}
 	}
