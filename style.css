@@ -2163,6 +2163,37 @@ img::selection {
 img::-moz-selection {
   background: transparent; }
 
+.tint {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .tint:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+
+.avatar {
+  border: 3px solid #5d8ddf;
+  border-radius: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 50px;
+  width: 150px; }
+
 ul, ol {
   margin: 0 0 1.5em 3em; }
 
@@ -2396,8 +2427,9 @@ a {
 
 .main-content {
   padding: 8% 0; }
-  .main-content.white-bg {
-    background-color: #fff; }
+
+.white-bg {
+  background-color: #fff; }
 
 .page-content {
   width: 100%;
@@ -2497,29 +2529,6 @@ a {
       border: none;
       margin: 0;
       visibility: hidden; }
-
-.tint {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
-  .tint:hover {
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    -o-filter: grayscale(0);
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
 
 .content-sep {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
@@ -3046,6 +3055,9 @@ a {
     transition: all 0.2s ease;
     color: #cccccc; }
 
+.custom-code {
+  height: 100%; }
+
 .page-footer {
   position: relative; }
 
@@ -3273,6 +3285,9 @@ a {
     max-width: 720px;
     color: #cacaca;
     font-weight: 400; }
+
+.single-works .main-content {
+  padding: 8% 0 0; }
 
 .single-works .hero {
   height: 520px;
@@ -3789,11 +3804,11 @@ a {
     -ms-animation-iteration-count: 1;
     -o-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 1.25s;
+    -moz-animation-duration: 1.25s;
+    -ms-animation-duration: 1.25s;
+    -o-animation-duration: 1.25s;
+    animation-duration: 1.25s;
     -webkit-animation-delay: 0.5s;
     -moz-animation-delay: 0.5s;
     -ms-animation-delay: 0.5s;
@@ -3926,5 +3941,56 @@ a {
 
 .home .page-footer {
   display: none; }
+
+.about-avatar {
+  display: none; }
+
+.about .avatar.about-avatar {
+  display: block;
+  border: 2px solid #828282;
+  margin: 10px auto 20px;
+  width: 75px; }
+  .about .avatar.about-avatar.fadeIn {
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -ms-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
+
+#toolset-container {
+  padding: 8% 0; }
+
+#toolset-container .col-sm-1 {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

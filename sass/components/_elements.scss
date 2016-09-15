@@ -48,3 +48,19 @@ img::selection {
 	background: transparent;
 }
 img::-moz-selection{background:transparent}
+.tint {
+	@include filter(grayscale(100%));
+	@include fade;
+	&:hover {
+		@include filter(grayscale(0));
+		@include fade;
+	}
+}
+.avatar {
+	border: 3px solid $color__brand;
+	border-radius: 100%;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 50px;
+	width: 150px;
+}

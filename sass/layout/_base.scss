@@ -4,9 +4,9 @@
 }
 .main-content {
 	padding: 8% 0;
-	&.white-bg {
-		background-color: $color__white;
-	}
+}
+.white-bg {
+	background-color: $color__white;
 }
 .page-content {
 	width: 100%;
@@ -105,14 +105,6 @@
 			margin: 0;
 			visibility: hidden;
 		}
-	}
-}
-.tint {
-	@include filter(grayscale(100%));
-	@include fade;
-	&:hover {
-		@include filter(grayscale(0));
-		@include fade;
 	}
 }
 .content-sep {

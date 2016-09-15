@@ -17,7 +17,8 @@
 	position: absolute;
 	.page-container.zoom {
 		@include zoomIn(
-			$delay: .5s
+			$delay: .5s,
+			$duration: 1.25s
 			);
 	}
 	h1.entry-title {

@@ -33,6 +33,15 @@ function cmb2_custom_metaboxes() {
             'type' => 'text',
             ) );
         $cmb->add_field( array(
+            'name'    => 'Select Background Image',
+            'desc'    => '',
+            'id'      => $prefix . 'background_img',
+            'type'    => 'file',
+            'options' => array(
+            'url' => false, // Hide the text input for the url
+            ),
+            ) );
+        $cmb->add_field( array(
             'name' => __( 'Background Position', 'cmb2' ),
             'id'   => $prefix . 'bg_position',
             'type' => 'text',
@@ -48,6 +57,11 @@ function cmb2_custom_metaboxes() {
             'id'   => $prefix . 'cta_link',
             'type' => 'text',
             ) );
+        $cmb->add_field( array(
+            'name' => __( 'Custom Code', 'cmb2' ),
+            'id'   => $prefix . 'custom_code',
+            'type' => 'textarea_code'
+            ) );
     /*
         Skillset
     */
@@ -57,6 +71,7 @@ function cmb2_custom_metaboxes() {
             'object_types'  => array( 'page', ),
             'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/experience.php' ),
             'priority' => 'high',
+            'closed'     => true,
             ) );
         $cmb->add_field( array(
             'name' => __( 'List one', 'cmb2' ),
@@ -87,6 +102,7 @@ function cmb2_custom_metaboxes() {
             'object_types'  => array( 'page', ),
             'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/experience.php' ),
             'priority' => 'high',
+            'closed'     => true,
             ) );
         $cmb->add_field( array(
             'name'       => __( 'Section Title', 'cmb2' ),
@@ -125,6 +141,7 @@ function cmb2_custom_metaboxes() {
                 'key' => 'post-type', 'value' => 'works'
                 ),
             'priority' => 'high',
+            'closed'     => true,
             ) );
         $cmb->add_field( array(
             'name' => 'Toolset Title',
@@ -147,13 +164,12 @@ function cmb2_custom_metaboxes() {
             'object_types'  => array( 'works', ),
             'priority'      => 'high',
             'closed'     => false,
+            'closed'     => true,
             ) );
         $cmb->add_field( array(
             'name' => 'Post Date',
             'id'   => $prefix . 'post_date',
             'type' => 'text_date',
-    // 'timezone_meta_key' => 'wiki_test_timezone',
-    // 'date_format' => 'l jS \of F Y',
             ) );
 
     /*
@@ -166,6 +182,7 @@ function cmb2_custom_metaboxes() {
         'context'      => 'side', //  'normal', 'advanced', or 'side'
         'show_on'      => array( 'key' => 'post-type', 'value' => 'works' ),
         'priority' => 'low',
+        'closed'     => true,
         ) );
         $cmb->add_field( array(
             'name'    => 'Select Thumbnail',
@@ -176,7 +193,6 @@ function cmb2_custom_metaboxes() {
             'url' => false, // Hide the text input for the url
             ),
             ) );
-
     }
 /**
  * Sample template tag function for outputting a cmb2 file_list
