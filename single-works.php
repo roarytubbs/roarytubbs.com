@@ -14,16 +14,14 @@ get_header(); ?>
 	if ( have_posts() ) :
 		/* Start the Loop */
 	while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content', get_post_format() );
+	get_template_part( 'template-parts/content', get_post_format() );
 	endwhile;
 	endif;
 	?>
-
-	<div class="module">
-		<div class="medium-width">
+	<section id="toolset-container">
+		<div class="page-container">
 			<?php get_template_part('template-parts/toolset'); ?>
-		</div><!-- medium-width -->
-	</div><!-- module text -->
-
+		</div><!-- page-conteiner -->
+	</section><!-- toolset-container -->
 </main><!-- #main -->
 <?php get_footer();

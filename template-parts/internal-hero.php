@@ -10,5 +10,6 @@ $bg_position = get_post_meta( get_the_ID(), '_cf_bg_position', true);
 			<h1 class="entry-title"><?php echo esc_html( $custom_title ); ?></h1>
 			<h2 class="subtitle"><?php echo esc_html( $custom_subtitle ); ?></h2>
 		</div><!-- page-container -->
+		<img src="https://pbs.twimg.com/profile_images/728255113345695748/igyRIEWy.jpg" alt="avatar" class="avatar about-avatar fadeIn" />
 	</div><!-- hero-content -->
 </div><!-- hero -->

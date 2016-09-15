@@ -1,0 +1,14 @@
+.about-avatar {
+	display: none;
+}
+.about .avatar.about-avatar {
+	display: block;
+	border: 2px solid $color__med-gray;
+	margin: 10px auto 20px;
+	width: 75px;
+	&.fadeIn {
+		@include fadeIn(
+			$delay: .6s
+			);
+	}
+}
