@@ -82,3 +82,9 @@
 		}
 	}
 }
+.credits {
+	@include font-size(1.0);
+	.fa {
+		color: $color__accent;
+	}
+}

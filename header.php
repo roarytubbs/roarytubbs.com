@@ -21,12 +21,12 @@
 	<?php wp_head(); ?>
 </head>
 <?php
-	$maybe_post_slug = '';
-	$maybe_post = get_queried_object();
-	if ( is_a( $maybe_post, 'WP_Post' ) ) {
-		$maybe_post_slug = $maybe_post->post_name;
-	}
-	?>
+$maybe_post_slug = '';
+$maybe_post = get_queried_object();
+if ( is_a( $maybe_post, 'WP_Post' ) ) {
+	$maybe_post_slug = $maybe_post->post_name;
+}
+?>
 <body <?php body_class( $maybe_post_slug ); ?>>
 	<section class="page-wrapper">
 		<header class="page-header">
@@ -37,6 +37,9 @@
 						<span><?php echo get_bloginfo('name'); ?></span>
 					</a>
 				</div><!-- logo -->
+				<div class="mobile-toggle">
+					<span></span>
+				</div><!-- mobile-toggle -->
 				<nav class="main-nav">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'main-nav',
