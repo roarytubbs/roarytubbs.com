@@ -24,6 +24,9 @@
 		</nav><!-- footer-nav -->
 	</footer><!-- page-footer -->
 </section><!-- page-wrapper -->
+<div class="credits">
+	Made with <i class="fa fa-heart"></i> by Me with WordPress.
+</div><!-- credits -->
 <?php wp_footer(); ?>
 
 </body>

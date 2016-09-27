@@ -21,6 +21,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800);
 /* short hand appearance */
+/* breakpoints */
 /* flexbox */
 html {
   font-family: sans-serif;
@@ -1779,6 +1780,10 @@ big {
   background: #262626;
   height: 70px;
   padding: 0 5%; }
+  @media (max-width: 56.25em) {
+    .navigation-wrap {
+      padding: 0;
+      display: block; } }
 
 .logo {
   display: inline-flex;
@@ -1826,6 +1831,17 @@ big {
     font-weight: 700;
     margin-left: 7px;
     vertical-align: middle; }
+    @media (max-width: 56.25em) {
+      .logo span {
+        display: none; } }
+  @media (max-width: 56.25em) {
+    .logo {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 165px;
+      display: block;
+      line-height: 70px;
+      text-align: center; } }
 
 .main-nav {
   height: inherit;
@@ -1905,20 +1921,7 @@ big {
       .main-nav ul .current-page-ancestor > a:before,
       .main-nav ul .current-menu-ancestor > a:before {
         border-top: 4px solid #f24c4e; }
-  .main-nav .btn {
-    margin-left: 25px; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-
-  .main-navigation ul {
-    display: block; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -1936,6 +1939,90 @@ big {
   text-align: right;
   width: 50%; }
 
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+  .mobile-toggle span {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 24px;
+    height: 1px;
+    background-color: #fff;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s; }
+    .mobile-toggle span:before, .mobile-toggle span:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #fff;
+      right: 0;
+      -webkit-transition: transform 0.3s, top 0.3s, background-color 0s;
+      -moz-transition: transform 0.3s, top 0.3s, background-color 0s;
+      -ms-transition: transform 0.3s, top 0.3s, background-color 0s;
+      -o-transition: transform 0.3s, top 0.3s, background-color 0s;
+      transition: transform 0.3s, top 0.3s, background-color 0s; }
+    .mobile-toggle span:before {
+      top: -8px; }
+    .mobile-toggle span:after {
+      top: 8px; }
+
+.mobile-toggle.open {
+  background-color: rgba(130, 130, 130, 0.1);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+  .mobile-toggle.open span {
+    background-color: rgba(130, 130, 130, 0); }
+    .mobile-toggle.open span:before, .mobile-toggle.open span:after {
+      background-color: #fff; }
+    .mobile-toggle.open span:before {
+      top: 0;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg); }
+    .mobile-toggle.open span:after {
+      top: 0;
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg); }
+
+@media (max-width: 56.25em) {
+  .mobile-toggle {
+    display: block; } }
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -3130,6 +3217,12 @@ a {
   .footer-nav li.codepen a:focus {
     background-color: #ccc; }
 
+.credits {
+  font-size: 10px;
+  font-size: 1rem; }
+  .credits .fa {
+    color: #f24c4e; }
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -3476,24 +3569,24 @@ a {
   .color-group .dark * {
     color: #262626; }
 
-.grid-view .grid-view-item.work-item {
+.grid-view-item.work-item {
   padding: 0;
   background-color: #fff;
-  width: 45.5%;
+  width: 28.5%;
   text-decoration: none;
-  margin: 0 20px 70px 20px;
+  margin: 0 20px 60px 20px;
   position: relative;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   overflow: hidden;
   cursor: pointer; }
-  .grid-view .grid-view-item.work-item a {
+  .grid-view-item.work-item a {
     text-decoration: none; }
-  .grid-view .grid-view-item.work-item .work-img-wrap {
+  .grid-view-item.work-item .work-img-wrap {
     max-height: 400px;
     overflow: hidden;
     margin: 0; }
-    .grid-view .grid-view-item.work-item .work-img-wrap img {
+    .grid-view-item.work-item .work-img-wrap img {
       border-bottom: 0;
       box-sizing: border-box;
       width: 100%;
@@ -3503,20 +3596,11 @@ a {
       -moz-transition: all 0.4s;
       -ms-transition: all 0.4s;
       -o-transition: all 0.4s;
-      transition: all 0.4s; }
-    .grid-view .grid-view-item.work-item .work-img-wrap:hover img {
-      transform: scale(1.1);
-      -webkit-transition: all 0.4s;
-      -moz-transition: all 0.4s;
-      -ms-transition: all 0.4s;
-      -o-transition: all 0.4s;
       transition: all 0.4s;
-      filter: blur(2px);
-      -webkit-filter: blur(2px);
-      -moz-filter: blur(2px);
-      -ms-filter: blur(2px);
-      -o-filter: blur(2px); }
-  .grid-view .grid-view-item.work-item .overlay {
+      overflow: hidden; }
+  .grid-view-item.work-item .overlay {
+    position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -3536,7 +3620,7 @@ a {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  .grid-view .grid-view-item.work-item .btn {
+  .grid-view-item.work-item .btn {
     text-align: center;
     min-width: 50%;
     margin: 0 auto;
@@ -3553,9 +3637,9 @@ a {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #f24c4e; }
-    .grid-view .grid-view-item.work-item .btn:hover {
+    .grid-view-item.work-item .btn:hover, .grid-view-item.work-item .btn:focus {
       background-color: rgba(242, 76, 78, 0.8); }
-  .grid-view .grid-view-item.work-item .metadata {
+  .grid-view-item.work-item .metadata {
     padding: 30px 5px;
     text-align: center;
     -webkit-transition: all 0.2s;
@@ -3565,7 +3649,7 @@ a {
     position: relative;
     z-index: 2;
     background-color: #fff; }
-  .grid-view .grid-view-item.work-item .work-title {
+  .grid-view-item.work-item .work-title {
     font-size: 18px;
     font-size: 1.8rem;
     letter-spacing: 0;
@@ -3576,11 +3660,30 @@ a {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
-  .grid-view .grid-view-item.work-item .work-subtitle {
+  .grid-view-item.work-item .work-subtitle {
     font-size: 14px;
     font-size: 1.4rem;
     color: #828282;
     line-height: 1; }
+
+.grid-view-item.work-item:hover .overlay {
+  filter: alpha(opacity=70);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7; }
+.grid-view-item.work-item:hover img {
+  transform: scale(1.1);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  -o-filter: blur(1px); }
 
 /* SKILLSET */
 #skillset-container ul {

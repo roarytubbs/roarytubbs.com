@@ -1,5 +1,5 @@
 jQuery ( document ).ready( function( $ ) {
-
+  // Array work
   $(function runParticle() {
     particlesJS("particles-js", {
       "particles": {
@@ -113,6 +113,7 @@ jQuery ( document ).ready( function( $ ) {
     });
   });
 
+  // Swiper
   var mySwiper = new Swiper ('.swiper-container', {
     pagination: '.swiper-pagination',
     nextButton: '.swiper-button-next',
@@ -124,55 +125,60 @@ jQuery ( document ).ready( function( $ ) {
     effect: 'fade'
   });
 
-  var tabs = $('.tabs');
+  // var tabs = $('.tabs');
 
-  tabs.each(function(){
-    var tab = $(this),
-    tabItems = tab.find('ul.tabs-navigation'),
-    tabContentWrapper = tab.children('ul.tabs-content'),
-    tabNavigation = tab.find('nav');
+  // tabs.each(function(){
+  //   var tab = $(this),
+  //   tabItems = tab.find('ul.tabs-navigation'),
+  //   tabContentWrapper = tab.children('ul.tabs-content'),
+  //   tabNavigation = tab.find('nav');
 
-    tabItems.on('click', 'li', function(event){
-      event.preventDefault();
-      var selectedItem = $(this);
-      if( !selectedItem.hasClass('selected') ) {
-        var selectedTab = selectedItem.data('content'),
-        selectedContent = tabContentWrapper.find('li[data-content="'+selectedTab+'"]'),
-        slectedContentHeight = selectedContent.innerHeight();
+  //   tabItems.on('click', 'li', function(event){
+  //     event.preventDefault();
+  //     var selectedItem = $(this);
+  //     if( !selectedItem.hasClass('selected') ) {
+  //       var selectedTab = selectedItem.data('content'),
+  //       selectedContent = tabContentWrapper.find('li[data-content="'+selectedTab+'"]'),
+  //       slectedContentHeight = selectedContent.innerHeight();
 
-        tabItems.find('li.selected').removeClass('selected');
-        selectedItem.addClass('selected');
-        selectedContent.addClass('selected').siblings('li').removeClass('selected');
-        //animate tabContentWrapper height when content changes 
-        tabContentWrapper.animate({
-          'height': slectedContentHeight
-        }, 200);
-      }
+  //       tabItems.find('li.selected').removeClass('selected');
+  //       selectedItem.addClass('selected');
+  //       selectedContent.addClass('selected').siblings('li').removeClass('selected');
+  //       //animate tabContentWrapper height when content changes 
+  //       tabContentWrapper.animate({
+  //         'height': slectedContentHeight
+  //       }, 200);
+  //     }
+  //   });
+  //   checkScrolling(tabNavigation);
+  //   tabNavigation.on('scroll', function(){ 
+  //     checkScrolling($(this));
+  //   });
+  // });
+
+  // $(window).on('resize', function(){
+  //   tabs.each(function(){
+  //     var tab = $(this);
+  //     checkScrolling(tab.find('nav'));
+  //     tab.find('.tabs-content').css('height', 'auto');
+  //   });
+  // });
+
+  // function checkScrolling(tabs){
+  //   var totalTabWidth = parseInt(tabs.children('.tabs-navigation').width()),
+  //   tabsViewport = parseInt(tabs.width());
+  //   if( tabs.scrollLeft() >= totalTabWidth - tabsViewport) {
+  //     tabs.parent('.tabs').addClass('is-ended');
+  //   } else {
+  //     tabs.parent('.tabs').removeClass('is-ended');
+  //   }
+  // }
+
+  // mobile navigation
+    $('.mobile-toggle').click(function(){
+      $(this).toggleClass('open');
+      $('.main-nav').toggleClass('mobile-open');
     });
-    checkScrolling(tabNavigation);
-    tabNavigation.on('scroll', function(){ 
-      checkScrolling($(this));
-    });
-  });
-
-  $(window).on('resize', function(){
-    tabs.each(function(){
-      var tab = $(this);
-      checkScrolling(tab.find('nav'));
-      tab.find('.tabs-content').css('height', 'auto');
-    });
-  });
-
-  function checkScrolling(tabs){
-    var totalTabWidth = parseInt(tabs.children('.tabs-navigation').width()),
-    tabsViewport = parseInt(tabs.width());
-    if( tabs.scrollLeft() >= totalTabWidth - tabsViewport) {
-      tabs.parent('.tabs').addClass('is-ended');
-    } else {
-      tabs.parent('.tabs').removeClass('is-ended');
-    }
-  }
-
   // jribbble
   $.jribbble.setToken('0b4980a630216df0469d8ae93c45e745586e0558a8d35f9c327b054550f280e3');
 
