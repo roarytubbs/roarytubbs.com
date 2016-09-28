@@ -1,0 +1,29 @@
+.dribbble-shots {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	.shot {
+		width: 20%;
+		@include fadeIn(
+			$duration: 1s,
+			$delay: 0s
+			);
+		@include breakpoint(largedesktop)
+		{
+			width: 25%;
+		}
+		@include breakpoint(tablet)
+		{
+			width: 33.3%;
+		}
+		@include breakpoint(smallmobile)
+		{
+			width: 50%;
+		}
+	}
+}

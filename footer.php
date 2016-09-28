@@ -25,7 +25,7 @@
 	</footer><!-- page-footer -->
 </section><!-- page-wrapper -->
 <div class="credits">
-	Made with <i class="fa fa-heart"></i> by Me with WordPress.
+	Made with <i class="fa fa-heart"></i> by Me with WordPress, SASS & JQuery.
 </div><!-- credits -->
 <?php wp_footer(); ?>
 

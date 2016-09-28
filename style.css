@@ -1016,6 +1016,31 @@ th {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); } }
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
@@ -1548,6 +1573,68 @@ label .ninja-forms-req-symbol {
   font-size: 10px;
   font-size: 1rem; }
 
+.dribbble-shots {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .dribbble-shots .shot {
+    width: 20%;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -ms-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* 1300px */
+    /* 1170px */
+    /* 1300px */
+    /* 1170px */
+    /* 1300px */
+    /* 1170px */ }
+    @media (max-width: 81.125em) {
+      .dribbble-shots .shot {
+        width: 25%; } }
+    @media (max-width: 64em) {
+      .dribbble-shots .shot {
+        width: 33.3%; } }
+    @media (max-width: 30em) {
+      .dribbble-shots .shot {
+        width: 50%; } }
+
 html {
   font-size: 62.5%; }
 
@@ -1694,7 +1781,17 @@ big {
   font-size: 30px;
   font-size: 3rem;
   line-height: 42px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  /* 1300px */
+  /* 1170px */ }
+  @media (max-width: 46em) {
+    .richtext h1,
+    .richtext h2,
+    .richtext h3,
+    .richtext h4,
+    .richtext h5,
+    .richtext h6 {
+      text-align: left !important; } }
 
 .richtext h3 {
   font-weight: 600;
@@ -1779,11 +1876,12 @@ big {
   justify-content: space-between;
   background: #262626;
   height: 70px;
-  padding: 0 5%; }
-  @media (max-width: 56.25em) {
+  padding: 0 5%;
+  /* 1300px */
+  /* 1170px */ }
+  @media (max-width: 46em) {
     .navigation-wrap {
-      padding: 0;
-      display: block; } }
+      padding: 0 2%; } }
 
 .logo {
   display: inline-flex;
@@ -1830,18 +1928,12 @@ big {
     color: #fff;
     font-weight: 700;
     margin-left: 7px;
-    vertical-align: middle; }
-    @media (max-width: 56.25em) {
+    vertical-align: middle;
+    /* 1300px */
+    /* 1170px */ }
+    @media (max-width: 46em) {
       .logo span {
         display: none; } }
-  @media (max-width: 56.25em) {
-    .logo {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 165px;
-      display: block;
-      line-height: 70px;
-      text-align: center; } }
 
 .main-nav {
   height: inherit;
@@ -1867,7 +1959,12 @@ big {
       margin-left: 25px;
       padding-top: 25px;
       height: 100%;
-      position: relative; }
+      position: relative;
+      /* 1300px */
+      /* 1170px */ }
+      @media (max-width: 30em) {
+        .main-nav ul li {
+          margin-left: 0; } }
     .main-nav ul li:first-child {
       margin-left: 0; }
     .main-nav ul a:before {
@@ -1921,6 +2018,104 @@ big {
       .main-nav ul .current-page-ancestor > a:before,
       .main-nav ul .current-menu-ancestor > a:before {
         border-top: 4px solid #f24c4e; }
+
+.social-nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  line-height: 0;
+  height: inherit;
+  /* 1300px */
+  /* 1170px */ }
+  .social-nav li {
+    display: inline-block;
+    margin-left: 25px; }
+  .social-nav a,
+  .social-nav a:link,
+  .social-nav a:visited,
+  .social-nav a:active {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #fff; }
+  .social-nav a:hover,
+  .social-nav a:focus {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .social-nav span {
+    display: none; }
+  .social-nav .fa {
+    font-size: 15px;
+    font-size: 1.5rem; }
+  .social-nav .fa-dribbble:hover,
+  .social-nav .fa-dribbble:focus {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #ea4c89; }
+  .social-nav .fa-github:hover,
+  .social-nav .fa-github:focus {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #ff9933; }
+  .social-nav .fa-linkedin:hover,
+  .social-nav .fa-linkedin:focus {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #0077b5; }
+  .social-nav .fa-twitter:hover,
+  .social-nav .fa-twitter:focus {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #55acee; }
+  .social-nav .fa-codepen:hover,
+  .social-nav .fa-codepen:focus {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #cccccc; }
+  @media (max-width: 64em) {
+    .social-nav {
+      display: none; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -2020,9 +2215,8 @@ big {
       -o-transform: rotate(225deg);
       transform: rotate(225deg); }
 
-@media (max-width: 56.25em) {
-  .mobile-toggle {
-    display: block; } }
+/* 1300px */
+/* 1170px */
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -2620,416 +2814,6 @@ a {
 .content-sep {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-/**
- * Flex Grid -
- * Version: 0.3.2
- *
- * Simple grid built with flex box and sass.
- *
- * Matthew Simo - matthew.a.simo@gmail.com
- */
-/**
- * Grid setup
- *
- * The grid will calculate dimensions based on these two variables:
- * $fg-columns will inform the grid loops how many columns there should be.
- * $fg-gutter will inform the grid loops how big eac column's gutters should be.
- *
- * The grid will name columns, rows, offsets based on these three variables:
- * $fg-class-row string used for the row class
- * $fg-class-col string used for the column class
- * $fg-class-off string used for the offset class
- */
-/**
- * Break point namespace object
- *
- * Set the default namespace object with these defaults with the
- * understanding that you can pass in whatever you might require for your site.
- *
- * $fg-breakpoints is a Sass list with nested lists inside. Each sub list defines two things.
- * 1. The namespace for that breakpoint. (Required) (i.e. xs, sm, md, lg)
- * 2. The min-width measurement for the breakpoint for that namespace. (i.e. 48em, 62em, 75em)
- *
- * Note: These should be in the proper order (at least till libsass handles map keys properly).
- *
- * Note: If the measurement is left out then it will be skipped when generating
- * the grid and applied to global styles.
- *
- */
-/**
- * Class Name Defaults
- *
- * Define class names for columns, rows and offsets in case compatibility with other
- * libraries is necessary.
-
-
-/**
- * Calculate column size percentage
- */
-/**
- * Spacing mixin to create uniform margin/padding
- */
-/**
- * Row wrapper class, flex box parent.
- */
-.row {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: -1.5%;
-  margin-right: -1.5%; }
-
-.col-xs, .col-sm, .col-md, .col-lg, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0;
-  flex-shrink: 0;
-  padding-left: 1.5%;
-  padding-right: 1.5%; }
-
-.col-xs, .col-sm, .col-md, .col-lg {
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 100%; }
-
-/**
- * Generate a set of grid column classes using a namespace
- *
- * .col-[namespace] for intelligent column division
- * .col-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
- * .off-[namespace]-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
- */
-/**
- * Build the grid in two steps, to help minimize file size
- * Step 1, for each namespace, create the grid-base
- * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
- */
-.col-xs-1 {
-  flex-basis: 8.33333%;
-  max-width: 8.33333%; }
-
-.col-xs-2 {
-  flex-basis: 16.66667%;
-  max-width: 16.66667%; }
-
-.col-xs-3 {
-  flex-basis: 25%;
-  max-width: 25%; }
-
-.col-xs-4 {
-  flex-basis: 33.33333%;
-  max-width: 33.33333%; }
-
-.col-xs-5 {
-  flex-basis: 41.66667%;
-  max-width: 41.66667%; }
-
-.col-xs-6 {
-  flex-basis: 50%;
-  max-width: 50%; }
-
-.col-xs-7 {
-  flex-basis: 58.33333%;
-  max-width: 58.33333%; }
-
-.col-xs-8 {
-  flex-basis: 66.66667%;
-  max-width: 66.66667%; }
-
-.col-xs-9 {
-  flex-basis: 75%;
-  max-width: 75%; }
-
-.col-xs-10 {
-  flex-basis: 83.33333%;
-  max-width: 83.33333%; }
-
-.col-xs-11 {
-  flex-basis: 91.66667%;
-  max-width: 91.66667%; }
-
-.col-xs-12 {
-  flex-basis: 100%;
-  max-width: 100%; }
-
-.off-xs-1 {
-  margin-left: 8.33333%; }
-
-.off-xs-2 {
-  margin-left: 16.66667%; }
-
-.off-xs-3 {
-  margin-left: 25%; }
-
-.off-xs-4 {
-  margin-left: 33.33333%; }
-
-.off-xs-5 {
-  margin-left: 41.66667%; }
-
-.off-xs-6 {
-  margin-left: 50%; }
-
-.off-xs-7 {
-  margin-left: 58.33333%; }
-
-.off-xs-8 {
-  margin-left: 66.66667%; }
-
-.off-xs-9 {
-  margin-left: 75%; }
-
-.off-xs-10 {
-  margin-left: 83.33333%; }
-
-.off-xs-11 {
-  margin-left: 91.66667%; }
-
-@media only screen and (min-width: 768px) {
-  .col-sm-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-
-  .col-sm-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-
-  .col-sm-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-
-  .col-sm-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-
-  .col-sm-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-
-  .col-sm-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-
-  .col-sm-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-
-  .col-sm-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-
-  .col-sm-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-
-  .col-sm-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-
-  .col-sm-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-
-  .col-sm-12 {
-    flex-basis: 100%;
-    max-width: 100%; }
-
-  .off-sm-1 {
-    margin-left: 8.33333%; }
-
-  .off-sm-2 {
-    margin-left: 16.66667%; }
-
-  .off-sm-3 {
-    margin-left: 25%; }
-
-  .off-sm-4 {
-    margin-left: 33.33333%; }
-
-  .off-sm-5 {
-    margin-left: 41.66667%; }
-
-  .off-sm-6 {
-    margin-left: 50%; }
-
-  .off-sm-7 {
-    margin-left: 58.33333%; }
-
-  .off-sm-8 {
-    margin-left: 66.66667%; }
-
-  .off-sm-9 {
-    margin-left: 75%; }
-
-  .off-sm-10 {
-    margin-left: 83.33333%; }
-
-  .off-sm-11 {
-    margin-left: 91.66667%; } }
-@media only screen and (min-width: 992px) {
-  .col-md-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-
-  .col-md-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-
-  .col-md-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-
-  .col-md-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-
-  .col-md-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-
-  .col-md-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-
-  .col-md-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-
-  .col-md-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-
-  .col-md-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-
-  .col-md-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-
-  .col-md-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-
-  .col-md-12 {
-    flex-basis: 100%;
-    max-width: 100%; }
-
-  .off-md-1 {
-    margin-left: 8.33333%; }
-
-  .off-md-2 {
-    margin-left: 16.66667%; }
-
-  .off-md-3 {
-    margin-left: 25%; }
-
-  .off-md-4 {
-    margin-left: 33.33333%; }
-
-  .off-md-5 {
-    margin-left: 41.66667%; }
-
-  .off-md-6 {
-    margin-left: 50%; }
-
-  .off-md-7 {
-    margin-left: 58.33333%; }
-
-  .off-md-8 {
-    margin-left: 66.66667%; }
-
-  .off-md-9 {
-    margin-left: 75%; }
-
-  .off-md-10 {
-    margin-left: 83.33333%; }
-
-  .off-md-11 {
-    margin-left: 91.66667%; } }
-@media only screen and (min-width: 1200px) {
-  .col-lg-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-
-  .col-lg-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-
-  .col-lg-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-
-  .col-lg-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-
-  .col-lg-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-
-  .col-lg-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-
-  .col-lg-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-
-  .col-lg-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-
-  .col-lg-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-
-  .col-lg-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-
-  .col-lg-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-
-  .col-lg-12 {
-    flex-basis: 100%;
-    max-width: 100%; }
-
-  .off-lg-1 {
-    margin-left: 8.33333%; }
-
-  .off-lg-2 {
-    margin-left: 16.66667%; }
-
-  .off-lg-3 {
-    margin-left: 25%; }
-
-  .off-lg-4 {
-    margin-left: 33.33333%; }
-
-  .off-lg-5 {
-    margin-left: 41.66667%; }
-
-  .off-lg-6 {
-    margin-left: 50%; }
-
-  .off-lg-7 {
-    margin-left: 58.33333%; }
-
-  .off-lg-8 {
-    margin-left: 66.66667%; }
-
-  .off-lg-9 {
-    margin-left: 75%; }
-
-  .off-lg-10 {
-    margin-left: 83.33333%; }
-
-  .off-lg-11 {
-    margin-left: 91.66667%; } }
 .page-header {
   top: 0;
   left: 0;
@@ -3049,99 +2833,6 @@ a {
     align-items: center;
     justify-content: space-between; }
 
-.social-nav {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-ordinal-group: 3;
-  -moz-box-ordinal-group: 3;
-  -ms-flex-order: 3;
-  -webkit-order: 3;
-  order: 3;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  align-items: center;
-  line-height: 0;
-  height: inherit; }
-  .social-nav li {
-    display: inline-block;
-    margin-left: 25px; }
-  .social-nav a,
-  .social-nav a:link,
-  .social-nav a:visited,
-  .social-nav a:active {
-    filter: alpha(opacity=100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    color: #fff; }
-  .social-nav a:hover,
-  .social-nav a:focus {
-    filter: alpha(opacity=100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-  .social-nav span {
-    display: none; }
-  .social-nav .fa {
-    font-size: 15px;
-    font-size: 1.5rem; }
-  .social-nav .fa-dribbble:hover,
-  .social-nav .fa-dribbble:focus {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    color: #ea4c89; }
-  .social-nav .fa-github:hover,
-  .social-nav .fa-github:focus {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    color: #ff9933; }
-  .social-nav .fa-linkedin:hover,
-  .social-nav .fa-linkedin:focus {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    color: #0077b5; }
-  .social-nav .fa-twitter:hover,
-  .social-nav .fa-twitter:focus {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    color: #55acee; }
-  .social-nav .fa-codepen:hover,
-  .social-nav .fa-codepen:focus {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    color: #cccccc; }
-
 .custom-code {
   height: 100%; }
 
@@ -3157,7 +2848,12 @@ a {
     padding: 0;
     list-style: none; }
   .footer-nav li {
-    display: inline-block; }
+    display: inline-block;
+    /* 1300px */
+    /* 1170px */ }
+    @media (max-width: 46em) {
+      .footer-nav li {
+        width: 44.5%; } }
   .footer-nav a,
   .footer-nav a:link,
   .footer-nav a:visited,
@@ -3218,6 +2914,10 @@ a {
     background-color: #ccc; }
 
 .credits {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
   font-size: 10px;
   font-size: 1rem; }
   .credits .fa {
@@ -3579,7 +3279,18 @@ a {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  /* 1300px */
+  /* 1170px */
+  /* 1300px */
+  /* 1170px */ }
+  @media (max-width: 64em) {
+    .grid-view-item.work-item {
+      width: 42.5%; } }
+  @media (max-width: 46em) {
+    .grid-view-item.work-item {
+      width: 100%;
+      margin: 0 0 60px 0; } }
   .grid-view-item.work-item a {
     text-decoration: none; }
   .grid-view-item.work-item .work-img-wrap {
@@ -3994,53 +3705,6 @@ a {
     -moz-opacity: 0.9;
     -khtml-opacity: 0.9;
     opacity: 0.9; }
-
-.dribbble-shots {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  flex-wrap: wrap; }
-  .dribbble-shots .shot {
-    width: 20%;
-    -webkit-animation-name: fadeIn;
-    -moz-animation-name: fadeIn;
-    -ms-animation-name: fadeIn;
-    -o-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    -ms-animation-iteration-count: 1;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: 0s;
-    -moz-animation-delay: 0s;
-    -ms-animation-delay: 0s;
-    -o-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
 
 .home .page-footer {
   display: none; }

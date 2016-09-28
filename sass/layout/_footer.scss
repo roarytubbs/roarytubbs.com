@@ -13,6 +13,9 @@
 	}
 	li {
 		display: inline-block;
+		@include breakpoint(mobile) {
+			width: 44.5%;
+		}
 	}
 	@include links {
 		color: $color__light-gray;
@@ -83,6 +86,10 @@
 	}
 }
 .credits {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	padding: 5px 10px;
 	@include font-size(1.0);
 	.fa {
 		color: $color__accent;
