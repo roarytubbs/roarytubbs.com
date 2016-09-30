@@ -1,0 +1,65 @@
+.row {
+	text-align: justify;
+	width: 100%;
+	@include font-size(0.1);
+	&:after {
+		display: inline-block;
+		width:100%;
+		content:'';
+	}
+	.col {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+		text-align: left;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.col-75 {
+		width: 73%;
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
+	}
+	.col-50 {
+		width: 48%;
+		@include breakpoint(mobile) {
+			width: 100%;
+		}
+	}
+	.col-30 {
+		width: 28.5%;
+		@include breakpoint(tablet) {
+			width: 48%;
+		}
+		@include breakpoint(mobile) {
+			width: 100%;
+		}
+	}
+	.col-25 {
+		width: 23%;
+		@include breakpoint(tablet) {
+			width: 48%;
+		}
+		@include breakpoint(mobile) {
+			width: 100%;
+		}
+	}
+	.col-10 {
+		width: 8%;
+		@include breakpoint(tablet) {
+			width: 15%;
+		}
+		@include breakpoint(mobile) {
+			width: 23%;
+		}
+	}
+	&.blank {
+		width: 0;
+		min-height: 0;
+		border: none;
+		margin: 0;
+		visibility: hidden;
+	}
+}

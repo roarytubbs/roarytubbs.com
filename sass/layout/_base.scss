@@ -84,29 +84,6 @@
 		width: 100%;
 	}
 }
-.grid-view {
-	text-align: justify;
-	width: 100%;
-	@include font-size(0.1);
-	.grid-view-item {
-		width: 31.3%;
-		position: relative;
-		vertical-align: top;
-		display: inline-block;
-		min-height: 290px;
-		text-align: left;
-		padding: 15px 15px 10px;
-		margin-bottom: 50px;
-		border: 1px solid #f1f1f1;
-		&.blank {
-			width: 0;
-			min-height: 0;
-			border: none;
-			margin: 0;
-			visibility: hidden;
-		}
-	}
-}
 .content-sep {
 	border-bottom: 1px solid $color__background-hr;
 }
