@@ -6,5 +6,5 @@ $toolset_logos = get_post_meta( get_the_ID(), '_cf_toolset_logos', true);
 	<h4><?php echo esc_html( $toolset_title ); ?></h4>
 </header>
 <?php
-cmb2_output_file_list( '_cf_toolset_logos', 'small', 'col-sm-1' );
+cmb2_output_file_list( '_cf_toolset_logos', 'small', 'col col-10' );
 ?>

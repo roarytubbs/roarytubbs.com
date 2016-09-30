@@ -8,6 +8,7 @@
  *
  * @package roarytubbs
  */
+$custom_js  = get_post_meta( get_the_ID(), '_cf_custom_js', true );
 
 ?>
 </div><!-- page-content -->
@@ -27,7 +28,9 @@
 <div class="credits">
 	Made with <i class="fa fa-heart"></i> by Me with WordPress, SASS & JQuery.
 </div><!-- credits -->
-<?php wp_footer(); ?>
-
+<?php wp_footer();?>
+<script type="text/javascript">
+		<?php echo print_r( $custom_js ); ?>;
+</script>
 </body>
 </html>

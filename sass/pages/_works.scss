@@ -144,17 +144,17 @@
 		color: $color__dark-gray;
 	}
 }
-.grid-view-item.work-item {
-	padding: 0;
+.work-item-wrapper {
 	background-color: $color__white;
-	width: 28.5%;
 	text-decoration: none;
-	margin: 0 20px 60px 20px;
-	position: relative;
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 	transition: all 0.2s;
 	overflow: hidden;
 	cursor: pointer;
+	min-height: 290px;
+	text-align: left;
+	margin-bottom: 50px;
+	border: 1px solid $color__off-white;
 	@include breakpoint(tablet){
 		width: 42.5%
 	}
@@ -231,7 +231,7 @@
 		line-height: 1;
 	}
 }
-.grid-view-item.work-item:hover {
+.work-item-wrapper:hover {
 	.overlay {
 		@include opacity(.7);
 	}

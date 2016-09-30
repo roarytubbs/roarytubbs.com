@@ -8,6 +8,8 @@
  *
  * @package roarytubbs
  */
+$rt_custom_css  = get_post_meta( get_the_ID(), '_cf_custom_css', true );
+
 ?><!DOCTYPE html>
 <!--[if lte IE 7]><html lang="en-US" class="no-js ie7"><![endif]-->
 <!--[if IE 8]><html lang="en-US" class="no-js ie8"><![endif]-->
@@ -19,6 +21,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
+	<?php echo wpautop( $rt_custom_css ); ?>
 </head>
 <?php
 $maybe_post_slug = '';

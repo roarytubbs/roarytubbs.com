@@ -171,6 +171,40 @@ function cmb2_custom_metaboxes() {
             'id'   => $prefix . 'post_date',
             'type' => 'text_date',
             ) );
+        /*
+            Custom CSS
+        */
+            $cmb = new_cmb2_box( array(
+                'id'            => 'cf_custom_css',
+                'title'         => __( 'CSS', 'cmb2' ),
+                'object_types'  => array( 'works', ),
+                'priority'      => 'low',
+                'closed'     => false,
+                'closed'     => true,
+                ) );
+            $cmb->add_field( array(
+                'name' => __( 'Custom CSS', 'cmb2' ),
+                'id'   => $prefix . 'custom_css',
+                'desc'          => 'code will be injected in the header',
+                'type' => 'textarea_code'
+                ) );
+        /*
+            Custom JavaScript
+        */
+            $cmb = new_cmb2_box( array(
+                'id'            => 'cf_custom_js',
+                'title'         => __( 'JavaScript', 'cmb2' ),
+                'object_types'  => array( 'works', ),
+                'priority'      => 'low',
+                'closed'     => false,
+                'closed'     => true,
+                ) );
+            $cmb->add_field( array(
+                'name' => __( 'Custom JavaScript', 'cmb2' ),
+                'id'   => $prefix . 'custom_js',
+                'desc'          => 'code will be injected in the footer',
+                'type' => 'textarea_code'
+                ) );
 
     /*
         Thumbnail

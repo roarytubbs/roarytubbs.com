@@ -53,6 +53,7 @@
 		@include opacity(.9);
 	}
 }
-.home .page-footer {
+.home .page-footer,
+.home .credits {
 	display: none;
 }

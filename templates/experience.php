@@ -30,16 +30,16 @@ get_header(); ?>
 		<section id="skillset-container" class="main-content">
 			<div class="page-container">
 				<div class="row">
-					<ul class="col-md-3">
+					<ul class="col col-25">
 						<?php echo wpautop( $skillset_1 ); ?>
 					</ul>
-					<ul class="col-md-3">
+					<ul class="col col-25">
 						<?php echo wpautop( $skillset_2 ); ?>
 					</ul>
-					<ul class="col-md-3">
+					<ul class="col col-25">
 						<?php echo wpautop( $skillset_3 ); ?>
 					</ul>
-					<ul class="col-md-3">
+					<ul class="col col-25">
 						<?php echo wpautop( $skillset_4 ); ?>
 					</ul>
 				</div><!-- row -->
@@ -125,16 +125,16 @@ get_header(); ?>
 			<h3><?php echo esc_html( $partnerships_title ); ?></h3>
 		</header>
 		<div class="row">
-			<ul class="col-md-3">
+			<ul class="col col-25">
 				<?php echo wpautop( $partnership_1 ); ?>
 			</ul>
-			<ul class="col-md-3">
+			<ul class="col col-25">
 				<?php echo wpautop( $partnership_2 ); ?>
 			</ul>
-			<ul class="col-md-3">
+			<ul class="col col-25">
 				<?php echo wpautop( $partnership_3 ); ?>
 			</ul>
-			<ul class="col-md-3">
+			<ul class="col col-25">
 				<?php echo wpautop( $partnership_4 ); ?>
 			</ul>
 		</div><!-- row -->
