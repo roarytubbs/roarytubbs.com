@@ -12,4 +12,5 @@ $bg_position = get_post_meta( get_the_ID(), '_cf_bg_position', true);
 		</div><!-- page-container -->
 		<img src="https://pbs.twimg.com/profile_images/728255113345695748/igyRIEWy.jpg" alt="avatar" class="avatar about-avatar fadeIn" />
 	</div><!-- hero-content -->
+	<div class="dribbble-shots"></div>
 </div><!-- hero -->

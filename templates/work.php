@@ -4,7 +4,6 @@ Template Name: Work
 */
 get_header(); ?>
 <?php get_template_part('template-parts/internal-hero'); ?>
-<div class="dribbble-shots"></div>
 <main class="main-content white-bg" role="main">
 	<div class="page-container">
 		<div class="row">
