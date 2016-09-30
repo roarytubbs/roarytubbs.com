@@ -37,9 +37,6 @@ if ( is_a( $maybe_post, 'WP_Post' ) ) {
 						<span><?php echo get_bloginfo('name'); ?></span>
 					</a>
 				</div><!-- logo -->
-				<div class="mobile-toggle">
-					<span></span>
-				</div><!-- mobile-toggle -->
 				<nav class="main-nav">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'main-nav',

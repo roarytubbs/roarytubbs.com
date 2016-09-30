@@ -6,9 +6,8 @@
 	background: $color__background-header;
 	height: 70px;
 	padding: 0 5%;
-	@include breakpoint(tablet) {
-		padding: 0;
-		display: block;
+	@include breakpoint(mobile){
+		padding: 0 2%;
 	}
 }
 .logo {
@@ -40,17 +39,9 @@
 		font-weight: $font__weight-bold;
 		margin-left: 7px;
 		vertical-align: middle;
-		@include breakpoint(tablet) {
+		@include breakpoint(mobile) {
 			display: none;
 		}
-	}
-	@include breakpoint(tablet) {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 165px;
-		display: block;
-		line-height: 70px;
-		text-align: center;
 	}
 }
 .main-nav {
@@ -68,6 +59,9 @@
 			padding-top: 25px;
 			height: 100%;
 			position: relative;
+			@include breakpoint(smallmobile){
+				margin-left: 0;
+			}
 		}
 		li:first-child {
 			margin-left: 0;
@@ -111,21 +105,72 @@
 		}
 	}
 }
-
+.social-nav {
+	@include flexbox;
+	@include flex-order(3);
+	@include clear-list-style;
+	align-items: center;
+	line-height: 0;
+	height: inherit;
+	li {
+		display: inline-block;
+		margin-left: 25px;
+	}
+	@include links {
+		@include opacity(1.0);
+		@include fade;
+		color: $color__white;
+	}
+	@include links-hover {
+		@include opacity(1.0);
+		@include fade;
+	}
+	span {
+		display: none;
+	}
+	.fa {
+		@include font-size(1.5);
+	}
+	.fa-dribbble:hover,
+	.fa-dribbble:focus {
+		@include fade;
+		color: rgba($color__brand-dribbble, 1);
+	}
+	.fa-github:hover,
+	.fa-github:focus {
+		@include fade;
+		color: rgba($color__brand-github, 1);
+	}
+	.fa-linkedin:hover,
+	.fa-linkedin:focus {
+		@include fade;
+		color: rgba($color__brand-linkedin, 1);
+	}
+	.fa-twitter:hover,
+	.fa-twitter:focus {
+		@include fade;
+		color: rgba($color__brand-twitter, 1);
+	}
+	.fa-codepen:hover,
+	.fa-codepen:focus {
+		@include fade;
+		color: rgba($color__brand-codepen, 1);
+	}
+	@include breakpoint(tablet){
+		display: none;
+	}
+}
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
-
 	.nav-previous {
 		float: left;
 		width: 50%;
 	}
-
 	.nav-next {
 		float: right;
 		text-align: right;

@@ -35,7 +35,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 'vendors/particle.scss',
 'vendors/animate/animate.scss',
 'vendors/swiper.scss',
-'vendors/ninja-form';
+'vendors/ninja-form',
+'vendors/jribbble';
 
 // Typography
 @import
@@ -80,7 +81,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 // Layout
 @import
 "layout/base",
-"layout/flex-grid",
+"layout/grid",
 "layout/header",
 "layout/footer",
 "layout/hero";

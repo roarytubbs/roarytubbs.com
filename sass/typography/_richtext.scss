@@ -49,6 +49,9 @@
   @include font-size(3.0);
   line-height: 42px;
   margin-bottom: 20px;
+  @include breakpoint(mobile) {
+    text-align: left !important;
+  }
 }
 .richtext h3 {
   font-weight: $font__weight-semi-bold;

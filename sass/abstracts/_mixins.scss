@@ -161,20 +161,25 @@
 }
 /* breakpoints */
  @mixin breakpoint($point) {
-   @if $point == desktop {
-     @media (max-width: 80em) { @content ; }
+  /* 1300px */
+   @if $point == largedesktop {
+     @media (max-width: 81.125em) { @content ; }
   }
-   @else if $point == laptop {
+  /* 1170px */
+   @if $point == desktop {
+     @media (max-width: 73.125em) { @content ; }
+  }
+  /* 1024 */
+    @else if $point == tablet {
      @media (max-width: 64em) { @content ; }
   }
-    @else if $point == tablet {
-     @media (max-width: 56.25em) { @content ; }
+  /* 736px */
+   @else if $point == mobile {
+     @media (max-width: 46em)  { @content ; }
   }
-   @else if $point == phablet {
-     @media (max-width: 37.5em)  { @content ; }
-  }
-  @else if $point == mobileonly {
-     @media (max-width: 37.5em)  { @content ; }
+  /* 480px */
+  @else if $point == smallmobile {
+     @media (max-width: 30em)  { @content ; }
 
   }
 }
