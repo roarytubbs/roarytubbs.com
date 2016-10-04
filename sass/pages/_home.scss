@@ -53,6 +53,9 @@
 		@include opacity(.9);
 	}
 }
+.home .dribbble-shots {
+	display: inherit;
+}
 .home .page-footer,
 .home .credits {
 	display: none;
