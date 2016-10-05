@@ -24,8 +24,8 @@
 		text-align: center;
 		width: 100%;
 	}
-	.page-container.zoom {
-		@include zoomIn(
+	.page-container.animation {
+		@include fadeInUp(
 			$duration: 1s,
 			$count: 1,
 			$delay: .25s,
