@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="hero">
 	<span class="overlay"></span>
 	<div class="hero-content">
-		<div class="page-container zoom">
+		<div class="page-container animation">
 			<h1 class="entry-title"><?php echo esc_html( $custom_title ); ?></h1>
 			<h2 class="subtitle"><?php echo esc_html( $custom_subtitle ); ?></h2>
 		</div><!-- page-container -->
