@@ -16,7 +16,7 @@
 	height: 100%;
 	position: absolute;
 	.page-container.zoom {
-		@include zoomIn(
+		@include fadeIn(
 			$delay: .5s,
 			$duration: 1.25s
 			);

@@ -3662,11 +3662,11 @@ a {
   height: 100%;
   position: absolute; }
   .home .hero .page-container.zoom {
-    -webkit-animation-name: zoomIn;
-    -moz-animation-name: zoomIn;
-    -ms-animation-name: zoomIn;
-    -o-animation-name: zoomIn;
-    animation-name: zoomIn;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -ms-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
     -webkit-animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
     -ms-animation-iteration-count: 1;
