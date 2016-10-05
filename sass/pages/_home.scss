@@ -15,9 +15,9 @@
 	max-height: 100%;
 	height: 100%;
 	position: absolute;
-	.page-container.zoom {
+	.page-container.animation {
 		@include fadeIn(
-			$delay: .5s,
+			$delay: .75s,
 			$duration: 1.25s
 			);
 	}

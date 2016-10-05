@@ -7,7 +7,7 @@ $custom_code  = get_post_meta( get_the_ID(), '_cf_custom_code', true );
 ?>
 <div class="hero" style="background-image:url(<?php echo esc_html( $background_img ); ?>); background-position: <?php echo esc_html( $bg_position ); ?>;">
 	<div class="hero-content">
-		<div class="page-container">
+		<div class="page-container animation">
 			<div class="work-hero">
 				<?php the_post_thumbnail() ?>
 			</div><!-- work-hero -->
