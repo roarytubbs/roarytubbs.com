@@ -10,6 +10,9 @@
 	.navigation-wrap{
 		background: rgba($color__background-header, .3);
 	}
+	@include breakpoint(tablet){
+		@include opacity(1);
+	}
 }
 .home .hero {
 	max-height: 100%;
