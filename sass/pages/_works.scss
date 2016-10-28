@@ -5,9 +5,12 @@
 	padding: 8% 0 0;
 }
 .single-works .hero {
-	height: 520px;
-	align-items: flex-end;
-	z-index: 1;
+	height: 100%;
+	// align-items: flex-end;
+	// z-index: 1;
+	.hero-content {
+		padding-top: 4%;
+	}
 	img {
 		position: relative;
 		z-index: 999;

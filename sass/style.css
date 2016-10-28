@@ -2978,7 +2978,6 @@ a {
   height: 400px;
   display: flex;
   display: -webkit-flex;
-  align-items: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3137,9 +3136,9 @@ a {
   padding: 8% 0 0; }
 
 .single-works .hero {
-  height: 520px;
-  align-items: flex-end;
-  z-index: 1; }
+  height: 100%; }
+  .single-works .hero .hero-content {
+    padding-top: 4%; }
   .single-works .hero img {
     position: relative;
     z-index: 999;
