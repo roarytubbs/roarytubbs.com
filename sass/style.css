@@ -3262,12 +3262,14 @@ a {
 
 .color-group {
   text-align: left;
-  margin-left: 40px;
-  padding-bottom: 40px;
-  width: 280px;
-  display: inline-block; }
-  .color-group:first-child {
-    margin-left: 0; }
+  margin-right: 40px;
+  padding-bottom: 4.5%;
+  max-width: 280px;
+  display: inline-block;
+  /* 1300px */
+  /* 1170px */ }
+  .color-group:last-child {
+    margin-right: 0; }
   .color-group ul {
     margin: 0;
     padding: 0;

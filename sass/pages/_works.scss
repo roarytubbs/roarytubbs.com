@@ -93,12 +93,12 @@
 }
 .color-group {
 	text-align: left;
-	margin-left: 40px;
-	padding-bottom: 40px;
-	width: 280px;
+	margin-right: 40px;
+	padding-bottom: 4.5%;
+	max-width: 280px;
 	display: inline-block;
-	&:first-child {
-		margin-left: 0;
+	&:last-child {
+		margin-right: 0;
 	}
 	ul {
 		@include clear-list-style;
@@ -145,6 +145,9 @@
 	}
 	.dark * {
 		color: $color__dark-gray;
+	}
+	@include breakpoint(tablet){
+
 	}
 }
 .work-item-wrapper {
