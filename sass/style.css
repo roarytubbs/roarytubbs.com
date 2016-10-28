@@ -3824,6 +3824,8 @@ a {
 
 #toolset-container {
   padding: 8% 0; }
+  #toolset-container ul {
+    text-align: center; }
 
 #toolset-container .col {
   margin: 0 auto 10px;
