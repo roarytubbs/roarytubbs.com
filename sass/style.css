@@ -2008,11 +2008,13 @@ big {
     .main-nav ul a:hover,
     .main-nav ul a:focus {
       color: #f24c4e; }
+    .main-nav ul .single-works .main-nav:first-child,
     .main-nav ul .current_page_item > a,
     .main-nav ul .current-menu-item > a,
     .main-nav ul .current-page-ancestor > a,
     .main-nav ul .current-menu-ancestor > a {
       color: #f24c4e; }
+      .main-nav ul .single-works .main-nav:first-child:before,
       .main-nav ul .current_page_item > a:before,
       .main-nav ul .current-menu-item > a:before,
       .main-nav ul .current-page-ancestor > a:before,
@@ -3342,6 +3344,12 @@ a {
   @media (max-width: 64em) {
     .work-item-wrapper {
       width: 42.5%; } }
+  .work-item-wrapper:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
   @media (max-width: 46em) {
     .work-item-wrapper {
       width: 100%;

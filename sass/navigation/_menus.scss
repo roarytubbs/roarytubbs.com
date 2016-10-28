@@ -94,6 +94,7 @@
 		@include links-hover {
 			color: $color__accent;
 		}
+		.single-works .main-nav:first-child,
 		.current_page_item > a,
 		.current-menu-item > a,
 		.current-page-ancestor > a,

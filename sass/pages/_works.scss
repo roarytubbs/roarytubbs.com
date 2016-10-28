@@ -167,6 +167,9 @@
 	@include breakpoint(tablet){
 		width: 42.5%
 	}
+	&:hover {
+		@include transform(scale(1.1));
+	}
 	@include breakpoint(mobile){
 		width: 100%;
 		margin: 0 0 60px 0;
