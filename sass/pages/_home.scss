@@ -10,7 +10,7 @@
 	.navigation-wrap{
 		background: rgba($color__background-header, .3);
 	}
-	@include breakpoint(tablet){
+	@include breakpoint(mobile){
 		@include opacity(1);
 	}
 }
