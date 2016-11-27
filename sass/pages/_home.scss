@@ -9,8 +9,11 @@
 	}
 	.navigation-wrap{
 		background: rgba($color__background-header, .3);
+		@include breakpoint(tablet){
+			background: rgba($color__background-header, .9);
+		}
 	}
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		@include opacity(1);
 	}
 }

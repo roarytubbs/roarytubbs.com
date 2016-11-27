@@ -1,5 +1,10 @@
-.page-template-work .dribbble-shots {
-	display: inherit;
+.page-template-work { 
+	.hero .overlay {
+		@include opacity(.8);
+	}
+	.dribbble-shots {
+		display: inherit;
+	}
 }
 .single-works .main-content {
 	padding: 8% 0 0;
@@ -169,6 +174,13 @@
 	}
 	&:hover {
 		@include transform(scale(1.1));
+		.overlay {
+			@include opacity(.7);
+		}
+		img {
+			@include transition(all 0.4s);
+			@include filter(blur(1px));
+		}
 	}
 	@include breakpoint(mobile){
 		width: 100%;
@@ -242,15 +254,4 @@
 		color: $color__med-gray;
 		line-height: 1;
 	}
-}
-.work-item-wrapper:hover {
-	.overlay {
-		@include opacity(.7);
-	}
-	img {
-		transform: scale(1.1);
-		@include transition(all 0.4s);
-		@include filter(blur(1px));
-	}
-
 }

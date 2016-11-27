@@ -26,7 +26,7 @@ $custom_js  = get_post_meta( get_the_ID(), '_cf_custom_js', true );
 	</footer><!-- page-footer -->
 </section><!-- page-wrapper -->
 <div class="credits">
-	Made with <i class="fa fa-heart"></i> by Me with WordPress, SASS & JQuery.
+	Made with <i class="fa fa-heart"></i> from OKC using WordPress, SASS & JQuery.
 </div><!-- credits -->
 <?php wp_footer();?>
 <script type="text/javascript">
