@@ -30,66 +30,65 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 // Vendors
 @import
-'vendors/normalize',
-'vendors/jquery.bxslider.scss',
-'vendors/particle.scss',
-'vendors/animate/animate.scss',
-'vendors/swiper.scss',
-'vendors/ninja-form',
-'vendors/jribbble';
+'vendors/_normalize',
+'vendors/_jquery.bxslider',
+'vendors/animate/animate',
+'vendors/_swiper',
+'vendors/_ninja-form',
+'vendors/_jribbble';
 
 // Typography
 @import
-"typography/typography",
-"typography/headings",
-"typography/copy",
-"typography/richtext";
+"typography/_typography",
+"typography/_headings",
+"typography/_copy",
+"typography/_richtext";
 
 // Navigation
 @import
-"navigation/menus",
-"navigation/mobile-nav";
+"navigation/_menus",
+"navigation/_mobile-nav";
 
 // Modules
 @import
-"modules/accessibility",
-"modules/alignments",
-"modules/clearings",
-"modules/infinite-scroll";
+"modules/_accessibility",
+"modules/_alignments",
+"modules/_clearings",
+"modules/_infinite-scroll";
 
 // Widgets
-@import "site/secondary/widgets";
+@import "site/secondary/_widgets";
 
 // Content
-@import "site/site";
+@import "site/_site";
 
 // Media
 @import
-"media/media",
-"media/captions",
-"media/galleries";
+"media/_media",
+"media/_captions",
+"media/_galleries";
 
 // Components
 @import
-"components/elements",
-"components/lists",
-"components/tables",
-"components/buttons",
-"components/fields",
-"components/links";
+"components/_elements",
+"components/_lists",
+"components/_tables",
+"components/_buttons",
+"components/_fields",
+"components/_links";
 
 // Layout
 @import
-"layout/base",
-"layout/grid",
-"layout/header",
-"layout/footer",
-"layout/hero";
+"layout/_base",
+"layout/_grid",
+"layout/_header",
+"layout/_footer",
+"layout/_hero";
 
 // Page Specific
 @import
-"pages/works",
-"pages/experience",
-"pages/home",
-"pages/about",
-"pages/parts/toolset";
+"pages/works/_works",
+"pages/_experience",
+"pages/_home",
+"pages/_about",
+"pages/parts/_toolset";
