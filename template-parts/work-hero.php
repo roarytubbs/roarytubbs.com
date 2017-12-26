@@ -14,7 +14,7 @@ $custom_code  = get_post_meta( get_the_ID(), '_cf_custom_code', true );
 		</div><!-- page-container -->
 	</div><!-- hero-content -->
 	<div class="custom-code">
-		<?php echo print_r( $custom_code ); ?>
+		<?php echo ( $custom_code ); ?>
 	</div>
 </div><!-- hero -->
 <div class="metadata">
