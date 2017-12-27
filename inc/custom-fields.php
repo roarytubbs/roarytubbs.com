@@ -94,6 +94,27 @@ function cmb2_custom_metaboxes() {
             'type' => 'textarea_small'
             ) );
     /*
+        Works Button
+    */
+        $cmb = new_cmb2_box( array(
+            'id'          => 'cf_works_button',
+            'title'         => __( 'Button', 'cmb2' ),
+            'object_types'  => array( 'page', ),
+            'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/work.php' ),
+            'priority' => 'high',
+            'closed'     => true,
+            ) );
+        $cmb->add_field( array(
+            'name' => __( 'Button Text', 'cmb2' ),
+            'id'   => $prefix . 'work_button_text',
+            'type' => 'text'
+            ) );
+        $cmb->add_field( array(
+            'name' => __( 'Button URL', 'cmb2' ),
+            'id'   => $prefix . 'work_button_url',
+            'type' => 'text'
+            ) );
+    /*
         Partnerships
     */
         $cmb = new_cmb2_box( array(
@@ -158,19 +179,6 @@ function cmb2_custom_metaboxes() {
     /*
         Works
     */
-        $cmb = new_cmb2_box( array(
-            'id'            => 'cf_post_date',
-            'title'         => __( 'Works', 'cmb2' ),
-            'object_types'  => array( 'works', ),
-            'priority'      => 'high',
-            'closed'     => false,
-            'closed'     => true,
-            ) );
-        $cmb->add_field( array(
-            'name' => 'Post Date',
-            'id'   => $prefix . 'post_date',
-            'type' => 'text_date',
-            ) );
         /*
             Custom CSS
         */

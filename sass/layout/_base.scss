@@ -3,7 +3,19 @@
 	@include transition (all 0.3s);
 }
 .main-content {
-	padding: 8% 0;
+	padding: 4% 0;
+	@include breakpoint(desktop){
+		padding: 5% 0;
+	}
+	@include breakpoint(tablet){
+		padding: 6% 0;
+	}
+	@include breakpoint(mobile){
+		padding: 7% 0;
+	}
+	@include breakpoint(smallmobile){
+		padding: 8% 0;
+	}
 }
 .white-bg {
 	background-color: $color__white;

@@ -1,196 +1,252 @@
 .single-works .main-nav ul li:first-child a {
-	color: $color__accent;
-	&:before {
-		border-top: 4px solid $color__accent;
-	}
+    color: $color__accent;
+    &:before {
+        border-top: 4px solid $color__accent;
+    }
 }
+
 .page-template-work {
-	.hero .overlay {
-		@include opacity(.8);
-	}
-	.dribbble-shots {
-		display: inherit;
-	}
+    .hero .overlay {
+        @include opacity(.8);
+    }
+    .dribbble-shots {
+        display: inherit;
+    }
 }
+
 .single-works .main-content {
-	padding: 8% 0 0;
+    padding: 8% 0 0;
 }
+
 .single-works .hero {
-	height: 100%;
-	// align-items: flex-end;
-	// z-index: 1;
-	.hero-content {
-		padding-top: 4%;
-	}
-	img {
-		position: relative;
-		z-index: 999;
-		display: block;
-		width: 100%;
-		@include fadeInUp(
-			$duration: 1.2s,
-			$delay: .25s
-			);
-	}
-	.overlay {
-		@include opacity(0.7);
-	}
+    height: 100%; // align-items: flex-end;
+    // z-index: 1;
+    .hero-content {
+        padding-top: 4%;
+    }
+    img {
+        position: relative;
+        z-index: 999;
+        display: block;
+        width: 100%;
+        @include fadeInUp( $duration: 1.2s,
+        $delay: .25s);
+    }
+    .overlay {
+        @include opacity(0.7);
+    }
 }
+
 .single-works .nav-links {
-	position: absolute;
-	z-index: 999;
-	width: 100%;
-	top: 25%;
-	@include font-size(1.4);
-	.nav-previous,
-	.nav-next {
-		width: initial;
-		&:hover a:before{
-			color: $color__accent;
-		}
-	}
-	.nav-previous {
-		margin-left: 50px;
-	}
-	.nav-next {
-		margin-right: 50px;
-	}
-	.nav-previous a:before,
-	.nav-next a:before {
-		text-align: center;
-		vertical-align: middle;
-		font-family: 'FontAwesome';
-		content: '\f137';
-		margin-right: 10px;
-		@include font-size(5.0);
-		color: rgba($color__accent, .2);
-		@include fade;
-	}
-	.nav-next a:before {
-		content: '\f138';
-	}
-	a {
-		text-decoration: none;
-		color: red;
-		@include font-size(0.0);
-	}
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 25%;
+    @include font-size(1.4);
+    .nav-previous,
+    .nav-next {
+        width: initial;
+        &:hover a:before {
+            color: $color__accent;
+        }
+        &:hover a:after {
+            color: $color__off-white;
+        }
+    }
+    .nav-previous {
+        margin-left: 50px;
+    }
+    .nav-next {
+        margin-right: 50px;
+    }
+    .nav-previous a:before,
+    .nav-next a:before {
+        text-align: center;
+        vertical-align: middle;
+        font-family: 'FontAwesome';
+        content: '\f104';
+        margin-left: 10px;
+        @include font-size(5.0);
+        color: rgba($color__accent, .2);
+        @include fade;
+    }
+    .nav-next a:before {
+        content: '\f105';
+    }
+    .nav-previous a:after,
+    .nav-next a:after {
+        position: absolute;
+        display: block;
+        margin: 0;
+        bottom: -5px;
+        @include font-size(1.2);
+        color: rgba($color__off-white, .2);
+        @include fade;
+        content: "Previous";
+    }
+    .nav-next a:after {
+        content: "Next";
+    }
+    a {
+        text-decoration: none;
+        color: red;
+        @include font-size(0.0);
+    }
 }
+
 .single-works .metadata {
-	background: #333;
-	padding: 25px 0 35px;
-	text-align: center;
-	position: relative;
+    background: #333;
+    padding: 25px 0 35px;
+    text-align: center;
+    position: relative;
 }
+
 .work-title {
-	color: $color__white;
-	@include font-size(4.0);
-	margin-bottom: 15px;
-	font-weight: $font__weight-bold;
-	letter-spacing: -0.04em;
-	line-height: 1;
+    color: $color__white;
+    @include font-size(4.0);
+    margin-bottom: 15px;
+    font-weight: $font__weight-bold;
+    letter-spacing: -0.04em;
+    line-height: 1;
 }
+
 .work-subtitle {
-	text-transform: capitalize;
-	margin: 0 0 10px 0;
-	color: $color__light-gray;
-	font-weight: $font__weight-regular;
-	@include font-size(1.8);
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
+    color: $color__light-gray;
+    font-weight: $font__weight-regular;
+    @include font-size(1.8);
 }
 
 .work-item-wrapper {
-	background-color: $color__white;
-	text-decoration: none;
-	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-	transition: all 0.2s;
-	overflow: hidden;
-	cursor: pointer;
-	min-height: 290px;
-	text-align: left;
-	margin-bottom: 50px;
-	border: 1px solid $color__off-white;
-	@include breakpoint(tablet){
-		width: 42.5%
-	}
-	&:hover {
-		@include transform(scale(1.1));
-		.overlay {
-			@include opacity(.7);
-		}
-		img {
-			@include transition(all 0.4s);
-			@include filter(blur(1px));
-		}
-	}
-	@include breakpoint(mobile){
-		width: 100%;
-		margin: 0 0 60px 0;
-	}
-	a {
-		text-decoration: none;
-	}
-	.work-img-wrap {
-		max-height: 400px;
-		overflow: hidden;
-		margin: 0;
-		img {
-			border-bottom: 0;
-			box-sizing: border-box;
-			width: 100%;
-			height: auto;
-			display: block;
-			@include transition(all 0.4s);
-			overflow: hidden;
-		}
-	}
-	.overlay {
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		display: -webkit-flex;
-		text-align: center;
-		align-items: center;
-		background: rgba($color__black, .7);
-		@include opacity(0);
-		@include transition(all 0.3s ease-in-out);
-	}
-	.btn {
-		text-align: center;
-		min-width: 50%;
-		margin: 0 auto;
-		@include font-size(1.4);
-		@include transform(scale(0.8));
-		@include transition(all 0.3s ease-in-out);
-		background-color: $color__accent;
-		&:hover,
-		&:focus {
-			background-color: rgba($color__accent, .8);
-		}
-	}
-	.metadata{
-		padding: 30px 5px;
-		text-align: center;
-		-webkit-transition: all 0.2s;
-		-moz-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		transition: all 0.2s;
-		position: relative;
-		z-index: 2;
-		background-color: $color__white;
-	}
-	.work-title {
-		@include font-size(1.8);
-		letter-spacing: 0;
-		margin-bottom: 12px;
-		color: $color__dark-gray;
-		@include transition(all 0.2s);
-	}
-	.work-subtitle {
-		@include font-size(1.4);
-		color: $color__med-gray;
-		line-height: 1;
-	}
+    background-color: $color__white;
+    text-decoration: none;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    @include transition(all 0.2s ease-in-out);
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 290px;
+    text-align: left;
+    margin-bottom: 50px;
+    border: 1px solid $color__off-white;
+    @include breakpoint(tablet) {
+        width: 42.5%
+    }
+    &:hover {
+        box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
+        .overlay {
+            @include opacity(.7);
+        }
+        .work-img-wrap img {
+            @include transform(scale(1.1));
+        }
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0 0 60px 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    .work-img-wrap {
+        max-height: 400px;
+        overflow: hidden;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        img {
+            border-bottom: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            display: block;
+            @include transition(all 0.3s ease-in-out);
+            @include transform(scale(1));
+            overflow: hidden;
+        }
+    }
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        display: -webkit-flex;
+        text-align: center;
+        align-items: center;
+        background: rgba($color__black, .7);
+        @include opacity(0);
+        @include transition(all 0.3s ease-in-out);
+    }
+    .btn {
+        text-align: center;
+        min-width: 50%;
+        margin: 0 auto;
+        @include font-size(1.4);
+        @include transform(scale(0.8));
+        @include transition(all 0.3s ease-in-out);
+        border: 1px solid $color__accent;
+        color: $color__dark-gray;
+        background: none;
+        &:hover,
+        &:focus {
+            background-color: rgba($color__accent, .8);
+        }
+    }
+    .metadata {
+        padding: 30px 5px;
+        text-align: center;
+        @include transition(all 0.2s ease-in-out);
+        position: relative;
+        z-index: 2;
+        background-color: $color__white;
+    }
+    .work-title {
+        @include font-size(1.8);
+        letter-spacing: 0;
+        margin-bottom: 12px;
+        color: $color__dark-gray;
+        @include transition(all 0.2s);
+    }
+    .work-subtitle {
+        @include font-size(1.4);
+        color: $color__med-gray;
+        line-height: 1;
+    }
+}
+
+
+
+/* styles for password protected works */
+
+.is-password-protected {
+    .overlay {
+        @include opacity(.95);
+    }
+    .work-img-wrap:before {
+        font-family: 'FontAwesome';
+        content: '\f023';
+        @include font-size(7.2);
+        color: $color__off-white;
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: inherit;
+        top: 25%;
+    }
+}
+
+
+
+/* view more button for the bottom of the page */
+
+.page-template-work .view-more {
+    .col {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
 }

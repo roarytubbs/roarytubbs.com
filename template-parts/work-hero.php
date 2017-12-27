@@ -18,7 +18,7 @@ $custom_code  = get_post_meta( get_the_ID(), '_cf_custom_code', true );
 	</div>
 </div><!-- hero -->
 <div class="metadata">
-	<?php the_post_navigation(); ?>
+	<!-- <?php the_post_navigation(); ?> -->
 	<div class="page-container">
 		<h1 class="work-title"><?php echo esc_html( $custom_title ); ?></h1>
 		<h2 class="work-subtitle"><?php echo esc_html( $custom_subtitle ); ?></h2>
