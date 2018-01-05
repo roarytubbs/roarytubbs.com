@@ -1,10 +1,9 @@
-#toolset-container {
-	padding: 8% 0;
-	ul {
-		text-align: center;
-	}
-}
-#toolset-container .col{
-	margin: 0 auto 10px;
-	text-align: center;
+.toolset ul.box {
+    li.box-item-10 {
+        padding: 1rem;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

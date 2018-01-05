@@ -45,7 +45,7 @@ get_header(); ?>
 		</div><!-- row -->
 		<div class="row view-more">
 			<div class="col col-100 aligncenter">
-				<a href="<?php echo esc_html( $work_button_url ); ?>" class="btn btn-black"><?php echo esc_html( $work_button_text ); ?></a>
+				<a href="<?php echo esc_html( $work_button_url ); ?>" class="btn btn-black-ghost"><?php echo esc_html( $work_button_text ); ?></a>
 			</div><!-- col col-100 -->
 		</div><!-- row -->
 	</div><!--page-container -->

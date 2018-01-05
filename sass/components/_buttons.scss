@@ -29,10 +29,19 @@ input[type="submit"] {
         border-color: $color__button-border-hover;
     }
     &.btn-small {
-        @include font-size(1.3);
+        @include font-size(1.2);
         padding: 7px 14px;
     }
-    &.btn-black {
+    &.btn-black-solid {
+        background: rgba($color__dark-gray, 1);
+        color: $color__off-white;
+        border: 2px solid $color__dark-gray;
+        &:focus,
+        &:hover {
+            background: rgba($color__dark-gray, .3);
+        }
+    }
+    &.btn-black-ghost {
         background: none;
         color: $color__black;
         border: 2px solid $color__black;

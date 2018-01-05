@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 .page-footer {
 	position: relative;
+	background-color: $color__dark-gray;
 }
 .footer-nav {
-	background: #262626;
 	padding: 20px 0;
 	text-align: center;
 	ul{
@@ -85,9 +85,11 @@
 		}
 	}
 }
-.credits {
+.copyright {
 	padding: 5px 10px;
 	@include font-size(1.0);
+	color: $color__med-gray;
+	border-top: 1px solid $color__gray-800;
 	.fa {
 		color: $color__accent;
 	}

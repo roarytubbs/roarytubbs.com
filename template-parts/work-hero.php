@@ -4,6 +4,8 @@ $custom_subtitle  = get_post_meta( get_the_ID(), '_cf_subtitle', true );
 $custom_code  = get_post_meta( get_the_ID(), '_cf_custom_code', true );
 $background_img  = get_post_meta( get_the_ID(), '_cf_background_img', true );
 $custom_code  = get_post_meta( get_the_ID(), '_cf_custom_code', true );
+$cta_text  = get_post_meta( get_the_ID(), '_cf_cta_text', true );
+$cta_link  = get_post_meta( get_the_ID(), '_cf_cta_link', true );
 ?>
 <div class="hero" style="background-image:url(<?php echo esc_html( $background_img ); ?>); background-position: <?php echo esc_html( $bg_position ); ?>;">
 	<div class="hero-content">
@@ -22,5 +24,8 @@ $custom_code  = get_post_meta( get_the_ID(), '_cf_custom_code', true );
 	<div class="page-container">
 		<h1 class="work-title"><?php echo esc_html( $custom_title ); ?></h1>
 		<h2 class="work-subtitle"><?php echo esc_html( $custom_subtitle ); ?></h2>
+		<?php if ( !empty( $cta_link ) ) {
+			printf( '<a href="' . $cta_link . '" class="btn btn-small btn-black-solid">' . $cta_text . '</a>');
+		}?>
 	</div><!-- page-container -->
 </div><!-- metadata -->

@@ -13,23 +13,22 @@
         });
 
         // change href for password protected posts
-        $(function() {
-            if ($('.work-item-wrapper').hasClass('is-password-protected')) {
-                $('.work-item-wrapper.is-password-protected').find('a').attr("href", "#");
-            }
-        });
-        // test for protected posts
-        $('.work-item-wrapper').on('click', function(event) {
-            if ($(this).hasClass('is-password-protected')) {
-                alert("this is password protected");
-            }
-        });
-
+        // $(function() {
+        //     if ($('.work-item-wrapper').hasClass('is-password-protected')) {
+        //         $('.work-item-wrapper.is-password-protected').find('a').attr("href", "#");
+        //     }
+        // });
+        // // test for protected posts
+        // $('.work-item-wrapper').on('click', function(event) {
+        //     if ($(this).hasClass('is-password-protected')) {
+        //         alert("this is password protected");
+        //     }
+        // });
 
         // add new html to title of experience
-        $('.page-template-experience .counter').each(function() {
+        $('.page-template-experience #experience-counter').each(function() {
             var $this = $(this),
-                countTo = $this.attr('experience-count');
+                countTo = (new Date).getFullYear() - (2006);
             $({ countNum: $this.text() }).animate({
                     countNum: countTo
                 },

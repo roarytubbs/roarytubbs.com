@@ -18,10 +18,13 @@ get_header(); ?>
 	endwhile;
 	endif;
 	?>
-	<section id="toolset-container">
-		<div class="page-container">
-			<?php get_template_part('template-parts/toolset'); ?>
-		</div><!-- page-conteiner -->
-	</section><!-- toolset-container -->
 </main><!-- #main -->
+<div id="work-footer" class="box">
+	<div class="box-item box-item-50">
+		<?php get_template_part('template-parts/credits'); ?>
+	</div><!--box-item-->
+	<div class="box-item box-item-50">
+		<?php get_template_part('template-parts/toolset'); ?>
+	</div><!--box-item-->
+</div><!-- work-footer -->
 <?php get_footer();

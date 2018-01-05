@@ -10,12 +10,23 @@
   letter-spacing: -0.02em;
 }
 .richtext a {
-  position: relative;
   color: $color__link;
   text-decoration: none;
+  @include fade;
+  @include on-event {
+    outline: 0;
+    color: $color__link-hover;
+    @include fade;
+    text-decoration: underline; 
+  }
+}
+.main-content .richtext a {
+  position: relative;
   font-weight: $font__weight-semi-bold;
   display: inline;
   padding-bottom: 3px;
+  color: $color__link;
+  text-decoration: none;
   @include fade;
   @include on-event {
     outline: 0;
@@ -23,7 +34,7 @@
     @include fade;
   }
 }
-.richtext a:after {
+.main-content .richtext a:after {
   content: "";
   position: absolute;
   bottom: -.2em;
@@ -34,7 +45,7 @@
   @include transform(translateY(-0.25em));
   @include transition(transform .3s ease, opacity .3s ease);
 }
-.richtext a:hover:after{
+.main-content .richtext a:hover:after{
   @include opacity(1);
   @include transform(translateY(0));
 }
@@ -54,10 +65,11 @@
   }
 }
 .richtext h3 {
-  font-weight: $font__weight-semi-bold;
-  @include font-size(2.6);
+  font-weight: $font__weight-bold;
+  @include font-size(3.0);
   text-align: center;
   margin-bottom: 60px;
+  letter-spacing: -0.05rem;
 }
 .richtext h4 {
   text-align: center;

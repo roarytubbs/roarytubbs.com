@@ -12,6 +12,7 @@ $custom_js  = get_post_meta( get_the_ID(), '_cf_custom_js', true );
 
 ?>
 </div><!-- page-content -->
+</section><!-- page-wrapper -->
 <footer class="page-footer">
 	<nav class="footer-nav">
 		<div class="page-container">
@@ -21,13 +22,13 @@ $custom_js  = get_post_meta( get_the_ID(), '_cf_custom_js', true );
 				'menu_class' => ' ',
 				'menu_id' => ' '
 				) ); ?>
-			</div><!-- page-container -->
-		</nav><!-- footer-nav -->
-	</footer><!-- page-footer -->
-</section><!-- page-wrapper -->
-<div class="credits">
-	Made with <i class="fa fa-heart"></i> from OKC using WordPress, SASS & JQuery.
-</div><!-- credits -->
+		</div><!-- page-container -->
+	</nav><!-- footer-nav -->
+	<div class="copyright">
+		Made with <i class="fa fa-heart"></i> from OKC using WordPress, SASS & JQuery.
+	</div><!-- credits -->
+</footer><!-- page-footer -->
+
 <?php wp_footer();?>
 <script type="text/javascript">
 		<?php echo print_r( $custom_js ); ?>;
