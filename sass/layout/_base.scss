@@ -1,103 +1,128 @@
 .page-wrapper {
-	position: relative;
-	@include transition (all 0.3s);
+    position: relative;
+    @include transition (all 0.3s);
 }
+
 .main-content {
-	padding: 4% 0;
-	@include breakpoint(desktop){
-		padding: 5% 0;
-	}
-	@include breakpoint(tablet){
-		padding: 6% 0;
-	}
-	@include breakpoint(mobile){
-		padding: 7% 0;
-	}
-	@include breakpoint(smallmobile){
-		padding: 8% 0;
-	}
+    padding: 4% 0;
+    @include breakpoint(desktop) {
+        padding: 5% 0;
+    }
+    @include breakpoint(tablet) {
+        padding: 6% 0;
+    }
+    @include breakpoint(mobile) {
+        padding: 7% 0;
+    }
+    @include breakpoint(smallmobile) {
+        padding: 8% 0;
+    }
 }
+
 .white-bg {
-	background-color: $color__white;
+    background-color: $color__white;
 }
+
 .page-content {
-	width: 100%;
-	margin: 0;
+    width: 100%;
+    margin: 0;
 }
+
 .page-container {
-	max-width: $size__max-width;
-	margin-left: auto;
-	margin-right: auto;
-	width: 90.5%;
-	position: relative;
-	box-sizing: border-box;
+    max-width: $size__max-width;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90.5%;
+    position: relative;
+    box-sizing: border-box;
 }
+
 .small-width {
-	max-width: $size__small-width;
-	width: 90.5%;
-	margin: 0 auto;
-	position: relative;
-	box-sizing: border-box;
+    max-width: $size__small-width;
+    width: 90.5%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
 }
+
 .medium-width {
-	max-width: $size__medium-width;
-	width: 90.5%;
-	margin: 0 auto;
-	position: relative;
-	box-sizing: border-box;
+    max-width: $size__medium-width;
+    width: 90.5%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
 }
+
 .large-width {
-	max-width: $size__large-width;
-	width: 90.5%;
-	margin: 0 auto;
-	position: relative;
-	box-sizing: border-box;
+    max-width: $size__large-width;
+    width: 90.5%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
 }
+
 .module {
-	margin-top: 100px;
-	&:first-child {
-		margin-top: 0;
-	}
-	h2.title {
-		@include font-size(3.6);
-		margin-bottom: 30px;
-		font-weight: $font__weight-bold;
-		letter-spacing: -0.04em;
-	}
-	img {
-		max-width: 100%;
-		height: auto;
-	}
+    margin-top: 100px;
+    &:first-child {
+        margin-top: 0;
+    }
+    h4.sub-title {
+        text-align: left;
+        font-size: 12px;
+        margin-bottom: 15px;
+        font-weight: $font__weight-extra-bold;
+        letter-spacing: 0;
+    }
+    h2.title {
+        @include font-size(3.6);
+        margin-bottom: 30px;
+        font-weight: $font__weight-extra-bold;
+        letter-spacing: -0.04em;
+        color: $color__gray-800;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
+
 .module.image {
-	margin-top: 100px;
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	img {
-		width: 100%;
-		margin: 0 auto;
-		display: block;
-	}
-	&.framed img {
-		@include box-shadow(0px, 2px, 6px, 0px, rgba(0,0,0,0.11));
-		border: 1px solid #CCC;
-		@include border-radius(5px);
-	}
+    margin-top: 100px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    &.framed img {
+        @include box-shadow(0px, 2px, 6px, 0px, rgba(0, 0, 0, 0.11));
+        border: 1px solid #CCC;
+        @include border-radius(5px);
+    }
 }
+
 .module.full-width-image {
-	width: 100%;
-	overflow: hidden;
-	.image {
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 600px;
-		width: 100%;
-	}
+    width: 100%;
+    overflow: hidden;
+    .image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        width: 100%;
+    }
+}
+
+.module.drop_shadow img {
+    box-shadow: 0 2px 10px 0 rgba($color__black, 0.30) !important;
+}
+.module.rounded_corners img {
+    @include border-radius(10px);
 }
 .content-sep {
-	border-bottom: 1px solid $color__background-hr;
+    border-bottom: 1px solid $color__background-hr;
 }
 
 // .module.gallery {
@@ -116,8 +141,6 @@
 // 		}
 // 	}
 // }
-
-
 // .swiper-container {
 // 	& .bx-wrapper .bx-controls-direction {
 // 		@include links {

@@ -114,15 +114,19 @@ function myprefix_private_title_format( $format ) {
     return '%s';
 }
 
+/* password protected works post */
 function my_password_form() {
+	echo '<div id="password-protected-works" class="modal richtext">';
     global $post;
+    echo '<h2>Password Protected</h2>';
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-    ' . __( "To view this protected post, enter the password below:" ) . '
-    <label for="' . $label . '">' . __( "Password:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
-    </form>
+    ' . __( "<p>To view this protected post, enter the password below:</p>" ) . '
+    <label for="' . $label . '"></label><input name="post_password" placeholder="Password" id="' . $label . '" type="password" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
+    </form><a href="#" onclick="history.back(-1)"><i class="fa fa-angle-left"></i>Go Back</a>
     ';
     return $o;
+	echo '</div><!--password-protected-works-->';
 }
 add_filter( 'the_password_form', 'my_password_form' );
 
@@ -136,6 +140,7 @@ function rt_scripts() {
 	wp_enqueue_script( 'rt-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1', true );
 	wp_enqueue_script( 'rt-swiper', get_template_directory_uri() . '/js/vendor/swiper.jquery.min.js', array(), '3.3.1', true );
 	wp_enqueue_script( 'rt-particles', get_template_directory_uri() . '/js/vendor/particles.jquery.min.js', array(), '1', true );
+	wp_enqueue_script( 'rt-modal', get_template_directory_uri() . '/js/vendor/modal.jquery.min.js', array(), '1', true );
 	wp_enqueue_script( 'rt-jribbble', get_template_directory_uri() . '/js/vendor/jribbble.min.js', array(), '1', true );
 	wp_enqueue_script( 'rt-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

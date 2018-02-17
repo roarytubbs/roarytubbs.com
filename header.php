@@ -29,8 +29,12 @@ $maybe_post = get_queried_object();
 if ( is_a( $maybe_post, 'WP_Post' ) ) {
 	$maybe_post_slug = $maybe_post->post_name;
 }
+$password_required = '';
+if ( post_password_required() ) {
+	$password_required = 'work-passwort-protected';
+}
 ?>
-<body <?php body_class( $maybe_post_slug ); ?>>
+<body <?php body_class( $password_required ); ?> >
 	<section class="page-wrapper">
 		<header class="page-header">
 			<div class="navigation-wrap">

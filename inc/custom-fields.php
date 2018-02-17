@@ -166,6 +166,80 @@ function cmb2_custom_metaboxes() {
     /* ==============
         WORKS ONLY
      ============== */
+     /* MODULES */
+    $cmb = new_cmb2_box( array(
+        'id'          => 'cf_modules',
+        'title'         => __( 'Modules ', 'cmb2' ),
+        'object_types'  => array( 'works',),
+        'show_on'      => array( 'key' => 'post-type', 'value' => 'works'
+            ),
+        'priority' => 'high',
+        'closed'     => true,
+        ) );
+    $module_group_field_id = $cmb->add_field( array(
+        'id'          => $prefix . 'module_repeat_group',
+        'type'        => 'group',
+        'options'     => array(
+            'group_title'   => __( 'Module {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button'    => __( 'Add Another Module', 'cmb2' ),
+            'remove_button' => __( 'Remove Module', 'cmb2' ),
+            'sortable'      => true, // beta
+            // 'closed'     => true, // true to have the groups closed by default
+        ),
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Module Type', 'cmb2' ),
+        'id'   => $prefix . 'module_type_selection',
+        'type'             => 'select',
+        'show_option_none' => true,
+        'default'          => 'none',
+        'options' => array(
+            'medium-width' => __( 'Medium Width', 'cmb2' ),
+            'large-width'    => __( 'Large Width', 'cmb2' ),
+            'image'    => __( 'Image', 'cmb2' ),
+            'slider'    => __( 'Slider', 'cmb2' ),
+            'full-width-image'    => __( 'Full Width Image', 'cmb2' ),
+        ),
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Title', 'cmb2' ),
+        'id'   => $prefix . 'module_title',
+        'type' => 'text',
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Sub Title', 'cmb2' ),
+        'id'   => $prefix . 'module_sub_title',
+        'type' => 'text',
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Content', 'cmb2' ),
+        'id'   => $prefix . 'module_content',
+        'type'    => 'textarea_code',
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Image', 'cmb2' ),
+        'id'   => $prefix . 'module_image',
+        'type'    => 'file',
+        // Optional:
+        'options' => array(
+            'url' => false, // Hide the text input for the url
+        ),
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Slider', 'cmb2' ),
+        'id'   => $prefix . 'module_slider',
+        'type'    => 'text',
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Rounded Corners', 'cmb2' ),
+        'id'   => $prefix . 'module_image_rounded_corners',
+        'type'    => 'checkbox',
+    ) );
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Drop Shadow', 'cmb2' ),
+        'id'   => $prefix . 'module_image_dropshadow',
+        'type'    => 'checkbox',
+    ) );
     /* CREDIT */
     $cmb = new_cmb2_box( array(
         'id'          => 'cf_credit',

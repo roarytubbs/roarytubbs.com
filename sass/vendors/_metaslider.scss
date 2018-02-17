@@ -1,8 +1,3 @@
-body .metaslider .flexslider .slides img {
-    @include border-radius(10px);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.30);
-}
-
 .metaslider .flexslider .flex-direction-nav li {
     position: absolute;
     top: 0;
@@ -15,10 +10,6 @@ body .metaslider .flexslider .slides img {
     &.flex-nav-next {
         left: auto;
         right: 0;
-    }
-    &:hover {
-        @include opacity(.3);
-        @include fade;
     }
 }
 
@@ -33,14 +24,18 @@ body .metaslider .flexslider .slides img {
     text-shadow: none;
     width: 40px;
     height: 40px;
+    &:hover {
+        color: rgba($color__med-gray, .8);
+        @include fade;
+    }
 }
 
 .metaslider .flexslider .flex-direction-nav li a:after {
     font-family: 'FontAwesome';
-    font-size: 5.0rem;
+    font-size: 6.0rem;
     position: absolute;
     display: block;
-    color: rgba($color__dark-gray, 1);
+    color: rgba($color__light-gray, 1);
 }
 
 .metaslider .flexslider .flex-direction-nav li a.flex-prev {
@@ -55,4 +50,14 @@ body .metaslider .flexslider .slides img {
     &:after {
         content: '\f105';
     }
+}
+
+.metaslider .caption-wrap {
+    background: none !important;
+    bottom: -35px !important;
+    text-align: center;
+    margin-top: 15px !important;
+    @include font-size(1.4);
+    color: $color__med-gray !important;
+    font-style: italic;
 }

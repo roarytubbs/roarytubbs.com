@@ -12,37 +12,32 @@
             effect: 'fade'
         });
 
-        // change href for password protected posts
-        $(function() {
-            if ($('.work-item-wrapper').hasClass('is-password-protected')) {
-                $('.work-item-wrapper.is-password-protected').find('a').attr("href", "#");
-            }
-        });
-        // test for protected posts
-        $('.work-item-wrapper').on('click', function(event) {
-            if ($(this).hasClass('is-password-protected')) {
-                alert("this is password protected");
-            }
-        });
+        if ($('body').hasClass('work-passwort-protected')) {
+             $("#password-protected-works").modal({
+              fadeDuration: 100,
+              escapeClose: false,
+              clickClose: false,
+              showClose: false
+            });
+        }
 
         // add new html to title of experience
         $('.page-template-experience #experience-counter').each(function() {
             var $this = $(this),
                 countTo = (new Date).getFullYear() - (2006);
             $({ countNum: $this.text() }).animate({
-                    countNum: countTo
+                countNum: countTo
+            }, {
+                duration: 2000,
+                easing: 'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
                 },
-                {
-                    duration: 2000,
-                    easing: 'linear',
-                    step: function() {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function() {
-                        $this.text(this.countNum);
-                        //alert('finished');
-                    }
-                });
+                complete: function() {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                }
+            });
         });
 
         // jribbble
