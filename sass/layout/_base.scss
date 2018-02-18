@@ -66,10 +66,13 @@
     &:first-child {
         margin-top: 0;
     }
+    h3, h4 {
+        text-align: left;
+    }
     h4.sub-title {
         text-align: left;
-        font-size: 12px;
-        margin-bottom: 15px;
+        @include font-size(1.6);
+        margin-bottom: 10px;
         font-weight: $font__weight-extra-bold;
         letter-spacing: 0;
     }
