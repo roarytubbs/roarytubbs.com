@@ -174,7 +174,7 @@ function cmb2_custom_metaboxes() {
         'show_on'      => array( 'key' => 'post-type', 'value' => 'works'
             ),
         'priority' => 'high',
-        'closed'     => true,
+        'closed'     => false,
         ) );
     $module_group_field_id = $cmb->add_field( array(
         'id'          => $prefix . 'module_repeat_group',
