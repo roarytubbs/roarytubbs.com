@@ -24,10 +24,11 @@
     text-shadow: none;
     width: 40px;
     height: 40px;
-    &:hover {
-        color: rgba($color__med-gray, .8);
+}
+
+.metaslider .flexslider .flex-direction-nav li a:hover:after {
+        color: rgba($color__med-gray, .95);
         @include fade;
-    }
 }
 
 .metaslider .flexslider .flex-direction-nav li a:after {
