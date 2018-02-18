@@ -69,6 +69,14 @@
     h3, h4 {
         text-align: left;
     }
+    h3 {
+        @include font-size(2.4);
+        margin-bottom: 20px;
+    }
+    h4 {
+        margin-bottom: 10px;
+        text-transform: none;
+    }
     h4.sub-title {
         text-align: left;
         @include font-size(1.6);
