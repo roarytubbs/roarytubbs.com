@@ -96,6 +96,9 @@
         max-width: 100%;
         height: auto;
     }
+    &.has-bg-color {
+        padding: 60px;
+    }
 }
 
 .module.image {

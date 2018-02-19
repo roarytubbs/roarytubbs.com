@@ -5,7 +5,7 @@ if ( ! post_password_required() ) {
 
 	foreach ( (array) $module_entries as $key => $entry ) {
 
-		$type = $title = $sub_title = $content = $image = $slider = $rounded_corners = $drop_shadow = '';
+		$type = $title = $sub_title = $content = $image = $slider = $rounded_corners = $bg_color = $drop_shadow = '';
 
 		if ( isset( $entry['_cf_module_type_selection'] ) ) {
 			$type = esc_html( $entry['_cf_module_type_selection'] );
@@ -38,9 +38,11 @@ if ( ! post_password_required() ) {
 		if ( isset( $entry['_cf_module_image_dropshadow'] ) ) {
 			$drop_shadow = $entry['_cf_module_image_dropshadow'] ;
 		}
+		if ( isset( $entry['_cf_custom_bg_color'] ) ) {
+			$bg_color = $entry['_cf_custom_bg_color'] ;
+		}
 
-		echo '<div class="module ' . $type . ($type == 'medium-width' ? ' richtext' : '') . ($rounded_corners == 'on' ? ' rounded_corners' : '') . ($drop_shadow == 'on' ? ' drop_shadow' : '') . '">';
-
+		echo '<div class="module ' . $type . ($type == 'medium-width' ? ' richtext' : '') . ($rounded_corners == 'on' ? ' rounded_corners' : '') . ($drop_shadow == 'on' ? ' drop_shadow' : '') .  ($bg_color != '' ? ' has-bg-color' . '" style="background-color:' . $bg_color : '"' ) . '">';
 		// MEDIUM WIDTH MODULE
 		if ( $type === 'medium-width' ) {
 			if ( !empty( $sub_title ) ) {

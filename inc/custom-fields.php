@@ -240,11 +240,11 @@ function cmb2_custom_metaboxes() {
         'id'   => $prefix . 'module_image_dropshadow',
         'type'    => 'checkbox',
     ) );
-    $cmb->add_field( $module_group_field_id, array(
-        'name' => __( 'Custom Background Color', 'cmb2' ),
-        'id'      => 'custom_bg_color',
+    $cmb->add_group_field( $module_group_field_id, array(
+        'name' => __( 'Background Color', 'cmb2' ),
+        'id'   => $prefix . 'custom_bg_color',
         'type'    => 'colorpicker',
-        'default' => '#ffffff',
+        'default' => '',
         // 'options' => array(
         //  'alpha' => true, // Make this a rgba color picker.
         // ),
