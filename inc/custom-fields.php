@@ -240,6 +240,15 @@ function cmb2_custom_metaboxes() {
         'id'   => $prefix . 'module_image_dropshadow',
         'type'    => 'checkbox',
     ) );
+    $cmb->add_field( $module_group_field_id, array(
+        'name' => __( 'Custom Background Color', 'cmb2' ),
+        'id'      => 'custom_bg_color',
+        'type'    => 'colorpicker',
+        'default' => '#ffffff',
+        // 'options' => array(
+        //  'alpha' => true, // Make this a rgba color picker.
+        // ),
+    ) );
     /* CREDIT */
     $cmb = new_cmb2_box( array(
         'id'          => 'cf_credit',
