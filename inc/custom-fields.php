@@ -24,7 +24,7 @@ function cmb2_custom_metaboxes() {
     $cmb->add_field( array(
         'name'       => __( 'Title', 'cmb2' ),
         'id'         => $prefix . 'title',
-        'type'       => 'text',
+        'type'       => 'textarea_code',
         ) );
     $cmb->add_field( array(
         'name' => __( 'Subtitle', 'cmb2' ),

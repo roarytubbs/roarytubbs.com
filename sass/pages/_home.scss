@@ -1,68 +1,74 @@
 .home .page-wrapper {
-	position: initial;
+    position: initial;
 }
+
 .home .page-header {
-	position: absolute;
-	@include opacity(.1);
-	&:hover {
-		@include opacity(1);
-	}
-	.navigation-wrap{
-		background: rgba($color__background-header, .3);
-		@include breakpoint(tablet){
-			background: rgba($color__background-header, .9);
-		}
-	}
-	@include breakpoint(tablet){
-		@include opacity(1);
-	}
+    position: absolute;
+    @include opacity(.1);
+    &:hover {
+        @include opacity(1);
+    }
+    .navigation-wrap {
+        background: rgba($color__background-header, .3);
+        @include breakpoint(tablet) {
+            background: rgba($color__background-header, .9);
+        }
+    }
+    @include breakpoint(tablet) {
+        @include opacity(1);
+    }
 }
+
 .home .hero {
-	max-height: 100%;
-	height: 100%;
-	position: absolute;
-	.page-container.animation {
-		@include fadeIn(
-			$delay: .75s,
-			$duration: 1.25s
-			);
-	}
-	h1.entry-title {
-		@include font-size(4.0);
-		line-height: 50px;
-		font-weight: $font__weight-regular;
-		letter-spacing: -0.05em;
-	}
-	h2.subtitle {
-		@include font-size(1.6);
-		line-height: 20px;
-		font-weight: $font__weight-semi-bold;
-		letter-spacing: -0.02em;
-		margin-top: 20px;
-		color: $color__brand;
-	}
-	.btn {
-		background: none;
-		&:hover,
-		&:focus {
-			color: $color__button-text-hover;
-			background-color: $color__button-bg-hover;
-			border-color: $color__button-border-hover;
-		}
-		&.fadeInUp {
-			@include fadeInUp(
-				$delay: .6s
-				);
-		}
-	}
-	.overlay {
-		@include opacity(.9);
-	}
+    max-height: 100%;
+    height: 100%;
+    position: absolute;
+    .main-content .richtext a {
+    	font-weight: $font__weight-light;
+    }
+    .page-container.animation {
+        @include fadeIn( $delay: .75s,
+        $duration: 1.25s);
+    }
+    h1.entry-title {
+        @include font-size(4.0);
+        line-height: 65px;
+        font-weight: $font__weight-light;
+        letter-spacing: -0.025em;
+        text-align: left;
+        max-width: 100%;
+        padding-right: 50px;
+    }
+    h2.subtitle {
+        @include font-size(1.6);
+        line-height: 20px;
+        font-weight: $font__weight-semi-bold;
+        letter-spacing: -0.02em;
+        margin-top: 20px;
+        color: $color__brand;
+    }
+    .btn {
+        background: none;
+        &:hover,
+        &:focus {
+            color: $color__button-text-hover;
+            background-color: $color__button-bg-hover;
+            border-color: $color__button-border-hover;
+        }
+        &.fadeInUp {
+            @include fadeInUp( $delay: .6s);
+        }
+    }
+    .overlay {
+        @include opacity(.9);
+    }
 }
+
 .home .dribbble-shots {
-	display: inherit;
+    display: inherit;
 }
+
 .home .page-footer,
 .home .credits {
-	display: none;
+    display: none;
 }
