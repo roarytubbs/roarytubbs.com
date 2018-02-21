@@ -34,7 +34,7 @@ if ( post_password_required() ) {
 	$password_required = 'work-passwort-protected';
 }
 ?>
-<body <?php body_class( $password_required ); ?> >
+<body <?php body_class( $password_required );  ?>  >
 	<section class="page-wrapper">
 		<header class="page-header">
 			<div class="navigation-wrap">

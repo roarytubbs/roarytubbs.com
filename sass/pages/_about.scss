@@ -1,15 +1,13 @@
-.about-avatar {
-
-}
-
-.avatar.about-avatar {
-	display: block;
-	border: none;
-	margin: 10px auto 20px;
-	width: 125px;
-	&.fadeIn {
-		@include fadeIn(
-			$delay: .6s
-			);
-	}
+.about {
+    .hero {
+        .avatar.about-avatar {
+            display: block;
+            border: none;
+            margin: 10px auto 20px;
+            width: 125px;
+            &.fadeIn {
+                @include fadeIn( $delay: .6s);
+            }
+        }
+    }
 }
