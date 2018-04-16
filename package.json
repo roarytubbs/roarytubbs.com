@@ -1,0 +1,24 @@
+{
+  "name": "rt",
+  "version": "1.0.0",
+  "main": "./js/sermons/index.js",
+  "repository": "git@github.com:roarytubbs/westside-church-wp.git",
+  "author": "Ty Carlson <tywayne@gmail.com>",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "sass:build": "sass ./sass/style.scss ./style.css --style=compressed",
+    "sass:watch": "sass --watch ./sass:./ --style=compressed ",
+    "js:build": "webpack --config webpack.config.js",
+    "js:watch": "webpack --config webpack.config.js --watch"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0",
+    "webpack": "^4.2.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.13"
+  }
+}

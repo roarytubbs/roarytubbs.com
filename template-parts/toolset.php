@@ -1,16 +1,23 @@
-<?php
-$toolset_title  = get_post_meta( get_the_ID(), '_cf_toolset_title', true );
-$toolset_logos = get_post_meta( get_the_ID(), '_cf_toolset_logos', true);
-?>
+<?php $show_tools_used = get_field( 'show_tools_used', get_the_ID() ); ?>
 <?php
 if ( ! post_password_required() ) {
-?>
-<section class="toolset">
-	<header class="richtext">
-		<h3><?php echo esc_html( $toolset_title ); ?></h3>
-	</header>
-	<?php
-		cmb2_output_file_list( '_cf_toolset_logos', 'small' );
+	if ( $show_tools_used == true ) {
 	?>
-</section><!--toolset-->
-<?php }
+	<section class="toolset">
+		<header class="richtext">
+			<h3><?php the_field('tools_used_title'); ?></h3>
+		</header>
+		<?php
+		$images = get_field('tools_used_logo');
+		$size = 'thumbnail';
+		if ( $images ): ?>
+		    <ul class="box">
+		        <?php foreach( $images as $image ): ?>
+		            <li class="box-item box-item-10 tint">
+		            	<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+		            </li>
+		        <?php endforeach; ?>
+		    </ul>
+		<?php endif; ?>
+	</section><!--toolset-->
+<?php }} ?>

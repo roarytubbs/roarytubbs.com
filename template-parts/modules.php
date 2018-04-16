@@ -77,3 +77,67 @@ if ( ! post_password_required() ) {
 	}
 }
 ?>
+
+<?php $module = get_field( 'content_module', get_the_ID() ); ?>
+
+	<?php if( have_rows('content_module') ): ?>
+
+		<?php while( have_rows('content_module') ): the_row();
+			$type = get_sub_field('content_module_type');
+			$title = get_sub_field('content_module_title');
+			$subTitle = get_sub_field('content_module_subtitle');
+			$content = get_sub_field('module_content');
+			$image = get_sub_field('module_image');
+			$roundedCorners = get_sub_field('module_rounded_corners');
+			$dropShadow = get_sub_field('module_drop_shadow');
+			$bgColor = get_sub_field('module_background_color');
+			?>
+			<?php if( $type == 'Medium Width' ): ?>
+				<div class="module richtext" style="background-color: <?php echo $bgColor; ?>;">
+					<div class="medium-width">
+						<?php if( $subTitle ): ?><h4 class="sub-title"><?php echo $subTitle; ?></h4> <?php endif; ?>
+						<?php if( $title ): ?><h2 class="title"><?php echo $title; ?></h2> <?php endif; ?>
+						<?php echo $content; ?>
+					</div>
+				</div><!-- medium-width -->
+			<?php elseif( $type == 'Large Width' ): ?>
+				<div class="module richtext" style="background-color: <?php echo $bgColor; ?>;">
+					<div class="large-width">
+						<?php if( $subTitle ): ?><h4 class="sub-title"><?php echo $subTitle; ?></h4> <?php endif; ?>
+						<?php if( $title ): ?><h2 class="title"><?php echo $title; ?></h2> <?php endif; ?>
+						<?php echo $content; ?>
+					</div>
+				</div><!-- large-width -->
+			<?php elseif( $type == 'Image' ): ?>
+				<div class="module image <?php if ( $roundedCorners == true) : ?>rounded_corners<?php endif; ?> <?php if ( $dropShadow == true) : ?>drop_shadow<?php endif; ?>" style="background-color: <?php echo $bgColor; ?>;">
+					<?php if( !empty($image) ): ?>
+						<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+				</div><!-- image -->
+			<?php elseif( $type == 'Slider' ): ?>
+				<div class="module <?php if ( $roundedCorners == true) : ?>rounded_corners<?php endif; ?> <?php if ( $dropShadow == true) : ?>drop_shadow<?php endif; ?>" style="background-color: <?php echo $bgColor; ?>;">
+					<div class="slider">
+						<?php echo do_shortcode(get_sub_field('module_slider_id')); ?>
+					</div><!-- slider -->
+				</div><!-- slider -->
+			<?php elseif( $type == 'Full Width Image' ): ?>
+				<div class="module full-width-image" style="background-color: <?php echo $bgColor; ?>;">
+					<div class="image" style="background-image:url(<?php echo $image['url'];?>)">
+					</div><!-- slider -->
+				</div><!-- slider -->
+			<?php endif; ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+

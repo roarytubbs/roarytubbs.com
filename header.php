@@ -8,7 +8,7 @@
  *
  * @package roarytubbs
  */
-$rt_custom_css  = get_post_meta( get_the_ID(), '_cf_custom_css', true );
+$use_custom_css = get_field( 'use_custom_css', get_the_ID() );
 
 ?><!DOCTYPE html>
 <!--[if lte IE 7]><html lang="en-US" class="no-js ie7"><![endif]-->
@@ -21,7 +21,9 @@ $rt_custom_css  = get_post_meta( get_the_ID(), '_cf_custom_css', true );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
-	<?php echo wpautop( $rt_custom_css ); ?>
+	<?php if ( $use_custom_css == true ): ?>
+		<style tyep="text/css"><?php the_field('custom_css'); ?></style>
+	<?php endif; ?>
 </head>
 <?php
 $maybe_post_slug = '';

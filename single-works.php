@@ -17,6 +17,7 @@ get_template_part('template-parts/work-hero'); ?>
 	  </article>
     <?php endwhile; ?>
 </main><!-- #main -->
+<?php get_template_part('template-parts/work-disclaimer'); ?>
 <div id="work-footer" class="box">
 	<div class="box-item box-item-50">
 		<?php get_template_part('template-parts/credits'); ?>

@@ -30,8 +30,10 @@ $custom_js  = get_post_meta( get_the_ID(), '_cf_custom_js', true );
 </footer><!-- page-footer -->
 
 <?php wp_footer();?>
-<script type="text/javascript">
-		<?php echo print_r( $custom_js ); ?>;
-</script>
+<?php $use_custom_javascript = get_field( 'use_custom_javascript', get_the_ID() ); ?>
+
+<?php if ( $use_custom_javascript == true ): ?>
+	<script type="text/javascript"><?php the_field('custom_javascript'); ?></script>
+<?php endif; ?>
 </body>
 </html>
