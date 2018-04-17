@@ -15,7 +15,7 @@
 }
 
 .single-works .main-content {
-    padding: 8% 0;
+    padding: 8% 0 0;
 }
 
 .single-works .hero {
@@ -132,13 +132,18 @@
     @include breakpoint(tablet) {
         width: 42.5%
     }
-    &:hover {
+    &:hover,
+    &:focus {
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
         .overlay {
             @include opacity(.7);
         }
         .work-img-wrap img {
             @include transform(scale(1.1));
+        }
+        .btn {
+            background-color: rgba($color__accent, 1);
+            color: $color__off-white;
         }
     }
     @include breakpoint(mobile) {
@@ -252,6 +257,7 @@
 
 
 
+
 /* styles for password protected works */
 
 .is-password-protected {
@@ -272,6 +278,7 @@
         top: 25%;
     }
 }
+
 
 
 

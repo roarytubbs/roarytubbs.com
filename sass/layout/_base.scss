@@ -66,7 +66,8 @@
     &:first-child {
         margin-top: 0;
     }
-    h3, h4 {
+    h3,
+    h4 {
         text-align: left;
     }
     h3 {
@@ -99,104 +100,71 @@
     &.has-bg-color {
         padding: 60px;
     }
-}
-
-.module.image {
-    margin-top: 100px;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    img {
-        width: 100%;
-        margin: 0 auto;
-        display: block;
+    &.drop_shadow img {
+        box-shadow: 0 2px 10px 0 rgba($color__black, 0.30) !important;
     }
-    &.framed img {
-        @include box-shadow(0px, 2px, 6px, 0px, rgba(0, 0, 0, 0.11));
-        border: 1px solid #CCC;
-        @include border-radius(5px);
+    &.rounded_corners img {
+        @include border-radius(10px);
     }
-}
-
-.module.full-width-image {
-    width: 100%;
-    overflow: hidden;
     .image {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 600px;
+        margin-top: 100px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        img {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+        &.framed img {
+            @include box-shadow(0px, 2px, 6px, 0px, rgba(0, 0, 0, 0.11));
+            border: 1px solid #CCC;
+            @include border-radius(5px);
+        }
+        .caption-wrap {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            opacity: 0.7;
+            margin: 0;
+            display: block;
+            width: 100%;
+            line-height: 1.4em;
+            background: none;
+            text-align: center;
+            margin-top: 15px;
+            @include font-size(1.4);
+            line-height: 1.4em;
+            color: #828282;
+            font-style: italic;
+            .caption {
+                padding: 5px 10px;
+                word-wrap: break-work;
+            }
+        }
+    }
+    .full-width-image {
         width: 100%;
+        overflow: hidden;
+        .image {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+    .slider {
+        .metaslider .caption-wrap {
+            position: relative;
+            bottom: 0 !important;
+        }
     }
 }
 
-.module.drop_shadow img {
-    box-shadow: 0 2px 10px 0 rgba($color__black, 0.30) !important;
-}
-.module.rounded_corners img {
-    @include border-radius(10px);
-}
 .content-sep {
     border-bottom: 1px solid $color__background-hr;
 }
-
-// .module.gallery {
-// 	max-width: 860px;
-// 	width: 100%;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	&.adaptive-height {
-// 		@include box-shadow(0px, 2px, 6px, 0px, rgba(0,0,0,0.11));
-// 		border: 1px solid #ccc;
-// 		@include border-radius(5px);
-// 		img {
-// 			@include border-radius(5px);
-// 			max-width: 100%;
-// 			display: block;
-// 		}
-// 	}
-// }
-// .swiper-container {
-// 	& .bx-wrapper .bx-controls-direction {
-// 		@include links {
-// 			position: absolute;
-// 			top: 200px;
-// 			margin-top: -50px;
-// 			outline: 0;
-// 			width: 100px;
-// 			height: 100px;
-// 			text-indent: -9999px;
-// 			z-index: 9999;
-// 			@include opacity(0.2);
-// 		}
-// 		@include links-hover {
-// 			@include opacity(0.7);
-// 		}
-// 	}
-// 	& .bx-wrapper ul li {
-// 		max-width: 860px;
-// 		width: 100% !important;
-// 	}
-// 	& .bx-wrapper .bx-prev {
-// 		background: url(../img/left-arrow-dark.png) center no-repeat;
-// 		left: calc(50% - 600px);
-// 		background-size: 20%;
-// 		-webkit-transition: all 0.2s;
-// 		-moz-transition: all 0.2s;
-// 		-o-transition: all 0.2s;
-// 		transition: all 0.2s;
-// 	}
-// 	& .bx-wrapper .bx-next {
-// 		background: url(../img/right-arrow-dark.png) center no-repeat;
-// 		right: calc(50% - 600px);
-// 		background-size: 20%;
-// 		-webkit-transition: all 0.2s;
-// 		-moz-transition: all 0.2s;
-// 		-o-transition: all 0.2s;
-// 		transition: all 0.2s;
-// 	}
-// 	& .bx-wrapper .bx-prev:hover,
-// 	& .bx-wrapper .bx-next:hover {
-// 		opacity: 1;
-// 	}
-// }

@@ -13,11 +13,12 @@
         });
 
         if ($('body').hasClass('work-passwort-protected')) {
-             $("#password-protected-works").modal({
-              fadeDuration: 100,
-              escapeClose: false,
-              clickClose: false,
-              showClose: false
+            $("#password-protected-works").modal({
+                fadeDuration: 100,
+
+                escapeClose: false,
+                clickClose: false,
+                showClose: false
             });
         }
 
@@ -40,15 +41,11 @@
             });
         });
 
-        // jribbble
-        $.jribbble.setToken('0b4980a630216df0469d8ae93c45e745586e0558a8d35f9c327b054550f280e3');
-
-        $.jribbble.users('roary_tubbs').shots({ per_page: 25 }).then(function(shots) {
-            var html = [];
-            shots.forEach(function(shot) {
-                html.push('<img class="shot" src="' + shot.images.normal + '">');
-            });
-            $('.dribbble-shots').html(html.join(''));
+        // Get a list of your shots and display them in the DOM.
+        jribbble.shots({ token: "392f704752c3393168f41f2cd15d05a84e89628199bd47f66247fb7c54a0d72e", per_page: 30 }, function(shotsArray) {
+            document.querySelector(".dribbble-shots").innerHTML = shotsArray.reduce(function(html, shot) {
+                return html + '<img class="shot" src="' + shot.images.normal + '">';
+            }, "");
         });
 
     });

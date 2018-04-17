@@ -11,10 +11,14 @@ get_header();
 get_template_part('template-parts/work-hero'); ?>
 <main class="main-content white-bg" role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
+<?php
+if ( ! post_password_required() ) {  ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		 <?php the_content(); ?>
+
 		 <?php get_template_part( 'template-parts/modules' ); ?>
 	  </article>
+<?php } ?>
+
     <?php endwhile; ?>
 </main><!-- #main -->
 <?php get_template_part('template-parts/work-disclaimer'); ?>
