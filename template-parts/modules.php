@@ -1,4 +1,5 @@
-<?php $module = get_field( 'content_module', get_the_ID() ); ?>
+<?php if ( ! post_password_required() ): ?>
+	<?php $module = get_field( 'content_module', get_the_ID() ); ?>
 
 	<?php if( have_rows('content_module') ): ?>
 
@@ -48,3 +49,5 @@
 			<?php endif; ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
+
+<?php endif; ?>

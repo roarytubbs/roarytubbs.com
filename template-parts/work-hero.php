@@ -21,7 +21,7 @@
 		</div>
 	</div><!-- hero -->
 	<div class="metadata">
-		<!-- <?php the_post_navigation(); ?> -->
+		<?php the_post_navigation(); ?>
 		<div class="page-container">
 			<h1 class="work-title"><?php echo ( $title ); ?></h1>
 			<h2 class="work-subtitle"><?php echo ( $subtitle ); ?></h2>
@@ -41,7 +41,7 @@
 		</div><!-- hero-content -->
 	</div><!-- hero -->
 	<div class="metadata">
-		<!-- <?php the_post_navigation(); ?> -->
+		<?php the_post_navigation(); ?>
 		<div class="page-container">
 			<h1 class="work-title"><?php the_title(); ?></h1>
 		</div><!-- page-container -->

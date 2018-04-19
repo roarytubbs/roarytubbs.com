@@ -7,19 +7,17 @@
  * @package roarytubbs
  */
 
-get_header();
-get_template_part('template-parts/work-hero'); ?>
+get_header(); ?>
+<?php get_template_part('template-parts/work-hero'); ?>
 <main class="main-content white-bg" role="main">
-	<?php while ( have_posts() ) : the_post(); ?>
-<?php
-if ( ! post_password_required() ) {  ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		 <?php get_template_part( 'template-parts/modules' ); ?>
-	  </article>
-<?php } ?>
-
-    <?php endwhile; ?>
+	<?php
+	if ( have_posts() ) :
+		/* Start the Loop */
+	while ( have_posts() ) : the_post();
+		get_template_part( 'template-parts/content', get_post_format() );
+	endwhile;
+	endif;
+	?>
 </main><!-- #main -->
 <?php get_template_part('template-parts/work-disclaimer'); ?>
 <div id="work-footer" class="box">

@@ -13,12 +13,11 @@
         });
 
         if ($('body').hasClass('work-passwort-protected')) {
-            $("#password-protected-works").modal({
-                fadeDuration: 100,
-
-                escapeClose: false,
-                clickClose: false,
-                showClose: false
+             $("#password-protected-works").modal({
+              fadeDuration: 100,
+              escapeClose: false,
+              clickClose: false,
+              showClose: false
             });
         }
 

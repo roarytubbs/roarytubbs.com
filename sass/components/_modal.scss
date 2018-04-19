@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%; // overflow: auto;
-    z-index: 1;
+    z-index: 999;
     padding: 20px;
     box-sizing: border-box;
     background-color: rgba($color__black, .75);
@@ -25,11 +25,14 @@
     }
 }
 
+.work-passwort-protected .blocker {
+    top: 70px;
+}
+
 .modal {
     display: none;
     vertical-align: middle;
     position: relative;
-    z-index: 2;
     max-width: 500px;
     box-sizing: border-box;
     width: 90%;
@@ -132,8 +135,8 @@
 #password-protected-works {
     text-align: center;
     max-width: 550px;
-    top: -125px;
-    padding: 50px 3% 0;
+    top: -350px;
+    padding: 50px 3% 20px;
     @include breakpoint(tablet) {
         padding: 50px 6% 0;
     }
@@ -142,15 +145,18 @@
     }
     p {
         margin-bottom: 20px;
-        a {
-            @include font-size(1.4);
-            line-height: initial;
-            margin: 0;
-            color: $color__med-gray;
-            .fa {
-                padding-right: 7px;
-            }
+    }
+    a {
+        @include font-size(1.4);
+        line-height: initial;
+        margin: 0;
+        color: $color__med-gray;
+        .fa {
+            padding-right: 7px;
         }
+    }
+    form {
+        margin-bottom: 30px;
     }
     input[type="password"] {
         margin-bottom: 20px;
