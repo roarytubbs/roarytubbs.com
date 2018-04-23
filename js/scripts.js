@@ -19,6 +19,7 @@
               clickClose: false,
               showClose: false
             });
+             return false;
         }
 
         // add new html to title of experience

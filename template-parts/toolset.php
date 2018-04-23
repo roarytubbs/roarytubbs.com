@@ -1,8 +1,5 @@
 <?php $show_tools_used = get_field( 'show_tools_used', get_the_ID() ); ?>
-<?php
-if ( ! post_password_required() ) {
-	if ( $show_tools_used == true ) {
-	?>
+<?php if ( $show_tools_used == true ): ?>
 	<section class="toolset">
 		<header class="richtext">
 			<h3><?php the_field('tools_used_title'); ?></h3>
@@ -20,4 +17,4 @@ if ( ! post_password_required() ) {
 		    </ul>
 		<?php endif; ?>
 	</section><!--toolset-->
-<?php }} ?>
+<?php endif; ?>

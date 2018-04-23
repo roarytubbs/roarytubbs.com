@@ -116,9 +116,9 @@ function myprefix_private_title_format( $format ) {
 
 /* password protected works post */
 function my_password_form() {
-	echo '<div id="password-protected-works" class="modal richtext">';
+	echo '<div id="password-protected-works" class="modal modal-wrap richtext">';
     global $post;
-    echo '<h2>Password Protected</h2>';
+    echo '<div class="modal-content"><h2>Password Protected</h2>';
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
     ' . __( "<p>To view this protected post, enter the password below:</p>" ) . '
@@ -126,7 +126,7 @@ function my_password_form() {
     </form><a href="#" onclick="history.back(-1)"><i class="fa fa-angle-left"></i>Go Back</a>
     ';
     return $o;
-	echo '</div><!--password-protected-works-->';
+	echo '</div></div><!--password-protected-works-->';
 }
 add_filter( 'the_password_form', 'my_password_form' );
 
