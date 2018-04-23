@@ -12,7 +12,7 @@
             effect: 'fade'
         });
 
-        if ($('body').hasClass('work-passwort-protected')) {
+        if ($('body').hasClass('work-password-protected')) {
              $("#password-protected-works").modal({
               fadeDuration: 100,
               escapeClose: false,

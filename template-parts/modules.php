@@ -1,6 +1,5 @@
 <?php if ( ! post_password_required() ): ?>
 	<?php $module = get_field( 'content_module', get_the_ID() ); ?>
-
 	<?php if( have_rows('content_module') ): ?>
 
 		<?php while( have_rows('content_module') ): the_row();
@@ -26,8 +25,15 @@
 					</div>
 				</div><!-- medium-width & large-width -->
 			<?php elseif( $type == 'Image' || $type == 'Slider' ): ?>
-				<div class="module <?php if( $richtext == true ): ?>richtext <?php endif; ?><?php if( $class ): echo $class; endif; ?><?php if ( $roundedCorners == true): ?> rounded_corners<?php endif; ?><?php if ( $dropShadow == true): ?> drop_shadow<?php endif; ?>" <?php if( $bgColor ): ?>style="background-color: <?php echo $bgColor; ?>;"<?php endif; ?>>
+				<div class="module <?php if( $richtext == true ): ?>richtext <?php endif; ?><?php if( $class ): echo $class; endif; ?><?php if ( $roundedCorners == true): ?> rounded_corners<?php endif; ?><?php if ( $dropShadow == true): ?> drop_shadow<?php endif; ?><?php if ( $type == 'Animated gif'): ?> animated-gif<?php endif; ?>" <?php if( $bgColor ): ?>style="background-color: <?php echo $bgColor; ?>;"<?php endif; ?>>
 					<?php if ($type == 'Image' && !empty($image)): ?>
+						<div class="image" <?php if( $maxHeight == true ): ?> style="max-height:<?php echo $maxHeightValue; ?>" <?php endif; ?>>
+							<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<div class="caption-wrap">
+								<div class="caption"><?php echo $image['alt']; ?></div>
+							</div><!-- caption-wrap -->
+						</div><!-- image -->
+					<?php elseif ($type == 'Animated gif' && !empty($image)): ?>
 						<div class="image" <?php if( $maxHeight == true ): ?> style="max-height:<?php echo $maxHeightValue; ?>" <?php endif; ?>>
 							<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 							<div class="caption-wrap">
@@ -49,5 +55,4 @@
 			<?php endif; ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
-
 <?php endif; ?>

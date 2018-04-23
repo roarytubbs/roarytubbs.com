@@ -3,10 +3,7 @@
 <?php $disclaimer = get_field( 'disclaimer', get_the_ID() ); ?>
 
 <?php if ( $show == true ): ?>
-	<section class="disclaimer richtext">
-		<header>
-			<h3><?php echo ( $title ); ?></h3>
-		</header>
-		<p><?php echo ( $disclaimer ); ?></p>
+	<section class="richtext" id="work-disclaimer-wrap">
+		<p><span><?php echo ( $title ); ?></span><?php echo ( $disclaimer ); ?></p>
 	</section><!--toolset-->
 <?php endif; ?>

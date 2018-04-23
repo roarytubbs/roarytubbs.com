@@ -33,7 +33,7 @@ if ( is_a( $maybe_post, 'WP_Post' ) ) {
 }
 $password_required = '';
 if ( post_password_required() ) {
-	$password_required = 'work-passwort-protected';
+	$password_required = 'work-password-protected';
 }
 ?>
 <body <?php body_class( $password_required );  ?>  >

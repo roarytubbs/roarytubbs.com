@@ -8,16 +8,9 @@
  */
 
 get_header(); ?>
-<?php get_template_part('template-parts/work-hero'); ?>
+	<?php get_template_part('template-parts/work-hero'); ?>
 <main class="main-content white-bg" role="main">
-	<?php
-	if ( have_posts() ) :
-		/* Start the Loop */
-	while ( have_posts() ) : the_post();
-		get_template_part( 'template-parts/content', get_post_format() );
-	endwhile;
-	endif;
-	?>
+	<?php get_template_part('template-parts/modules'); ?>
 </main><!-- #main -->
 <?php get_template_part('template-parts/work-disclaimer'); ?>
 <div id="work-footer" class="box">
