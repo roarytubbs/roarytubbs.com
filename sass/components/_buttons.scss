@@ -27,6 +27,7 @@ input[type="submit"] {
         color: $color__button-text-hover;
         background-color: $color__button-bg-hover;
         border-color: $color__button-border-hover;
+        text-decoration: none !important;
     }
     &.btn-small {
         @include font-size(1.2);

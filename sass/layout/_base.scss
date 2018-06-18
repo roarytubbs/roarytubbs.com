@@ -106,6 +106,16 @@
     &.rounded_corners img {
         @include border-radius(10px);
     }
+    .video {
+        margin-top: 100px;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        video {
+            width: 100%;
+        }
+    }
     .image {
         margin-top: 100px;
         max-width: 960px;

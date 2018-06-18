@@ -1,22 +1,57 @@
-.ninja-forms-response-msg {
-	padding: 15px;
-	margin-bottom: 20px;
-	border: 1px solid transparent;
-	@include border-radius(4px);
-	display: none;
-	&.ninja-forms-error-msg  {
-		color: #a94442;
-		background-color: #f2dede;
-		border-color: #ebccd1;
-		display: block;
-		p {
-			margin: 0;
-			@include font-size(1.4);
-			line-height: 1;
-		}
-	}
+.nf-before-form-content .nf-form-fields-required {
+    margin-bottom: 25px;
+    color: $color__gray_-200;
+    text-align: right;
 }
+.nf-field-container {
+	margin-bottom: 30px;
+}
+.ninja-forms-response-msg {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    @include border-radius(4px);
+    display: none;
+    &.ninja-forms-error-msg {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        display: block;
+        p {
+            margin: 0;
+            @include font-size(1.4);
+            line-height: 1;
+        }
+    }
+}
+
 label .ninja-forms-req-symbol {
-	color: $color__accent ;
-	@include font-size(1.0);
+    color: $color__accent;
+    @include font-size(1.0);
+    vertical-align: top;
+}
+.label-above .nf-field-label {
+	margin-bottom: 5px;
+}
+.nf-field-label label {
+    @include font-size(2.0);
+    text-transform: none;
+}
+
+.nf-field-description {
+    margin-bottom: 20px;
+}
+
+.richtext .nf-field-description p {
+    @include font-size(1.6);
+    line-height: 1.7;
+}
+
+.nf-error .ninja-forms-field {
+    border: 1px solid $color__accent;
+}
+
+.nf-after-field .nf-error-msg {
+    font-weight: $font__weight-bold;
+    color: #a94442;
 }

@@ -121,7 +121,7 @@ function my_password_form() {
     echo '<div class="modal-content"><h2>Password Protected</h2>';
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-    ' . __( "<p>To view this protected post, enter the password below:</p>" ) . '
+    ' . __( "<p>Please enter the password below or get in touch if you'd like to learn about this project. </p>" ) . '
     <label for="' . $label . '"></label><input name="post_password" placeholder="Password" id="' . $label . '" type="password" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
     </form><a href="#" onclick="history.back(-1)"><i class="fa fa-angle-left"></i>Go Back</a>
     ';

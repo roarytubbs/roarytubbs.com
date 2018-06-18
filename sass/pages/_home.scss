@@ -24,11 +24,13 @@
     height: 100%;
     position: absolute;
     .main-content .richtext a {
-    	font-weight: $font__weight-light;
+        font-weight: $font__weight-light;
     }
-    .page-container.animation {
-        @include fadeIn( $delay: .75s,
-        $duration: 1.25s);
+    .page-container {
+        &.animation {
+            @include fadeIn( $delay: .75s,
+            $duration: 1.25s);
+        }
     }
     h1.entry-title {
         @include font-size(4.0);
@@ -47,20 +49,32 @@
         margin-top: 20px;
         color: $color__brand;
     }
+    .overlay {
+        @include opacity(.9);
+    }
+}
+
+.home .hero .home-page-container-sub {
+    margin-top: 50px;
     .btn {
         background: none;
+        margin: 0;
         &:hover,
         &:focus {
             color: $color__button-text-hover;
             background-color: $color__button-bg-hover;
             border-color: $color__button-border-hover;
         }
-        &.fadeInUp {
-            @include fadeInUp( $delay: .6s);
+    }
+    .home-secondary {
+        display: block;
+        margin-top: 20px;
+        a {
+            margin-top: 15px;
         }
     }
-    .overlay {
-        @include opacity(.9);
+    .fadeInUp {
+        @include fadeInUp( $delay: .6s);
     }
 }
 

@@ -22,17 +22,15 @@ textarea {
 	border: 1px solid $color__input-border;
 	background-color: $color__input-bg;
 	color: $color__input-text;
-
 	height: 40px;
-	line-height: 40px;
 	padding: 0 0 0 10px;
 	margin: 0;
 	font-style: normal;
 	font-weight: $font__weight-regular;;
-
 	@include fade;
-	@include font-size(1.2);
-
+	@include font-size(1.4);
+	line-height: 1.7;
+	padding: 10px;
 	&:focus {
 		font-style: normal;
 		color: $color__input-text-focus;

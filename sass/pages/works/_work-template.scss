@@ -28,8 +28,7 @@
         z-index: 999;
         display: block;
         width: 100%;
-        @include fadeInUp( $duration: 1.2s,
-        $delay: .25s);
+        @include fadeInUp( $duration: 1.2s, $delay: .25s);
     }
     .overlay {
         @include opacity(0.7);
@@ -142,7 +141,7 @@
             @include opacity(.7);
         }
         .work-img-wrap img {
-            @include transform(scale(1.1));
+            @include transform(scale(1.04));
         }
         .btn {
             background-color: rgba($color__accent, .8);
@@ -150,30 +149,17 @@
         }
     }
     &.is-password-protected {
-        &:hover,
-        &:focus {
-            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-            a {
-                cursor: not-allowed;
-            }
-            .overlay {
-                @include opacity(.95);
-            }
-            .work-img-wrap img {
-                @include transform(scale(1));
-            }
-        }
         .btn {
-            background: $color__white;
-            color: $color__light-gray;
-            border: 2px solid $color__light-gray;
-            cursor: not-allowed;
-            &:hover,
-            &:focus {
-                background: $color__white;
-                color: $color__light-gray;
-                border: 2px solid $color__light-gray;
-                cursor: not-allowed;
+            padding-left: 35px;
+            &:before {
+                font-family: 'FontAwesome';
+                content: '\f023';
+                @include font-size(2.2);
+                color: $color__gray-700;
+                position: absolute;
+                top: 6px;
+                left: 0;
+                margin-left: 10px;
             }
         }
     }
@@ -302,50 +288,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* styles for password protected works */
-
-.is-password-protected {
-    .overlay {
-        @include opacity(.95);
-    }
-    .work-img-wrap:before {
-        font-family: 'FontAwesome';
-        content: '\f023';
-        @include font-size(7.2);
-        color: $color__off-white;
-        position: absolute;
-        z-index: 2;
-        text-align: center;
-        display: block;
-        width: 100%;
-        height: inherit;
-        top: 25%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
