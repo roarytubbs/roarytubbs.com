@@ -9,6 +9,7 @@
 
 get_header(); ?>
 <?php get_template_part('template-parts/work-hero'); ?>
+<?php get_template_part('template-parts/work-disclaimer'); ?>
 <main class="main-content white-bg" role="main">
 	<?php if ( ! post_password_required() ) { ?>
 		 <?php get_template_part( 'template-parts/work-modules' ); ?>
@@ -19,7 +20,6 @@ get_header(); ?>
 	  </article>
 	<?php endwhile; ?>
 </main><!-- #main -->
-<?php get_template_part('template-parts/work-disclaimer'); ?>
 <div id="work-footer" class="box">
 	<div class="box-item box-item-50">
 		<?php get_template_part('template-parts/credits'); ?>
