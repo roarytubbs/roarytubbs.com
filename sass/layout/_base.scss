@@ -176,14 +176,25 @@
         line-height: 1.4em;
         background: none;
         text-align: center;
-        margin-top: 15px;
+        margin: 0 0 10px 0;
+        font-weight: $font__weight-bold;
+        color: $color__gray-700;
+        font-style: inherit;
         @include font-size(1.4);
-        line-height: 1.4em;
-        color: #828282;
-        font-style: italic;
         .caption {
             padding: 5px 10px;
             word-wrap: break-word;
+            display: inline-block;
+            // border-bottom: 1px solid $color__gray_-400;
+            &:after {
+                content: '';
+                display: block;
+                position: relative;
+                height: 1px;
+                background-color: $color__light-gray;
+                width: 75%;
+                margin: 7px auto;
+            }
         }
     }
 }

@@ -45,17 +45,17 @@
 			<?php if( $hasCustomBGColor == true && $bgColor != ''): ?>style="background-color: <?php echo $bgColor; ?>;"<?php endif; ?>>
 				<?php if ($type == 'Image' && !empty($image)): ?>
 					<div class="image" <?php if( $maxHeight == true ): ?> style="max-height:<?php echo $maxHeightValue; ?>" <?php endif; ?>>
-						<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<div class="caption-wrap">
 							<div class="caption"><?php echo $image['alt']; ?></div>
 						</div><!-- caption-wrap -->
+						<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div><!-- image -->
 				<?php elseif ($type == 'Animated gif' && !empty($image)): ?>
 					<div class="image animated-gif" <?php if( $maxHeight == true ): ?> style="max-height:<?php echo $maxHeightValue; ?>" <?php endif; ?>>
-						<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<div class="caption-wrap">
 							<div class="caption"><?php echo $image['alt']; ?></div>
 						</div><!-- caption-wrap -->
+						<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div><!-- image -->
 				<?php elseif ($type == 'Slider' && !empty($sliderId)): ?>
 					<div class="slider">
@@ -63,13 +63,13 @@
 					</div><!-- slider -->
 				<?php elseif( $type == 'Video' ): ?>
 					<div class="video">
+						<div class="caption-wrap">
+							<div class="caption"><?php echo $video['title']; ?></div>
+						</div><!-- caption-wrap -->
 						<video controls>
 							<source src="<?php echo $video['url']; ?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
-						<div class="caption-wrap">
-							<div class="caption"><?php echo $video['title']; ?></div>
-						</div><!-- caption-wrap -->
 					</div><!-- video -->
 				<?php endif; ?>
 			</div><!-- image slider animated gif video -->
@@ -81,10 +81,10 @@
 			<?php endif; ?>
 			<div class="module <?php if( $richtext == true ): ?> richtext<?php endif; ?><?php if($isSubSection == true ): ?> sub-module <?php endif; ?><?php if ( $hasCusomtClass == true ): echo $class; endif; ?>"<?php if( $hasCustomBGColor == true && $bgColor != ''): ?>style="background-color: <?php echo $bgColor; ?>;"<?php endif; ?>>
 				<div class="full-width-image">
-					<div class="image" style="background-image:url(<?php echo $image['url'];?>)"></div><!-- image -->
 					<div class="caption-wrap">
 						<div class="caption"><?php echo $image['alt']; ?></div>
 					</div><!-- caption-wrap -->
+					<div class="image" style="background-image:url(<?php echo $image['url'];?>)"></div><!-- image -->
 				</div><!-- full-width-image -->
 			</div><!-- module -->
 		<?php endif; ?>
