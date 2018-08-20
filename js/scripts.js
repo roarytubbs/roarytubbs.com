@@ -13,13 +13,13 @@
         });
 
         if ($('body').hasClass('work-password-protected')) {
-             $("#password-protected-works").modal({
-              fadeDuration: 100,
-              escapeClose: false,
-              clickClose: false,
-              showClose: false
+            $("#password-protected-works").modal({
+                fadeDuration: 100,
+                escapeClose: false,
+                clickClose: false,
+                showClose: false
             });
-             return false;
+            return false;
         }
 
         // add new html to title of experience
@@ -47,6 +47,11 @@
                 return html + '<img class="shot" src="' + shot.images.normal + '">';
             }, "");
         });
+
+        // Medium Zoom
+        mediumZoom('.medium-zoom-image')
+
+
 
     });
 })(jQuery) //end

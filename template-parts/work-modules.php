@@ -48,7 +48,7 @@
 						<div class="caption-wrap">
 							<div class="caption"><?php echo $image['alt']; ?></div>
 						</div><!-- caption-wrap -->
-						<img class="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img class="lazy medium-zoom-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div><!-- image -->
 				<?php elseif ($type == 'Animated gif' && !empty($image)): ?>
 					<div class="image animated-gif" <?php if( $maxHeight == true ): ?> style="max-height:<?php echo $maxHeightValue; ?>" <?php endif; ?>>
