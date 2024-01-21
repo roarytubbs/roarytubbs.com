@@ -25,7 +25,7 @@
         // add new html to title of experience
         $('.page-template-experience #experience-counter').each(function() {
             var $this = $(this),
-                countTo = (new Date).getFullYear() - (2006);
+                countTo = (new Date).getFullYear() - (2007);
             $({ countNum: $this.text() }).animate({
                 countNum: countTo
             }, {
