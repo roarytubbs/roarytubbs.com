@@ -15,7 +15,7 @@ get_header(); ?>
 				  array(
 				    'post_type' => 'works',
 				    'paged' => get_query_var( 'paged' ),
-					'posts_per_page'	=> 9				  )
+					'posts_per_page'	=> 3				  )
 				);
 
 				while ( $all_works->have_posts() ) : $all_works->the_post();
