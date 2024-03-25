@@ -15,7 +15,7 @@
 }
 
 .single-works .main-content {
-    padding: 8% 0;
+    padding: 2% 0 8%;
 }
 
 .single-works .hero {
@@ -120,19 +120,24 @@
     @include font-size(1.8);
 }
 
-.work-item-wrapper {
+.col.col-100.work-item-wrapper {
+    display: flex;
     background-color: $color__white;
     text-decoration: none;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
     @include transition(all 0.2s ease-in-out);
     overflow: hidden;
-    cursor: pointer;
     min-height: 290px;
     text-align: left;
     margin-bottom: 50px;
     border: 1px solid $color__off-white;
     @include breakpoint(tablet) {
         width: 42.5%
+    }
+    a { 
+        display: flex;
+        text-decoration: none;
+        color: inherit;
     }
     &:hover,
     &:focus {
@@ -167,24 +172,15 @@
         width: 100%;
         margin: 0 0 60px 0;
     }
-    a {
-        text-decoration: none;
-    }
-    .work-img-wrap {
-        max-height: 400px;
-        overflow: hidden;
-        margin: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        img {
-            border-bottom: 0;
-            box-sizing: border-box;
-            width: 100%;
-            height: auto;
-            display: block;
-            @include transition(all 0.3s ease-in-out);
-            @include transform(scale(1));
-            overflow: hidden;
-        }
+    .btn {
+        text-align: center;
+        min-width: 50%;
+        @include font-size(1.6);
+        @include transition(all 0.3s ease-in-out);
+        border: 1px solid $color__accent;
+        color: $color__off-white;
+        background-color: $color__button-bg-hover;
+        
     }
     .overlay {
         position: absolute;
@@ -201,37 +197,52 @@
         @include opacity(0);
         @include transition(all 0.3s ease-in-out);
     }
-    .btn {
-        text-align: center;
-        min-width: 50%;
-        margin: 0 auto;
-        @include font-size(1.4);
-        @include transform(scale(0.8));
-        @include transition(all 0.3s ease-in-out);
-        border: 1px solid $color__accent;
-        background-color: rgba($color__accent, 1);
-        color: $color__off-white;
+    .work-img-wrap {
+        flex: 1;
+        max-height: 400px;
+        overflow: hidden;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        img {
+            border-bottom: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            display: block;
+            @include transition(all 0.3s ease-in-out);
+            @include transform(scale(1));
+            overflow: hidden;
+        }
     }
     .metadata {
-        padding: 30px 5px;
-        text-align: center;
+        flex: 2;
+        padding: 30px;
+        text-align: left;
         @include transition(all 0.2s ease-in-out);
         position: relative;
         z-index: 2;
         background-color: $color__white;
+        .work-title {
+            @include font-size(2.2);
+            letter-spacing: 0;
+            margin-bottom: 12px;
+            color: $color__dark-gray;
+            @include transition(all 0.2s);
+        }
+        .work-subtitle {
+            @include font-size(1.6);
+            color: $color__med-gray;
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+        .work-details-wrap {
+            padding: 0;
+            p {
+                margin: 0;
+            }
+       }
     }
-    .work-title {
-        @include font-size(1.8);
-        letter-spacing: 0;
-        margin-bottom: 12px;
-        color: $color__dark-gray;
-        @include transition(all 0.2s);
-    }
-    .work-subtitle {
-        @include font-size(1.4);
-        color: $color__med-gray;
-        line-height: 1;
-    }
+
 }
 
 #work-disclaimer-wrap {
@@ -253,10 +264,9 @@
         letter-spacing: 0;
     }
 }
-#work-details-wrap {
+.work-details-wrap {
     background-color: $color__white;
     padding: 30px 20%;
-    padding-bottom: 0;
     ul {
         list-style: none;
         display: flex;

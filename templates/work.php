@@ -4,7 +4,6 @@ Template Name: Works
 */
 $showMoreWorks = get_field( 'show_more_works', get_the_ID() );
 $moreWorksButton = get_field( 'show_more_works_cta', get_the_ID() );
-
 get_header(); ?>
 <?php get_template_part('template-parts/internal-hero'); ?>
 <main class="main-content white-bg" role="main">
@@ -15,32 +14,32 @@ get_header(); ?>
             $works_query = new WP_Query (array(
                 'post_type' => 'works',
                 'paged'          => $paged,
-                'posts_per_page'  => 6)
+                'posts_per_page'  => 3)
             );
             while ( $works_query->have_posts() ) : $works_query->the_post();
             $thumb = get_field( 'work_thumbnail', get_the_ID() );
             $subtitle = get_field( 'hero_subtitle', get_the_ID() );
             ?>
+
             <?php if(!empty($post->post_password)){ ?>
-                <article class="col col-30 work-item-wrapper is-password-protected">
+                <article class="col col-100 work-item-wrapper is-password-protected">
             <?php } else { ?>
-                <article class="col col-30 work-item-wrapper">
+                <article class="col col-100 work-item-wrapper">
             <?php } ?>
-                    <a href="<?php echo the_permalink(); ?>">
-                    <span class="overlay">
-                    </span><!-- overlay -->
-                    <figure class="work-img-wrap">
-                        <img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>" />
-                    </figure><!-- work-img-wrap -->
-                    <figcaption class="metadata">
-                        <h2 class="work-title"><?php the_title(); ?></h2>
-                        <h3 class="work-subtitle"><?php echo esc_html( $subtitle ); ?></h3><span class="btn">View <?php the_title(); ?></span>
-                    </figcaption><!-- metadata -->
-                </a>
+            <a href="<?php echo the_permalink(); ?>">
+            <span class="overlay"></span><!-- overlay -->
+            <figure class="work-img-wrap">
+                <img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>" />
+            </figure><!-- work-img-wrap -->
+            <figcaption class="metadata"> 
+                <h2 class="work-title"><?php the_title(); ?></h2>
+                <h3 class="work-subtitle"><?php echo esc_html( $subtitle ); ?></h3>
+                <?php get_template_part('template-parts/work-details'); ?>
+                <span  class="btn">View <?php the_title(); ?></span>
+            </figcaption><!-- metadata -->
             </article><!-- work-item -->
+            </a>
             <?php endwhile; wp_reset_postdata(); ?>
-            <article class="col col-30">
-            </article>
         </div><!-- row -->
 
         <!-- Pagination -->

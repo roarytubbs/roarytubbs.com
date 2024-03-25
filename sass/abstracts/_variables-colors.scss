@@ -25,7 +25,6 @@ $color__gray-600: #232323;
 $color__gray-700: #202020;
 $color__gray-800: #1c1c1c;
 $color__gray-900: #191919;
-
 $color__border: #ccc;
 
 
@@ -52,7 +51,7 @@ $color__button-text-hover: $color__off-white;
 $color__button-border: rgba($color__accent, .8);
 $color__button-border-hover: $color__accent;
 $color__button-bg: rgba($color__accent, .7);
-$color__button-bg-hover: rgba($color__accent, .9);
+$color__button-bg-hover: rgba($color__accent, 1);
 
 
 

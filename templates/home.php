@@ -6,7 +6,6 @@ $introCopy = get_field( 'home_intro_copy', get_the_ID() );
 $primaryAction = get_field( 'home_primary_action', get_the_ID() );
 $secondaryAction = get_field( 'home_secondary_action', get_the_ID() );
 
-
 get_header(); ?>
 <div class="hero">
 	<span class="overlay"></span>

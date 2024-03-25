@@ -2,10 +2,6 @@
 <?php $subtitle = get_field( 'hero_subtitle', get_the_ID() ); ?>
 <?php $imgCustomThumb = get_field( 'custom_hero_image', get_the_ID() ); ?>
 <?php $bgImgPosition = get_field( 'background_image_position', get_the_ID() ); ?>
-
-
-
-
 <div class="hero" style="background-image:url(<?php the_post_thumbnail_url() ?>); background-position: <?php echo ( $bgImgPosition ); ?>;">
 	<span class="overlay"></span>
 	<div class="hero-content">
