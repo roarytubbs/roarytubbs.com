@@ -10,6 +10,7 @@ get_header(); ?>
 
 <main class="main-content white-bg" role="main">
 	<div class="page-container">
+		<?php (if ( have_posts() ) : while ( have_posts() ) : the_post();) ?>
 		<?php
 		$maybe_page_title = custom_theme_cpt_get_option( 'gallery', 'archive-title' );
 		if ( empty( $maybe_page_title ) || false == $maybe_page_title ) {
@@ -31,7 +32,7 @@ get_header(); ?>
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
-				get_template_part( 'content', 'gallery' );
+				get_template_part( s'content', 'gallery' );
 			}
 		} else {
 			get_template_part( 'content', 'none' );

@@ -10,6 +10,7 @@
 get_header(); ?>
 <?php get_template_part('template-parts/work-hero'); ?>
 <?php get_template_part('template-parts/work-disclaimer'); ?>
+<?php get_template_part('template-parts/work-details'); ?>
 <main class="main-content white-bg" role="main">
 	<?php if ( ! post_password_required() ) { ?>
 		 <?php get_template_part( 'template-parts/work-modules' ); ?>
@@ -22,7 +23,7 @@ get_header(); ?>
 </main><!-- #main -->
 <div id="work-footer" class="box">
 	<div class="box-item box-item-50">
-		<?php get_template_part('template-parts/credits'); ?>
+		<?php get_template_part('template-parts/work-team'); ?>
 	</div><!--box-item-->
 	<div class="box-item box-item-50">
 		<?php get_template_part('template-parts/toolset'); ?>
