@@ -9,6 +9,7 @@
 get_header(); ?>
 
 <main class="main-content white-bg" role="main">
+	<h1>IS THIS THING ON</h1>
 	<div class="page-container">
 		<?php (if ( have_posts() ) : while ( have_posts() ) : the_post();) ?>
 		<?php
@@ -42,3 +43,4 @@ get_header(); ?>
 </main><!-- main-content -->
 
 <?php get_footer();
+ 

@@ -26,7 +26,7 @@ get_header(); ?>
             <?php } else { ?>
                 <article class="col col-100 work-item-wrapper">
             <?php } ?>
-            <a href="<?php echo the_permalink(); ?>">
+            <a href="<?php echo the_permalink(); ?>" aria-hidden="true">
             <span class="overlay"></span><!-- overlay -->
             <figure class="work-img-wrap">
                 <img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>" />
@@ -42,15 +42,47 @@ get_header(); ?>
             <?php endwhile; wp_reset_postdata(); ?>
         </div><!-- row -->
 
+
+
         <!-- Pagination -->
         <div class="pagination">
-            <?php
+      <?php
             echo paginate_links(array(
                 'total' => $works_query->max_num_pages,
                 'current' => max(1, get_query_var('paged')),
             ));
-            ?>
+        ?>
         </div>
+
+
+<?php
+$args = array(
+    'post_type' => 'works', // Replace 'books' with your custom post type slug
+    'posts_per_page' => 3, // Set the number of posts to display per page
+    'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+);
+
+$custom_query = new WP_Query($args);
+?>
+
+<?php
+$total_pages = $custom_query->max_num_pages;
+$current_page = max(1, get_query_var('paged'));
+?>
+
+
+
+<?php
+echo '<div class="pagination">';
+echo paginate_links(array(
+ 'base' => get_pagenum_link(1) . '%_%',
+ 'format' => '/works/%#%', // Change to match your URL structure if needed
+ 'current' => $current_page,
+ 'total' => $total_pages,
+));
+echo '</div>';
+?>
+
 
         <?php if ( $showMoreWorks ): ?>
             <div class="row view-more">
