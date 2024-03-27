@@ -10,12 +10,12 @@
 		<ul>
 			<li><p><span>Role</span><?php echo ( $role ); ?></p></li>
 			<li><p><span>Duration</span><?php echo ( $duration ); ?></p></li>
-			<li><p><span>Teams</span><?php echo ( $team ); ?></p></li>
+			<li><p><span>Team</span><?php echo ( $team ); ?></p></li>
 		</ul>
-		<?php if ( is_singular( 'works' ) ): ?>
+		<!-- <?php if ( is_singular( 'works' ) ): ?> -->
+		<!-- <?php endif; ?> -->
 			<?php if ( $overview != "" ): ?>
 				<div class="work-details-overview"><p><?php echo ( $overview ); ?></p></div>
 			<?php endif; ?>
-		<?php endif; ?>
 	</section><!--work details-->
 <?php endif; ?>

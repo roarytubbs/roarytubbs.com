@@ -120,7 +120,7 @@
     @include font-size(1.8);
 }
 
-.col.col-100.work-item-wrapper {
+.work-item-wrapper {
     background-color: $color__white;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
     @include transition(all 0.2s ease-in-out);
@@ -166,10 +166,6 @@
             }
         }
     }
-    @include breakpoint(mobile) {
-        width: 100%;
-        margin: 0 0 60px 0;
-    }
     .overlay {
         position: absolute;
         z-index: 1;
@@ -205,9 +201,10 @@
 
     }
     .metadata {
+        @include flexbox();
         @include flex(2); 
         @include flex-direction(column);
-        padding: 30px;
+        padding: 2% 3%;
         text-align: left;
         @include transition(all 0.2s ease-in-out);
         position: relative;
@@ -216,7 +213,7 @@
         .work-title {
             @include font-size(2.2);
             letter-spacing: 0;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: $color__dark-gray;
             @include transition(all 0.2s);
         }
@@ -224,11 +221,14 @@
             @include font-size(1.6);
             color: $color__med-gray;
             line-height: 1;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         .btn {
+            @include flexbox();
+            justify-content: center;
             text-align: center;
             min-width: 50%;
+            max-width: 300px;
             @include font-size(1.6);
             @include transition(all 0.3s ease-in-out);
             border: 1px solid $color__accent;
@@ -240,24 +240,45 @@
                 color: $color__off-white;
             }
         }
-        .work-details-wrap {
-            padding: 0;
-            ul {
-                @include breakpoint(tablet) {
-                    @include flex-direction(row);
-                    li p{
-                        margin:0 15px 15px 0;
-                    }
-               }
-            }
-            p {
-                margin: 0;
-            }
-       }
         @include breakpoint(tablet){
             display: inline-flex;
             width: -webkit-fill-available;
+            .btn{ 
+            max-width:100%; }
        }
+    }
+    .work-details-wrap {
+        padding: 0;
+        ul {
+            margin-bottom: 10px;
+            p {
+                margin: 0;
+            }
+            @include breakpoint(tablet) {
+                @include flex-direction(row);
+                p{
+                    margin:0 15px 15px 0;
+                }
+           }
+        }
+        .work-details-overview {
+            background: none;
+            padding: 0 0 2%;
+            color: $color__text-main;
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* number of lines to show */
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+        }
+   }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0 0 60px 0;
     }
 }
 
@@ -291,34 +312,37 @@
             display: inline-flex;
             width: -webkit-fill-available;
             border-right: 1px solid $color__border;
-            margin-right: 40px;
-            &:last-child
-            { 
+            margin: 0 5% 0 0;
+
+            &:last-child { 
                 border:none;
             }
         }
         p {
             @include font-size(1.6);
-            line-height: 1.7;
+            line-height: $font__line-height-body;
         }
         span{
             display: flex;
             @include font-size(1.2);
             font-weight: $font__weight-bold;
-            color: color__light-gray;
-            line-height: 16px;
+            line-height: $font__line-height-body;
         }
         @include breakpoint(tablet) {
-            @include flex-direction(column);
             margin-bottom: 15px;
             li {
-                border: none;
-                margin-right: 0;
-                p{
+                p {
                     margin-bottom:15px;
+                    @include font-size(1.4);
                 }
             }
        }
+        @include breakpoint(mobile) {
+            li {
+                margin-right: 0;
+                border: none;
+            }
+        }
     }
     .work-details-overview {
         background-color: $color__background;
@@ -327,8 +351,12 @@
         padding: 2.5%;
         p {
             margin: 0;    
-        }
+            line-height: $font__line-height-body;
 
+        }
+    }
+    @include breakpoint(tablet){
+        padding: 20px 5%;
     }
 }
 #work-footer {

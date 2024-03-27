@@ -43,7 +43,6 @@ get_header(); ?>
         </div><!-- row -->
 
 
-
         <!-- Pagination -->
         <div class="pagination">
       <?php

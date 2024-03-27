@@ -47,6 +47,9 @@ ul.box li.box-item {
             margin-right: 0;
         }
     }
+    .col-100 {
+        width: 100%;
+    }    
     .col-75 {
         width: 73%;
         @include breakpoint(tablet) {
