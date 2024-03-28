@@ -11,12 +11,12 @@ get_header(); ?>
         <div class="row">
             <?php
             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-            $works_query = new WP_Query (array(
+            $work_query = new WP_Query (array(
                 'post_type' => 'work',
                 'paged'          => $paged,
                 'posts_per_page'  => 3)
             );
-            while ( $works_query->have_posts() ) : $works_query->the_post();
+            while ( $work_query->have_posts() ) : $work_query->the_post();
             $thumb = get_field( 'work_thumbnail', get_the_ID() );
             $subtitle = get_field( 'hero_subtitle', get_the_ID() );
             ?>

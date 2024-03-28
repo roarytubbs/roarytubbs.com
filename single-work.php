@@ -30,4 +30,4 @@ get_header(); ?>
 		<?php get_template_part('template-parts/toolset'); ?>
 	</div><!--box-item-->
 </div><!-- work-footer -->
-<?php get_footer();
+<?php get_footer(); 

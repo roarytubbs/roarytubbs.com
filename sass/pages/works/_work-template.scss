@@ -313,7 +313,7 @@
             width: -webkit-fill-available;
             border-right: 1px solid $color__border;
             margin: 0 5% 0 0;
-
+            padding: 0 5% 0 0;   
             &:last-child { 
                 border:none;
             }
@@ -321,6 +321,8 @@
         p {
             @include font-size(1.6);
             line-height: $font__line-height-body;
+            margin: 0;
+            padding: 2% 0;
         }
         span{
             display: flex;
