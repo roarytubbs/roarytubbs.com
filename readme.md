@@ -9,7 +9,7 @@ other partials.
 A couple of CLI commands you'll want when working with Sass are below:
 
 - Watch entire sass directory for changes and build automatically
-  - `ass --watch sass/style.scss:style.css --style compressed`
+  - `npm run sass:watch`
 
 ```
 

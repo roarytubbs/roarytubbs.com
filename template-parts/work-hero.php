@@ -1,4 +1,4 @@
-<?php $should_this_be_a_custom_hero = get_field( 'show_credits', get_the_ID() ); ?>
+<?php $show = get_field( 'should_this_be_a_custom_hero', get_the_ID() ); ?>
 <?php $title = get_field( 'hero_title', get_the_ID() ); ?>
 <?php $subtitle = get_field( 'hero_subtitle', get_the_ID() ); ?>
 <?php $bgImg = get_field( 'custom_hero_image', get_the_ID() ); ?>
@@ -7,7 +7,7 @@
 <?php $customCode = get_field( 'hero_custom_code', get_the_ID() ); ?>
 
 
-<?php if ( $should_this_be_a_custom_hero == true ): ?>
+<?php if ( $show == true ): ?>
 	<div class="hero" style="background-image:url(<?php echo $bgImg['url']; ?>); background-position: <?php echo ( $bgImgPosition ); ?>;">
 		<div class="hero-content">
 			<div class="page-container animation">
