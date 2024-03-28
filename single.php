@@ -12,7 +12,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main class="main-content white-bg" role="main">
 		<div class="page-container">
-			<div class="medium-width richtext">
+			<div class="medium-width richtext"> <h2>test</h2>
 				<?php
 				while ( have_posts() ) : the_post();
 

@@ -1,7 +1,12 @@
 <?php
-/*
-Template Name: Work
-*/
+/**
+ * The template for displaying archive pages.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package roarytubbs
+ */
+get_header();
 $showMoreWorks = get_field( 'show_more_works', get_the_ID() );
 $moreWorksButton = get_field( 'show_more_works_cta', get_the_ID() );
 get_header(); ?>
@@ -48,8 +53,7 @@ get_header(); ?>
       <?php
             echo paginate_links(array(
                 'total' => $works_query->max_num_pages,
-                'current' => max(1, get_query_var('paged')),
-
+                'current' => max(2, get_query_var('paged')),
             ));
         ?>
         </div>

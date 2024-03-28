@@ -1,4 +1,4 @@
-.single-works .main-nav ul li:first-child a {
+.single-work .main-nav ul li:first-child a {
     color: $color__accent;
     &:before {
         border-top: 4px solid $color__accent;
@@ -14,11 +14,11 @@
     }
 }
 
-.single-works .main-content {
+.single-work .main-content {
     padding: 2% 0 8%;
 }
 
-.single-works .hero {
+.single-work .hero {
     height: 100%;
     .hero-content {
         padding-top: 4%;
@@ -35,7 +35,7 @@
     }
 }
 
-.single-works .navigation.post-navigation {
+.single-work .navigation.post-navigation {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -43,7 +43,7 @@
     display: block;
 }
 
-.single-works .nav-links {
+.single-work .nav-links {
     position: absolute;
     z-index: 999;
     width: 100%;
@@ -96,7 +96,7 @@
     }
 }
 
-.single-works .metadata {
+.single-work .metadata {
     background: #333;
     padding: 25px 0 35px;
     text-align: center;
