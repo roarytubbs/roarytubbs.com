@@ -14,7 +14,7 @@ get_header(); ?>
             $work_query = new WP_Query (array(
                 'post_type' => 'work',
                 'paged'          => $paged,
-                'posts_per_page'  => 2)
+                'posts_per_page'  => 3)
             );
             while ( $work_query->have_posts() ) : $work_query->the_post();
             $thumb = get_field( 'work_thumbnail', get_the_ID() );
