@@ -31,6 +31,13 @@ code, kbd, tt, var {
 	font-family: $font__code;
 	@include font-size(0.9375);
 }
+code {
+	@include font-size(1.6);
+	color: $color__black-solid;
+	background-color: $color__off-white;
+	padding: 4px;
+	font-weight: 500;
+}
 
 abbr, acronym {
 	border-bottom: 1px dotted $color__border-abbr;

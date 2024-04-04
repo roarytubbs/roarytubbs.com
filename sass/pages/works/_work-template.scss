@@ -253,6 +253,8 @@
             margin-bottom: 5%;
             p {
                 margin: 0;
+                @include font-size(1.4);
+                font-weight: $font__weight-semi-bold;
             }
             @include breakpoint(tablet) {
                 @include flex-direction(row);
@@ -263,9 +265,10 @@
         }
         .work-details-overview {
             background: none;
-            padding: 0 0 3%;
+            padding: 0 0 7%;
             color: $color__text-main;
             p {
+                @include font-size(1.6);
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -323,12 +326,14 @@
             line-height: $font__line-height-body;
             margin: 0;
             padding: 2% 0;
+            color: $color__dark-gray;
         }
         span{
             display: flex;
             @include font-size(1.2);
             font-weight: $font__weight-bold;
             line-height: $font__line-height-body;
+            color: $color__med-gray;
         }
         @include breakpoint(tablet) {
             margin-bottom: 15px;
@@ -347,10 +352,10 @@
         }
     }
     .work-details-overview {
-        background-color: $color__background;
-        color: $color__gray-000;
+        background-color: $color__background-ins;
+        color: $color__gray-300;
         @include font-size(1.6);
-        padding: 2.5%;
+        padding: 5%;
         p {
             margin: 0;    
             line-height: $font__line-height-body;
