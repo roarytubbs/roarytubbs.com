@@ -10,9 +10,16 @@ get_header(); ?>
     <div class="page-container">
         <div class="row">
             <?php
+
+
+
+
             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
             $work_query = new WP_Query (array(
                 'post_type' => 'work',
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish',
                 'paged'          => $paged,
                 'posts_per_page'  => 3)
             );
