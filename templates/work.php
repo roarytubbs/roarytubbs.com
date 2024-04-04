@@ -14,7 +14,7 @@ get_header(); ?>
             $work_query = new WP_Query (array(
                 'post_type' => 'work',
                 'paged'          => $paged,
-                'posts_per_page'  => 3)
+                'posts_per_page'  => 2)
             );
             while ( $work_query->have_posts() ) : $work_query->the_post();
             $thumb = get_field( 'work_thumbnail', get_the_ID() );
@@ -45,22 +45,16 @@ get_header(); ?>
 
         <!-- Pagination -->
         <div class="pagination">
-      <?php
+        <?php
             echo paginate_links(array(
-                'total' => $works_query->max_num_pages,
+                'total' => $work_query->max_num_pages,
                 'current' => max(1, get_query_var('paged')),
 
             ));
         ?>
         </div>
 
-        <?php
-            $args = array(
-                'post_type' => 'works',
-                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-            );
-            $custom_query = new WP_Query($args);
-        ?>
+     
         <?php if ( $showMoreWorks ): ?>
             <div class="row view-more">
                 <div class="col col-100 aligncenter">
