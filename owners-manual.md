@@ -11,9 +11,8 @@ _A concise reference for how to collaborate with me day‑to‑day. Feel free to
 ## Communication
 - **Primary:** @‑mention in Slack; email checked ~2× week
 - **Public channels > DMs** (visibility + shared context)
-- **Intent‑brackets / emoji** for tone & urgency (e.g., `[FYI]`, `[Needs async review]`)
 - **Loom** videos for async walkthroughs & design context
-- In focus‑mode Slack is snoozed please don’t expect instant replies 🔕
+- **Focus‑mode** Slack is snoozed please don’t expect instant replies 🔕
 
 ### Recieving feedback
 - **Direct, timely, balanced** (wins + deltas) — feedback is a gift 🎁
