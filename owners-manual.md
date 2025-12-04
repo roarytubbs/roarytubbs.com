@@ -2,7 +2,7 @@
 
 _A concise reference for how to collaborate with me day‑to‑day. Feel free to ask if anything here isn’t clear or looks off._
 ## Snapshot
-- **Role:** Staff Product Designer @ Vanta
+- **Role:** Product Designer @ HubSpot
 - **Location:** Oklahoma City, Central Time
 - **Faith, Family & Community:** Wife + three boys; active in church & local service
 - **Passions:** Camping, backpacking (summited 10×14ers), hiking, building projects, remodels, learning new hands‑on skills (e.g., electrical work & plumbing)
