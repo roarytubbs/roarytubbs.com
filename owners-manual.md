@@ -38,7 +38,8 @@ When I give feedback, I like to make my intent clear. That way, you don’t have
 ### Rhythms & structure
 Weekly cadence, rituals, availability
 - Typical hours **9 AM – 5:30 PM** CST (kid drop‑off may slide start ±30 min)
-- **Mornings = Deep Focus** · **Afternoons = Meetings / Collaboration**
+- **Mornings = Deep Focus**
+- **Afternoons = Meetings / Collaboration**
 - **Weekly anchors**
   - End‑of‑week retros
   - Data review 
