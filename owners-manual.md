@@ -2,7 +2,7 @@
 
 _A concise reference for how to collaborate with me day‑to‑day. Feel free to ask if anything here isn’t clear or looks off._
 ## Snapshot
-- **Role:** Product Designer @ HubSpot
+- **Role:** Sr. Product Designer, DevX @ HubSpot
 - **Location:** Oklahoma City, Central Time
 - **Faith, Family & Community:** Wife + three boys; active in church & local service
 - **Passions:** Camping, backpacking (summited 10×14ers), hiking, building projects, remodels, learning new hands‑on skills (e.g., electrical work & plumbing)
@@ -33,7 +33,7 @@ When I give feedback, I like to make my intent clear. That way, you don’t have
 | [⚡️ Action]   | I feel strongly about this. | Please implement this. If you disagree, let’s talk it through—I value the discussion as much as the outcome. |
 
 
-## How I work
+## How I like to work
 
 ### Rhythms & structure
 Weekly cadence, rituals, availability
